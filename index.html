@@ -1,584 +1,425 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GiftKhata – India's First Digital Gift Ledger</title>
+
+  <!-- PRIMARY SEO -->
+  <title>GiftKhata – India's #1 Digital Gift Ledger App | Track Gifts by Event & Person</title>
+  <meta name="description" content="GiftKhata is India's first digital gift ledger app. Track cash, vouchers & item gifts received and given at weddings, birthdays, griha pravesh & all Indian functions. Free to use." />
+  <meta name="keywords" content="gift ledger app India, digital gift tracker, gift khata, shagun tracker, wedding gift record, gift received tracker, gift given tracker, Indian gift register, bahi khata digital, gift management app, track gifts by person, event wise gift tracker, griha pravesh gifts, birthday gift tracker, cash gift record, voucher gift tracker" />
+  <meta name="author" content="GiftKhata" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  <link rel="canonical" href="https://www.giftkhata.com/" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.giftkhata.com/" />
+  <meta property="og:title" content="GiftKhata – India's #1 Digital Gift Ledger App" />
+  <meta property="og:description" content="Replace your paper bahi-khata with GiftKhata. Track all gifts — cash, vouchers & items — received and given at every Indian function. Free app for Indian families." />
+  <meta property="og:image" content="https://www.giftkhata.com/og-image.png" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="GiftKhata" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@GiftKhata" />
+  <meta name="twitter:title" content="GiftKhata – India's #1 Digital Gift Ledger App" />
+  <meta name="twitter:description" content="Track every gift received and given at weddings, birthdays, griha pravesh & more. India's first digital gift khata. Free for Indian families." />
+  <meta name="twitter:image" content="https://www.giftkhata.com/og-image.png" />
+
+  <!-- GEO -->
+  <meta name="geo.region" content="IN" />
+  <meta name="geo.placename" content="India" />
+
+  <!-- STRUCTURED DATA: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "GiftKhata",
+    "alternateName": "Gift Khata – Digital Gift Ledger",
+    "url": "https://www.giftkhata.com",
+    "description": "India's first digital gift ledger app to track gifts received and given at weddings, birthdays, griha pravesh and all Indian functions.",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Android, iOS",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "312" },
+    "inLanguage": "en-IN",
+    "countryOfOrigin": "IN"
+  }
+  </script>
+
+  <!-- STRUCTURED DATA: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GiftKhata",
+    "url": "https://www.giftkhata.com",
+    "logo": "https://www.giftkhata.com/logo.png",
+    "sameAs": ["https://www.instagram.com/giftkhata.ledger","https://twitter.com/giftkhata","https://www.facebook.com/giftkhata.ledger"],
+    "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Support", "email": "hello@giftkhata.com", "availableLanguage": ["English","Hindi"] }
+  }
+  </script>
+
+  <!-- STRUCTURED DATA: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is GiftKhata?",
+        "acceptedAnswer": { "@type": "Answer", "text": "GiftKhata is India's first digital gift ledger app to track all gifts received and given at weddings, birthdays, griha pravesh and other Indian functions." } },
+      { "@type": "Question", "name": "Is GiftKhata free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, GiftKhata is completely free to start with unlimited events and gift entries." } },
+      { "@type": "Question", "name": "Can I track gifts given to others?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. GiftKhata maintains a two-sided ledger per person showing gifts received and given." } },
+      { "@type": "Question", "name": "Which gift types are supported?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Cash (shagun), gift vouchers, physical items, and digital transfers (UPI/NEFT)." } }
+    ]
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ===== DARK THEME ===== */
-    [data-theme="dark"] {
-      --primary: #7C3AED;
-      --primary-light: #A78BFA;
-      --primary-dark: #5B21B6;
-      --accent: #F59E0B;
-      --accent2: #EC4899;
-      --bg: #0F0A1E;
-      --bg2: #1A1133;
-      --bg3: #241848;
-      --text: #F3F0FF;
-      --text-muted: #A89EC9;
-      --card: rgba(255,255,255,0.05);
-      --card-hover: rgba(255,255,255,0.08);
-      --card-border: rgba(124,58,237,0.3);
-      --nav-bg: rgba(15,10,30,0.88);
-      --shadow: rgba(124,58,237,0.25);
-      --mock-bg: #1A1133;
-      --ledger-border: rgba(255,255,255,0.06);
-      --toggle-bg: #241848;
-      --footer-bg: #1A1133;
-      --input-bg: rgba(255,255,255,0.05);
-      --input-border: rgba(124,58,237,0.3);
-      --gradient: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%);
-      --gradient2: linear-gradient(135deg, #F59E0B 0%, #EC4899 100%);
-    }
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-    /* ===== LIGHT THEME ===== */
-    [data-theme="light"] {
-      --primary: #6D28D9;
-      --primary-light: #7C3AED;
-      --primary-dark: #4C1D95;
-      --accent: #D97706;
-      --accent2: #DB2777;
-      --bg: #F5F3FF;
-      --bg2: #EDE9FE;
-      --bg3: #DDD6FE;
-      --text: #1E1B4B;
-      --text-muted: #6B5FA6;
-      --card: rgba(255,255,255,0.85);
-      --card-hover: rgba(255,255,255,1);
-      --card-border: rgba(109,40,217,0.2);
-      --nav-bg: rgba(245,243,255,0.92);
-      --shadow: rgba(109,40,217,0.15);
-      --mock-bg: #ffffff;
-      --ledger-border: rgba(109,40,217,0.1);
-      --toggle-bg: #DDD6FE;
-      --footer-bg: #EDE9FE;
-      --input-bg: rgba(255,255,255,0.9);
-      --input-border: rgba(109,40,217,0.25);
-      --gradient: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);
-      --gradient2: linear-gradient(135deg, #D97706 0%, #DB2777 100%);
-    }
+/* LIGHT THEME (default) */
+[data-theme="light"]{
+  --primary:#6D28D9;--primary-light:#7C3AED;--primary-dark:#4C1D95;
+  --accent:#D97706;--accent2:#DB2777;
+  --bg:#F8F5FF;--bg2:#EDE9FE;--bg3:#DDD6FE;
+  --text:#1E1B4B;--text-muted:#6B5FA6;
+  --card:rgba(255,255,255,0.92);--card-hover:#ffffff;--card-border:rgba(109,40,217,0.18);
+  --nav-bg:rgba(248,245,255,0.95);--shadow:rgba(109,40,217,0.14);
+  --mock-bg:#ffffff;--ledger-border:rgba(109,40,217,0.08);
+  --toggle-bg:#DDD6FE;--footer-bg:#EDE9FE;
+  --gradient:linear-gradient(135deg,#6D28D9 0%,#DB2777 100%);
+  --gradient2:linear-gradient(135deg,#D97706 0%,#DB2777 100%);
+  --green-bg:#DCFCE7;--pink-bg:#FCE7F3;--purple-bg:#EDE9FE;--amber-bg:#FEF3C7;
+}
 
-    /* ===== THEME TOGGLE ===== */
-    .theme-toggle {
-      width: 46px; height: 26px;
-      background: var(--toggle-bg);
-      border-radius: 50px; border: 1.5px solid var(--card-border);
-      cursor: pointer; position: relative;
-      display: flex; align-items: center;
-      padding: 2px; transition: background 0.4s, border-color 0.4s;
-      flex-shrink: 0;
-    }
-    .theme-toggle .toggle-thumb {
-      width: 20px; height: 20px; border-radius: 50%;
-      background: var(--gradient);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.7rem; transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    [data-theme="dark"] .toggle-thumb { transform: translateX(0); }
-    [data-theme="light"] .toggle-thumb { transform: translateX(20px); }
+/* DARK THEME */
+[data-theme="dark"]{
+  --primary:#7C3AED;--primary-light:#A78BFA;--primary-dark:#5B21B6;
+  --accent:#F59E0B;--accent2:#EC4899;
+  --bg:#0F0A1E;--bg2:#1A1133;--bg3:#241848;
+  --text:#F3F0FF;--text-muted:#A89EC9;
+  --card:rgba(255,255,255,0.05);--card-hover:rgba(255,255,255,0.09);--card-border:rgba(124,58,237,0.28);
+  --nav-bg:rgba(15,10,30,0.90);--shadow:rgba(124,58,237,0.28);
+  --mock-bg:#1A1133;--ledger-border:rgba(255,255,255,0.06);
+  --toggle-bg:#241848;--footer-bg:#1A1133;
+  --gradient:linear-gradient(135deg,#7C3AED 0%,#EC4899 100%);
+  --gradient2:linear-gradient(135deg,#F59E0B 0%,#EC4899 100%);
+  --green-bg:rgba(16,185,129,0.12);--pink-bg:rgba(236,72,153,0.12);--purple-bg:rgba(124,58,237,0.12);--amber-bg:rgba(245,158,11,0.12);
+}
 
-    /* ===== NAVBAR ===== */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1rem 5%;
-      background: var(--nav-bg);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--card-border);
-      transition: all 0.3s;
-      min-height: 64px;
-    }
-    .nav-logo {
-      display: flex; align-items: center; gap: 0.75rem;
-      text-decoration: none; flex-shrink: 0;
-    }
-    .logo-text-wrap {
-      display: flex; flex-direction: column; line-height: 1;
-    }
-    .logo-gift {
-      font-size: 1.25rem; font-weight: 800;
-      color: var(--text);
-      letter-spacing: -0.02em;
-    }
-    .logo-khata {
-      font-size: 1.25rem; font-weight: 800;
-      letter-spacing: -0.02em;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .logo-tagline {
-      font-size: 0.58rem; font-weight: 500;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-top: 2px;
-      -webkit-text-fill-color: var(--text-muted);
-    }
-    .logo-icon {
-      width: 42px; height: 42px; border-radius: 12px;
-      background: var(--gradient);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 14px var(--shadow);
-      transition: transform 0.3s, box-shadow 0.3s;
-      flex-shrink: 0;
-    }
-    .nav-logo:hover .logo-icon {
-      transform: rotate(-8deg) scale(1.1);
-      box-shadow: 0 6px 20px var(--shadow);
-    }
-    .logo-gift-icon { display: flex; }
-    .nav-logo .logo-icon {
-      width: 38px; height: 38px; border-radius: 10px;
-      background: var(--gradient);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-    }
-    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      color: var(--text-muted); text-decoration: none;
-      font-size: 0.9rem; font-weight: 500; transition: color 0.3s;
-    }
-    .nav-links a:hover { color: var(--text); }
-    .nav-cta {
-      background: var(--gradient); border: none; border-radius: 25px;
-      color: #fff; padding: 0.55rem 1.4rem; font-size: 0.9rem;
-      font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
-      font-family: 'Poppins', sans-serif; text-decoration: none;
-    }
-    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px var(--shadow); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { display: block; width: 25px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
-    .gradient { background: linear-gradient(135deg, #7C3AED 0%, #EC4899 100%); }
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;transition:background .4s,color .4s}
 
-    /* ===== HERO ===== */
-    #hero {
-      min-height: 100vh;
-      display: flex; align-items: center; justify-content: center;
-      padding: 100px 5% 60px;
-      position: relative; overflow: hidden;
-      text-align: center;
-      background: var(--bg);
-    }
-    .hero-bg-glow {
-      position: absolute; border-radius: 50%;
-      filter: blur(100px); pointer-events: none;
-      transition: opacity 0.5s;
-    }
-    .glow1 { width: 600px; height: 600px; background: rgba(124,58,237,0.28); top: -100px; left: -150px; }
-    .glow2 { width: 400px; height: 400px; background: rgba(236,72,153,0.2); bottom: 0; right: -100px; }
-    [data-theme="dark"] .glow1 { background: rgba(124,58,237,0.28); }
-    [data-theme="dark"] .glow2 { background: rgba(236,72,153,0.2); }
-    [data-theme="light"] .glow1 { background: rgba(124,58,237,0.12); }
-    [data-theme="light"] .glow2 { background: rgba(236,72,153,0.08); }
-    .hero-content { position: relative; z-index: 2; max-width: 820px; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(124,58,237,0.1); border: 1px solid var(--card-border);
-      border-radius: 50px; padding: 0.4rem 1rem; font-size: 0.82rem;
-      color: var(--primary-light); font-weight: 500; margin-bottom: 1.5rem;
-      animation: fadeDown 0.7s ease both;
-    }
-    [data-theme="light"] .hero-badge { background: rgba(109,40,217,0.08); }
-    .hero-badge .dot { width: 7px; height: 7px; background: var(--primary-light); border-radius: 50%; animation: pulse 1.5s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
-    .hero-title {
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 800; line-height: 1.15; margin-bottom: 1.2rem;
-      animation: fadeUp 0.8s 0.1s ease both;
-    }
-    .hero-title .grad { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-sub {
-      font-size: 1.1rem; color: var(--text-muted); line-height: 1.7;
-      max-width: 600px; margin: 0 auto 2rem;
-      animation: fadeUp 0.8s 0.2s ease both;
-    }
-    .hero-btns {
-      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-      animation: fadeUp 0.8s 0.3s ease both;
-    }
-    .btn-primary {
-      background: var(--gradient); color: #fff; border: none;
-      border-radius: 50px; padding: 0.85rem 2rem; font-size: 1rem;
-      font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif;
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      transition: transform 0.2s, box-shadow 0.2s; text-decoration: none;
-    }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 35px var(--shadow); }
-    .btn-outline {
-      background: transparent; color: var(--text); border: 1.5px solid var(--card-border);
-      border-radius: 50px; padding: 0.85rem 2rem; font-size: 1rem;
-      font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif;
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      transition: all 0.2s; text-decoration: none;
-    }
-    .btn-outline:hover { background: var(--card); border-color: var(--primary-light); }
-    .hero-stats {
-      display: flex; gap: 2.5rem; justify-content: center;
-      margin-top: 3rem; flex-wrap: wrap;
-      animation: fadeUp 0.8s 0.4s ease both;
-    }
-    .stat { text-align: center; }
-    .stat-num { font-size: 1.8rem; font-weight: 800; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.1rem; }
-    .hero-mockup { margin-top: 3.5rem; animation: fadeUp 0.9s 0.5s ease both; }
-    .mock-card {
-      background: var(--mock-bg); border: 1px solid var(--card-border);
-      border-radius: 20px; padding: 1.5rem;
-      max-width: 380px; margin: 0 auto;
-      box-shadow: 0 30px 80px var(--shadow); text-align: left;
-      transition: background 0.4s, box-shadow 0.4s;
-    }
-    .mock-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-    .mock-title { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); }
-    .mock-badge { background: rgba(245,158,11,0.15); color: var(--accent); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 600; }
-    .mock-event { font-size: 1.05rem; font-weight: 700; margin-bottom: 1.2rem; }
-    .mock-gift-row {
-      display: flex; align-items: center; gap: 0.8rem;
-      padding: 0.7rem 0.9rem; border-radius: 12px;
-      background: var(--card); margin-bottom: 0.6rem;
-      border: 1px solid transparent; transition: all 0.2s;
-    }
-    .mock-gift-row:hover { border-color: var(--card-border); background: var(--card-hover); }
-    .mock-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-    .ic-cash { background: rgba(16,185,129,0.15); color: #10B981; }
-    .ic-item { background: rgba(245,158,11,0.15); color: var(--accent); }
-    .ic-voucher { background: rgba(236,72,153,0.15); color: var(--accent2); }
-    .mock-gift-info { flex: 1; }
-    .mock-giver { font-size: 0.83rem; font-weight: 600; }
-    .mock-type { font-size: 0.75rem; color: var(--text-muted); }
-    .mock-amt { font-size: 0.9rem; font-weight: 700; color: #10B981; }
-    .mock-total { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--card-border); }
-    .mock-total-label { font-size: 0.82rem; color: var(--text-muted); }
-    .mock-total-amt { font-size: 1.2rem; font-weight: 800; background: var(--gradient2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+/* NAVBAR */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:.9rem 5%;background:var(--nav-bg);backdrop-filter:blur(18px);border-bottom:1px solid var(--card-border);transition:all .3s}
+.nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;flex-shrink:0}
+.logo-icon{width:42px;height:42px;border-radius:12px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-size:1.25rem;box-shadow:0 4px 14px var(--shadow);transition:transform .3s}
+.nav-logo:hover .logo-icon{transform:rotate(-8deg) scale(1.1)}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-size:1.18rem;font-weight:800;letter-spacing:-.02em}
+.logo-gift-txt{color:var(--primary)}
+.logo-khata-txt{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.logo-sub{font-size:.6rem;font-weight:500;color:var(--text-muted);letter-spacing:.1em;text-transform:uppercase;-webkit-text-fill-color:var(--text-muted)}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--primary)}
+.nav-right{display:flex;align-items:center;gap:1.2rem}
+.theme-toggle{width:48px;height:27px;background:var(--toggle-bg);border-radius:50px;border:1.5px solid var(--card-border);cursor:pointer;position:relative;display:flex;align-items:center;padding:2px;transition:background .4s;flex-shrink:0}
+.toggle-thumb{width:21px;height:21px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-size:.68rem;transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 6px rgba(0,0,0,.2)}
+[data-theme="dark"] .toggle-thumb{transform:translateX(0)}
+[data-theme="light"] .toggle-thumb{transform:translateX(21px)}
+.nav-cta{background:var(--gradient);border:none;border-radius:25px;color:#fff;padding:.55rem 1.4rem;font-size:.9rem;font-weight:600;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:'Poppins',sans-serif;text-decoration:none}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--shadow)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+.mobile-menu{display:none;flex-direction:column;background:var(--nav-bg);border-bottom:1px solid var(--card-border);padding:1rem 5%;gap:.5rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--text);text-decoration:none;font-size:.95rem;font-weight:500;padding:.6rem 0;border-bottom:1px solid var(--card-border)}
 
-    /* ===== SECTIONS ===== */
-    section { padding: 90px 5%; transition: background 0.4s; }
-    .section-label {
-      font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.2em; color: var(--primary-light); margin-bottom: 1rem;
-      display: flex; align-items: center; gap: 0.6rem;
-    }
-    .section-label::before {
-      content: '';
-      display: inline-block; width: 24px; height: 2px;
-      background: var(--gradient); border-radius: 2px; flex-shrink: 0;
-    }
-    .text-center .section-label { justify-content: center; }
-    .section-title {
-      font-family: 'Playfair Display', 'Poppins', serif;
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      font-weight: 800; line-height: 1.18; margin-bottom: 1.1rem;
-      letter-spacing: -0.01em;
-    }
-    .section-sub { font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; max-width: 580px; font-weight: 400; }
-    .text-center { text-align: center; }
-    .text-center .section-sub { margin: 0 auto; }
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:110px 5% 70px;position:relative;overflow:hidden;text-align:center;background:var(--bg)}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none}
+.glow1{width:550px;height:550px;top:-120px;left:-150px;opacity:.18}
+[data-theme="light"] .glow1{background:#7C3AED}
+[data-theme="dark"] .glow1{background:#7C3AED;opacity:.3}
+.glow2{width:400px;height:400px;bottom:-60px;right:-100px;opacity:.15}
+[data-theme="light"] .glow2{background:#EC4899}
+[data-theme="dark"] .glow2{background:#EC4899;opacity:.25}
+.hero-content{position:relative;z-index:2;max-width:840px}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--purple-bg);border:1px solid var(--card-border);border-radius:50px;padding:.4rem 1.1rem;font-size:.82rem;color:var(--primary-light);font-weight:600;margin-bottom:1.6rem;animation:fadeDown .7s ease both}
+.badge-dot{width:7px;height:7px;background:var(--primary-light);border-radius:50%;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+h1.hero-title{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:800;line-height:1.12;margin-bottom:1.2rem;animation:fadeUp .8s .1s ease both;letter-spacing:-.02em}
+.grad{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.1rem;color:var(--text-muted);line-height:1.75;max-width:620px;margin:0 auto 2rem;animation:fadeUp .8s .2s ease both}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp .8s .3s ease both}
+.btn-primary{background:var(--gradient);color:#fff;border:none;border-radius:50px;padding:.88rem 2.1rem;font-size:1rem;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;display:inline-flex;align-items:center;gap:.55rem;transition:transform .2s,box-shadow .2s;text-decoration:none}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 38px var(--shadow)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--card-border);border-radius:50px;padding:.88rem 2.1rem;font-size:1rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:inline-flex;align-items:center;gap:.55rem;transition:all .2s;text-decoration:none}
+.btn-outline:hover{background:var(--card);border-color:var(--primary-light)}
+.hero-stats{display:flex;gap:3rem;justify-content:center;margin-top:3rem;flex-wrap:wrap;animation:fadeUp .8s .4s ease both}
+.stat-num{font-size:1.9rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:.8rem;color:var(--text-muted);margin-top:.1rem}
 
-    /* ===== FEATURES ===== */
-    #features { background: var(--bg2); }
-    .features-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-    .feature-card {
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 18px; padding: 1.8rem;
-      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.4s;
-      position: relative; overflow: hidden;
-    }
-    .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient); opacity: 0; transition: opacity 0.3s; }
-    .feature-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px var(--shadow); border-color: var(--primary); }
-    .feature-card:hover::before { opacity: 1; }
-    .feature-icon { width: 52px; height: 52px; border-radius: 14px; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.2rem; }
-    .feature-title { font-size: 1.12rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
-    .feature-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.75; }
+/* MOCK CARD */
+.hero-mockup{margin-top:3.5rem;animation:fadeUp .9s .5s ease both}
+.mock-card{background:var(--mock-bg);border:1px solid var(--card-border);border-radius:22px;padding:1.6rem;max-width:390px;margin:0 auto;box-shadow:0 30px 80px var(--shadow);text-align:left;transition:background .4s,transform .3s}
+.mock-card:hover{transform:translateY(-6px)}
+.mock-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.mock-title{font-size:.82rem;font-weight:600;color:var(--text-muted)}
+.mock-badge{background:var(--amber-bg);color:var(--accent);font-size:.75rem;padding:.2rem .7rem;border-radius:20px;font-weight:700}
+.mock-total-header{font-size:1rem;font-weight:700;margin-bottom:1.2rem}
+.mock-gift-row{display:flex;align-items:center;gap:.85rem;padding:.72rem .9rem;border-radius:13px;background:var(--card);margin-bottom:.6rem;border:1px solid transparent;transition:all .2s}
+.mock-gift-row:hover{border-color:var(--card-border);background:var(--card-hover)}
+.mock-icon{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.ic-cash{background:var(--green-bg);color:#10B981}
+.ic-item{background:var(--amber-bg);color:var(--accent)}
+.ic-voucher{background:var(--pink-bg);color:var(--accent2)}
+.mock-gift-info{flex:1}
+.mock-giver{font-size:.84rem;font-weight:600}
+.mock-type{font-size:.74rem;color:var(--text-muted)}
+.mock-amt{font-size:.92rem;font-weight:700;color:#10B981}
+.mock-total-row{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--card-border)}
+.mock-total-label{font-size:.82rem;color:var(--text-muted)}
+.mock-total-amt{font-size:1.2rem;font-weight:800;background:var(--gradient2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-    /* ===== HOW IT WORKS ===== */
-    #how-it-works { background: var(--bg); }
-    .steps-container { display: flex; flex-direction: column; gap: 0; margin-top: 3.5rem; max-width: 700px; }
-    .step { display: flex; gap: 1.5rem; align-items: flex-start; position: relative; padding-bottom: 2.5rem; }
-    .step:last-child { padding-bottom: 0; }
-    .step-line { position: absolute; left: 23px; top: 50px; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--primary), transparent); }
-    .step:last-child .step-line { display: none; }
-    .step-num { width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; box-shadow: 0 0 0 4px rgba(124,58,237,0.15); }
-    .step-body { padding-top: 0.5rem; }
-    .step-title { font-size: 1.18rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
-    .step-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.78; }
+/* SECTIONS */
+section{padding:90px 5%;transition:background .4s}
+.section-label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--primary-light);margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem}
+.section-label::before{content:'';display:inline-block;width:22px;height:2px;background:var(--gradient);border-radius:2px;flex-shrink:0}
+.text-center .section-label{justify-content:center}
+.section-title{font-family:'Playfair Display','Poppins',serif;font-size:clamp(1.9rem,3.5vw,2.9rem);font-weight:800;line-height:1.18;margin-bottom:1rem;letter-spacing:-.01em}
+.section-sub{font-size:1rem;color:var(--text-muted);line-height:1.8;max-width:580px;font-weight:400}
+.text-center{text-align:center}
+.text-center .section-sub{margin:0 auto}
 
-    /* ===== GIFT TYPES ===== */
-    #gift-types { background: var(--bg2); }
-    .types-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.2rem; margin-top: 3rem; }
-    .type-card--soon {
-      position: relative;
-      overflow: hidden;
-      opacity: 0.82;
-      border-style: dashed !important;
-      border-color: var(--primary) !important;
-      background: var(--card) !important;
-    }
-    .type-card--soon::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: var(--gradient);
-      opacity: 0.04;
-      pointer-events: none;
-    }
-    .type-card--soon:hover { opacity: 1; }
-    .soon-ribbon {
-      position: absolute; top: 18px; right: -18px;
-      background: var(--gradient);
-      color: #fff;
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      padding: 0.25rem 2.2rem;
-      transform: rotate(38deg);
-      box-shadow: 0 2px 10px var(--shadow);
-      white-space: nowrap;
-      min-width: 110px;
-      text-align: center;
-    }
-    .soon-emoji {
-      filter: grayscale(30%);
-      transition: filter 0.3s;
-    }
-    .type-card--soon:hover .soon-emoji { filter: grayscale(0%); }
-    .soon-footer {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-top: 1rem;
-      padding-top: 0.75rem;
-      border-top: 1px dashed var(--card-border);
-    }
-    .soon-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--primary-light);
-      animation: blink 1.4s infinite;
-    }
-    .soon-dot:nth-child(2) { animation-delay: 0.2s; }
-    .soon-dot:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(0.7)} }
-    .soon-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--primary-light);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-left: 0.2rem;
-    }
-    .type-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 1.8rem 1.5rem; text-align: center; transition: transform 0.3s, box-shadow 0.3s, background 0.4s; }
-    .type-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px var(--shadow); }
-    .type-emoji { font-size: 2.5rem; margin-bottom: 0.8rem; }
-    .type-name { font-size: 1.08rem; font-weight: 700; margin-bottom: 0.4rem; letter-spacing: -0.01em; }
-    .type-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+/* FEATURES */
+#features{background:var(--bg2)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:3.5rem}
+.feature-card{background:var(--card);border:1px solid var(--card-border);border-radius:18px;padding:1.9rem;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
+.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gradient);opacity:0;transition:opacity .3s}
+.feature-card:hover{transform:translateY(-7px);box-shadow:0 22px 55px var(--shadow);border-color:var(--primary)}
+.feature-card:hover::before{opacity:1}
+.feature-icon{width:54px;height:54px;border-radius:15px;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.2rem}
+.feature-title{font-size:1.1rem;font-weight:700;margin-bottom:.6rem;letter-spacing:-.01em}
+.feature-desc{font-size:.93rem;color:var(--text-muted);line-height:1.78}
 
-    /* ===== OCCASIONS ===== */
-    #occasions { background: var(--bg); }
-    .occasions-flex { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; justify-content: center; }
-    .occasion-tag { display: flex; align-items: center; gap: 0.5rem; background: var(--card); border: 1px solid var(--card-border); border-radius: 50px; padding: 0.5rem 1.2rem; font-size: 0.9rem; font-weight: 500; transition: all 0.2s; cursor: default; }
-    .occasion-tag:hover { background: rgba(124,58,237,0.1); border-color: var(--primary); }
+/* HOW IT WORKS */
+#how-it-works{background:var(--bg)}
+.steps-wrap{max-width:680px;margin-top:3.5rem}
+.step{display:flex;gap:1.6rem;align-items:flex-start;position:relative;padding-bottom:2.5rem}
+.step:last-child{padding-bottom:0}
+.step-line{position:absolute;left:23px;top:52px;bottom:0;width:2px;background:linear-gradient(to bottom,var(--primary),transparent)}
+.step:last-child .step-line{display:none}
+.step-num{width:48px;height:48px;border-radius:50%;flex-shrink:0;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:#fff;box-shadow:0 0 0 5px rgba(124,58,237,.12)}
+.step-body{padding-top:.5rem}
+.step-title{font-size:1.15rem;font-weight:700;margin-bottom:.5rem}
+.step-desc{font-size:.94rem;color:var(--text-muted);line-height:1.78}
 
-    /* ===== WHY ===== */
-    #why { background: var(--bg2); }
-    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem; }
-    .why-list { list-style: none; display: flex; flex-direction: column; gap: 1.2rem; }
-    .why-item { display: flex; gap: 1rem; align-items: flex-start; }
-    .why-check { width: 28px; height: 28px; border-radius: 50%; background: rgba(16,185,129,0.15); color: #10B981; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; margin-top: 0.1rem; }
-    .why-text strong { display: block; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; letter-spacing: -0.01em; }
-    .why-text span { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
-    .why-visual { background: var(--card); border: 1px solid var(--card-border); border-radius: 20px; padding: 2rem; transition: background 0.4s; }
-    .ledger-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid var(--ledger-border); }
-    .ledger-row:last-child { border-bottom: none; }
-    .ledger-person { display: flex; align-items: center; gap: 0.8rem; }
-    .avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
-    .av1 { background: rgba(124,58,237,0.2); color: var(--primary-light); }
-    .av2 { background: rgba(245,158,11,0.2); color: var(--accent); }
-    .av3 { background: rgba(236,72,153,0.2); color: var(--accent2); }
-    .av4 { background: rgba(16,185,129,0.2); color: #10B981; }
-    .ledger-name { font-size: 0.9rem; font-weight: 600; }
-    .ledger-event { font-size: 0.75rem; color: var(--text-muted); }
-    .ledger-amounts { display: flex; gap: 1.5rem; }
-    .amount-col { text-align: right; }
-    .amount-label { font-size: 0.7rem; color: var(--text-muted); }
-    .amount-val { font-size: 0.9rem; font-weight: 700; }
-    .received { color: #10B981; }
-    .given { color: var(--accent2); }
+/* GIFT TYPES */
+#gift-types{background:var(--bg2)}
+.types-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.3rem;margin-top:3rem}
+.type-card{background:var(--card);border:1px solid var(--card-border);border-radius:18px;padding:1.9rem 1.6rem;text-align:center;transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+.type-card:hover{transform:translateY(-6px);box-shadow:0 18px 45px var(--shadow)}
+.type-emoji{font-size:2.6rem;margin-bottom:.85rem}
+.type-name{font-size:1.05rem;font-weight:700;margin-bottom:.45rem}
+.type-desc{font-size:.88rem;color:var(--text-muted);line-height:1.68}
+.type-card--soon{border-style:dashed;opacity:.85}
+.type-card--soon:hover{opacity:1}
+.soon-ribbon{position:absolute;top:16px;right:-18px;background:var(--gradient);color:#fff;font-size:.6rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:.22rem 2.2rem;transform:rotate(38deg);min-width:110px;text-align:center}
+.soon-footer{display:flex;align-items:center;gap:.4rem;margin-top:1rem;padding-top:.75rem;border-top:1px dashed var(--card-border)}
+.soon-dot{width:6px;height:6px;border-radius:50%;background:var(--primary-light);animation:blink 1.4s infinite}
+.soon-dot:nth-child(2){animation-delay:.2s}
+.soon-dot:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.7)}}
+.soon-label{font-size:.7rem;font-weight:600;color:var(--primary-light);letter-spacing:.05em;text-transform:uppercase;margin-left:.2rem}
 
-    /* ===== TESTIMONIALS ===== */
-    #testimonials { background: var(--bg); }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem; margin-top: 3rem; }
-    .testimonial-card { background: var(--card); border: 1px solid var(--card-border); border-radius: 18px; padding: 1.8rem; transition: background 0.4s; }
-    .stars { color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem; }
-    .t-text { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.2rem; font-style: italic; }
-    .t-author { display: flex; align-items: center; gap: 0.8rem; }
-    .t-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
-    .t-name { font-size: 0.9rem; font-weight: 600; }
-    .t-loc { font-size: 0.78rem; color: var(--text-muted); }
+/* OCCASIONS */
+#occasions{background:var(--bg)}
+.occasions-flex{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.2rem;justify-content:center}
+.occasion-tag{display:flex;align-items:center;gap:.5rem;background:var(--card);border:1px solid var(--card-border);border-radius:50px;padding:.52rem 1.3rem;font-size:.9rem;font-weight:500;transition:all .2s;cursor:default}
+.occasion-tag:hover{background:var(--purple-bg);border-color:var(--primary);color:var(--primary)}
 
-    /* ===== CTA ===== */
-    #cta { background: var(--bg); padding: 90px 5%; }
-    .cta-box { background: var(--gradient); border-radius: 28px; padding: 4rem 3rem; text-align: center; position: relative; overflow: hidden; }
-    .cta-box h2 { font-size: clamp(1.8rem,4vw,2.6rem); font-weight: 800; margin-bottom: 1rem; position: relative; color: #fff; }
-    .cta-box p { font-size: 1rem; opacity: 0.88; margin-bottom: 2rem; position: relative; max-width: 500px; margin-left: auto; margin-right: auto; color: #fff; }
-    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
-    .btn-white { background: #fff; color: var(--primary-dark); border: none; border-radius: 50px; padding: 0.85rem 2rem; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: 'Poppins', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; }
-    .btn-white:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
-    .btn-ghost { background: rgba(255,255,255,0.15); color: #fff; border: 1.5px solid rgba(255,255,255,0.4); border-radius: 50px; padding: 0.85rem 2rem; font-size: 1rem; font-weight: 600; cursor: pointer; font-family: 'Poppins', sans-serif; display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.2s; text-decoration: none; }
-    .btn-ghost:hover { background: rgba(255,255,255,0.25); }
+/* WHY */
+#why{background:var(--bg2)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;margin-top:3rem}
+.why-list{list-style:none;display:flex;flex-direction:column;gap:1.3rem}
+.why-item{display:flex;gap:1rem;align-items:flex-start}
+.why-check{width:28px;height:28px;border-radius:50%;background:rgba(16,185,129,.14);color:#10B981;display:flex;align-items:center;justify-content:center;font-size:.82rem;flex-shrink:0;margin-top:.1rem}
+.why-text strong{display:block;font-size:.98rem;font-weight:700;margin-bottom:.22rem}
+.why-text span{font-size:.9rem;color:var(--text-muted);line-height:1.72}
+.why-visual{background:var(--card);border:1px solid var(--card-border);border-radius:22px;padding:2rem;transition:background .4s}
+.ledger-table-title{font-size:.75rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
+.ledger-row{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid var(--ledger-border)}
+.ledger-row:last-child{border-bottom:none}
+.ledger-person{display:flex;align-items:center;gap:.85rem}
+.avatar{width:37px;height:37px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.84rem;flex-shrink:0}
+.av1{background:var(--purple-bg);color:var(--primary-light)}
+.av2{background:var(--amber-bg);color:var(--accent)}
+.av3{background:var(--pink-bg);color:var(--accent2)}
+.av4{background:var(--green-bg);color:#10B981}
+.ledger-name{font-size:.87rem;font-weight:600}
+.ledger-event{font-size:.73rem;color:var(--text-muted)}
+.ledger-amounts{display:flex;gap:1.4rem}
+.amount-col{text-align:right}
+.amount-label{font-size:.68rem;color:var(--text-muted)}
+.amount-val{font-size:.9rem;font-weight:700}
+.received{color:#10B981}
+.given{color:var(--accent2)}
 
-    /* ===== FOOTER ===== */
-    footer { background: var(--footer-bg); border-top: 1px solid var(--card-border); padding: 3rem 5% 2rem; text-align: center; transition: background 0.4s; }
-    .footer-logo { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; }
-    .footer-logo span { color: var(--primary-light); }
-    .footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
-    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--text); }
-    .footer-social { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; }
-    .social-btn { width: 40px; height: 40px; border-radius: 50%; background: var(--card); border: 1px solid var(--card-border); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; font-size: 1rem; transition: all 0.2s; }
-    .social-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-    .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
+/* TESTIMONIALS */
+#testimonials{background:var(--bg)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem;margin-top:3rem}
+.testimonial-card{background:var(--card);border:1px solid var(--card-border);border-radius:18px;padding:1.9rem;transition:background .4s,transform .3s}
+.testimonial-card:hover{transform:translateY(-5px)}
+.stars{color:var(--accent);font-size:.95rem;margin-bottom:1rem}
+.t-text{font-size:.95rem;color:var(--text-muted);line-height:1.82;margin-bottom:1.3rem;font-style:italic}
+.t-author{display:flex;align-items:center;gap:.85rem}
+.t-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+.t-name{font-size:.88rem;font-weight:600}
+.t-loc{font-size:.77rem;color:var(--text-muted)}
 
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s, transform 0.7s; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+/* FAQ */
+#faq{background:var(--bg2)}
+.faq-wrap{max-width:720px;margin:3rem auto 0;display:flex;flex-direction:column;gap:1rem}
+.faq-item{background:var(--card);border:1px solid var(--card-border);border-radius:14px;overflow:hidden;transition:box-shadow .3s}
+.faq-item[open]{box-shadow:0 8px 30px var(--shadow);border-color:var(--primary)}
+.faq-q{padding:1.1rem 1.5rem;font-size:.98rem;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--text)}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q::after{content:'+';font-size:1.3rem;color:var(--primary);flex-shrink:0;transition:transform .3s}
+.faq-item[open] .faq-q::after{content:'−'}
+.faq-a{padding:0 1.5rem 1.3rem;font-size:.93rem;color:var(--text-muted);line-height:1.82}
 
-    /* ===== THEME TRANSITION OVERLAY ===== */
-    .theme-transition-overlay {
-      position: fixed; inset: 0; z-index: 9999;
-      pointer-events: none; opacity: 0;
-      transition: opacity 0.15s;
-    }
-    .theme-transition-overlay.active { opacity: 1; }
+/* CTA */
+#cta{background:var(--bg)}
+.cta-box{background:var(--gradient);border-radius:28px;padding:4.5rem 3rem;text-align:center;position:relative;overflow:hidden}
+.cta-box::before{content:'';position:absolute;width:300px;height:300px;background:rgba(255,255,255,.08);border-radius:50%;top:-80px;right:-80px}
+.cta-box::after{content:'';position:absolute;width:200px;height:200px;background:rgba(255,255,255,.06);border-radius:50%;bottom:-60px;left:-60px}
+.cta-box h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:800;margin-bottom:1rem;position:relative;color:#fff}
+.cta-box p{font-size:1rem;opacity:.9;margin-bottom:2rem;position:relative;max-width:520px;margin-left:auto;margin-right:auto;color:#fff;line-height:1.7}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-white{background:#fff;color:var(--primary-dark);border:none;border-radius:50px;padding:.88rem 2.1rem;font-size:1rem;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;display:inline-flex;align-items:center;gap:.55rem;transition:transform .2s,box-shadow .2s;text-decoration:none}
+.btn-white:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(0,0,0,.25)}
+.btn-ghost{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.4);border-radius:50px;padding:.88rem 2.1rem;font-size:1rem;font-weight:600;cursor:pointer;font-family:'Poppins',sans-serif;display:inline-flex;align-items:center;gap:.55rem;transition:background .2s;text-decoration:none}
+.btn-ghost:hover{background:rgba(255,255,255,.28)}
 
-    /* ===== RESPONSIVE ===== */
-    @media(max-width:768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .why-grid { grid-template-columns: 1fr; }
-      .nav-cta { display: none; }
-      .logo-tagline { display: none; }
-      nav { padding: 0.75rem 4%; }
-      .logo-icon { width: 36px; height: 36px; font-size: 1rem; }
-      .logo-gift, .logo-khata { font-size: 1.1rem; }
-      #hero { padding-top: 80px; }
-      .features-grid { grid-template-columns: repeat(1, 1fr); }
-      .types-grid { grid-template-columns: repeat(1, 1fr); }
-    }
-    @media(min-width: 540px) {
-      .features-grid { grid-template-columns: repeat(2, 1fr); }
-      .types-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media(min-width: 900px) {
-      .features-grid { grid-template-columns: repeat(3, 1fr); }
-      .types-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-    @media(min-width: 1200px) {
-      .features-grid { grid-template-columns: repeat(3, 1fr); }
-      .types-grid { grid-template-columns: repeat(4, 1fr); }
-    }
-    @media(max-width:480px) {
-      .hero-stats { gap: 1.5rem; }
-      .cta-box { padding: 2.5rem 1.5rem; }
-      nav { padding: 0.65rem 4%; }
-      #hero { padding-top: 75px; }
-      .logo-gift, .logo-khata { font-size: 1rem; }
-    }
+/* FOOTER */
+footer{background:var(--footer-bg);border-top:1px solid var(--card-border);padding:3rem 5% 2rem;text-align:center;transition:background .4s}
+.footer-logo{font-size:1.3rem;font-weight:800;margin-bottom:1rem}
+.footer-links{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.footer-links a{color:var(--text-muted);text-decoration:none;font-size:.88rem;transition:color .2s}
+.footer-links a:hover{color:var(--primary)}
+.footer-social{display:flex;gap:.9rem;justify-content:center;margin-bottom:2rem}
+.social-btn{width:40px;height:40px;border-radius:50%;background:var(--card);border:1px solid var(--card-border);display:flex;align-items:center;justify-content:center;color:var(--text-muted);text-decoration:none;font-size:1rem;transition:all .2s}
+.social-btn:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.footer-copy{font-size:.8rem;color:var(--text-muted)}
 
-    /* ===== DESKTOP FONT BOOST ===== */
-    @media(min-width: 1024px) {
-      .section-title { font-size: clamp(2.4rem, 3vw, 3.2rem); }
-      .feature-title { font-size: 1.18rem; }
-      .feature-desc  { font-size: 0.95rem; }
-      .step-title    { font-size: 1.22rem; }
-      .step-desc     { font-size: 0.97rem; }
-      .type-name     { font-size: 1.12rem; }
-      .type-desc     { font-size: 0.92rem; }
-      .why-text strong { font-size: 1.05rem; }
-      .why-text span   { font-size: 0.93rem; }
-      .t-text          { font-size: 1rem; }
-      .section-sub     { font-size: 1.1rem; }
-      .occasion-tag    { font-size: 0.95rem; padding: 0.55rem 1.4rem; }
-      .footer-links a  { font-size: 0.92rem; }
-    }
-      </style>
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .why-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .logo-sub{display:none}
+  nav{padding:.75rem 4%}
+  #hero{padding-top:85px}
+}
+@media(max-width:480px){
+  .hero-stats{gap:1.6rem}
+  .cta-box{padding:2.6rem 1.5rem}
+  section{padding:70px 4%}
+  #hero{padding-top:78px}
+}
+</style>
 </head>
 <body>
 
-<div class="theme-transition-overlay" id="themeOverlay"></div>
-
 <!-- NAVBAR -->
 <nav id="navbar">
-  <a href="#" class="nav-logo">
-    <div class="logo-icon">
-      <span class="logo-gift-icon">🎁</span>
-    </div>
-    <div class="logo-text-wrap">
-      <span class="logo-gift">Gift</span><span class="logo-khata">Khata</span>
-      <span class="logo-tagline">Digital Gift Ledger</span>
+  <a href="#" class="nav-logo" aria-label="GiftKhata Home">
+    <div class="logo-icon">🎁</div>
+    <div class="logo-text">
+      <div class="logo-name"><span class="logo-gift-txt">Gift</span><span class="logo-khata-txt">Khata</span></div>
+      <div class="logo-sub">Digital Gift Ledger</div>
     </div>
   </a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#gift-types">Gift Types</a></li>
     <li><a href="#occasions">Occasions</a></li>
     <li><a href="#why">Why Us</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
   <div class="nav-right">
-    <div class="theme-toggle" id="themeToggle" title="Toggle theme">
+    <div class="theme-toggle" id="themeToggle" title="Toggle light/dark mode" role="button" aria-label="Toggle theme">
       <div class="toggle-thumb" id="toggleThumb">
-        <span id="toggleIcon">☀️</span>
+        <span id="toggleIcon">🌙</span>
       </div>
     </div>
     <a href="#cta" class="nav-cta">Get Early Access</a>
-    <div class="hamburger" onclick="toggleMenu()">
+    <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features" onclick="toggleMenu()">Features</a>
+  <a href="#how-it-works" onclick="toggleMenu()">How It Works</a>
+  <a href="#gift-types" onclick="toggleMenu()">Gift Types</a>
+  <a href="#occasions" onclick="toggleMenu()">Occasions</a>
+  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#faq" onclick="toggleMenu()">FAQ</a>
+  <a href="#cta" onclick="toggleMenu()" style="color:var(--primary);font-weight:700">🚀 Get Early Access</a>
+</div>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-bg-glow glow1"></div>
-  <div class="hero-bg-glow glow2"></div>
+<main>
+<section id="hero" aria-label="GiftKhata – India's Digital Gift Ledger">
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
   <div class="hero-content">
-    <div class="hero-badge">
-      <span class="dot"></span>
-      🇮🇳 India's First Digital Gift Ledger
-    </div>
-    <h1 class="hero-title">
-      Never Lose Track of a<br/><span class="grad">Gift Again</span>
-    </h1>
-    <p class="hero-sub">
-      Track every gift received and given — by event and by person.
-      Replace your paper bahi-khata with a smart, digital <strong>GiftKhata</strong>.
-    </p>
+    <div class="hero-badge"><span class="badge-dot"></span>🇮🇳 India's First Digital Gift Ledger</div>
+    <h1 class="hero-title">Never Lose Track of a<br/><span class="grad">Gift Again</span></h1>
+    <p class="hero-sub">Track every <strong>gift received and given</strong> — by event and by person. Replace your paper <strong>bahi-khata</strong> with India's smartest <strong>digital gift ledger</strong>, <strong>GiftKhata</strong>.</p>
     <div class="hero-btns">
-      <a href="#cta" class="btn-primary"><i class="fa fa-rocket"></i> Get Early Access</a>
+      <a href="#cta" class="btn-primary"><i class="fa fa-rocket"></i> Get Early Access — Free</a>
       <a href="#features" class="btn-outline"><i class="fa fa-play-circle"></i> See Features</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Gift Types Supported</div></div>
+      <div class="stat"><div class="stat-num" data-target="3">0</div><div class="stat-label">Gift Types Supported</div></div>
       <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Events & Functions</div></div>
       <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Free to Start</div></div>
     </div>
     <div class="hero-mockup">
-      <div class="mock-card" id="mockCard">
+      <div class="mock-card">
         <div class="mock-header">
           <span class="mock-title">📅 Rohan's Wedding · Jan 2025</span>
           <span class="mock-badge">12 Gifts</span>
         </div>
-        <div class="mock-event">Total Received: <span style="color:#10B981">₹1,24,500</span></div>
+        <div class="mock-total-header">Total Received: <span style="color:#10B981">₹1,24,500</span></div>
         <div class="mock-gift-row">
           <div class="mock-icon ic-cash"><i class="fa fa-indian-rupee-sign"></i></div>
           <div class="mock-gift-info"><div class="mock-giver">Sharma Uncle</div><div class="mock-type">Cash · Envelope</div></div>
@@ -594,29 +435,54 @@
           <div class="mock-gift-info"><div class="mock-giver">Priya Didi</div><div class="mock-type">Amazon Voucher</div></div>
           <div class="mock-amt">₹5,000</div>
         </div>
-        <div class="mock-total">
-          <span class="mock-total-label">Running Balance</span>
+        <div class="mock-total-row">
+          <span class="mock-total-label">3 of 12 entries shown</span>
           <span class="mock-total-amt">₹34,500 logged</span>
         </div>
       </div>
     </div>
   </div>
 </section>
+</main>
 
 <!-- FEATURES -->
 <section id="features">
   <div class="text-center reveal">
     <div class="section-label">Core Features</div>
     <h2 class="section-title">Everything you need to manage gifts</h2>
-    <p class="section-sub">From your first event to decades of gifting history — all in one place.</p>
+    <p class="section-sub">From your first event to decades of gifting history — all in one place, on your phone.</p>
   </div>
   <div class="features-grid">
-    <div class="feature-card reveal"><div class="feature-icon">🎉</div><div class="feature-title">Function-Wise Tracking</div><div class="feature-desc">Add any event — wedding, birthday, griha pravesh, naming ceremony — and log all gifts received under it separately. Every function gets its own clear record.</div></div>
-    <div class="feature-card reveal"><div class="feature-icon">💸</div><div class="feature-title">Cash, Voucher & Item Gifts</div><div class="feature-desc">Track all gift types: cash in envelopes, digital vouchers, gift cards, and physical items. Assign estimated or actual value to items for complete records.</div></div>
-    <div class="feature-card reveal"><div class="feature-icon">👥</div><div class="feature-title">Person-Wise Ledger</div><div class="feature-desc">Create a profile for every relative or friend. See a complete timeline of gifts received from them and what you gave — across all functions over the years.</div></div>
-    <div class="feature-card reveal"><div class="feature-icon">🎁</div><div class="feature-title">Gifts Given Tracker</div><div class="feature-desc">Log every gift you give at others' functions. Stay consistent and thoughtful by knowing exactly what you gave at each person's occasion in the past.</div></div>
-    <div class="feature-card reveal"><div class="feature-icon">🔍</div><div class="feature-title">Smart Search & Filter</div><div class="feature-desc">Find any gift instantly. Filter by person, event, gift type, amount range, or date. No more flipping through pages of a physical register.</div></div>
-    <div class="feature-card reveal"><div class="feature-icon">📊</div><div class="feature-title">Summaries & Insights</div><div class="feature-desc">See total gifts per event, top givers, most common gift types, and gifting balance per person — at a glance.</div></div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">🎉</div>
+      <h3 class="feature-title">Function-wise gift ledger</h3>
+      <p class="feature-desc">Add any event — wedding, birthday, griha pravesh, naming ceremony — and log all gifts received under it separately. Every function gets its own clear digital register.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">💸</div>
+      <h3 class="feature-title">Cash, voucher &amp; item tracking</h3>
+      <p class="feature-desc">Track all gift types: cash in shagun envelopes, digital vouchers, gift cards, and physical items. Assign estimated or actual value to items for complete records.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">👥</div>
+      <h3 class="feature-title">Person-wise GiftKhata</h3>
+      <p class="feature-desc">Create a profile for every relative or friend. See a complete timeline of gifts received from them and what you gave — across all functions over the years.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">🎁</div>
+      <h3 class="feature-title">Gifts given tracker</h3>
+      <p class="feature-desc">Log every gift you give at others' functions. Stay consistent and thoughtful by knowing exactly what you gave at each person's occasion in the past.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">🔍</div>
+      <h3 class="feature-title">Smart search &amp; filters</h3>
+      <p class="feature-desc">Find any gift instantly. Filter by person, event, gift type, amount range, or date. No more flipping through pages of a physical register.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">📊</div>
+      <h3 class="feature-title">Summaries &amp; insights</h3>
+      <p class="feature-desc">See total gifts per event, top givers, gifting balance per person and most common gift types — all at a glance in your digital gift ledger dashboard.</p>
+    </div>
   </div>
 </section>
 
@@ -625,36 +491,77 @@
   <div class="reveal">
     <div class="section-label">How It Works</div>
     <h2 class="section-title">Up and running in minutes</h2>
-    <p class="section-sub">Simple, intuitive flow — no training needed. If you can use WhatsApp, you can use GiftKhata.</p>
+    <p class="section-sub">Simple, intuitive flow designed for Indian families. If you can use WhatsApp, you can use GiftKhata.</p>
   </div>
-  <div class="steps-container">
-    <div class="step reveal"><div class="step-num">1</div><div class="step-line"></div><div class="step-body"><div class="step-title">Add your event or function</div><div class="step-desc">Create an event with its name, date, and type (wedding, birthday, anniversary, etc.). You can have unlimited events — past and upcoming.</div></div></div>
-    <div class="step reveal"><div class="step-num">2</div><div class="step-line"></div><div class="step-body"><div class="step-title">Log gifts received</div><div class="step-desc">For each gift, enter the giver's name, gift type (cash / item / voucher), amount or value, and any notes. Takes less than 30 seconds per entry.</div></div></div>
-    <div class="step reveal"><div class="step-num">3</div><div class="step-line"></div><div class="step-body"><div class="step-title">Add people to your network</div><div class="step-desc">Create contact profiles for relatives and friends. Once added, link them to any gift entry across multiple events — automatically building their ledger history.</div></div></div>
-    <div class="step reveal"><div class="step-num">4</div><div class="step-line"></div><div class="step-body"><div class="step-title">Record gifts you give</div><div class="step-desc">When you attend someone's function, log what you gave. Your khata shows both sides — received and given — for complete clarity.</div></div></div>
-    <div class="step reveal"><div class="step-num">5</div><div class="step-body"><div class="step-title">Track and review anytime</div><div class="step-desc">Open any event or person's profile to see total gifts, types, and amounts. Use insights to plan future gifting thoughtfully.</div></div></div>
+  <div class="steps-wrap">
+    <div class="step reveal">
+      <div class="step-num">1</div><div class="step-line"></div>
+      <div class="step-body">
+        <div class="step-title">Add your event or function</div>
+        <p class="step-desc">Create an event with name, date, and type (wedding, birthday, griha pravesh, etc.). You can have unlimited events — past and upcoming.</p>
+      </div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">2</div><div class="step-line"></div>
+      <div class="step-body">
+        <div class="step-title">Log gifts received</div>
+        <p class="step-desc">For each gift enter the giver's name, gift type (cash / item / voucher), amount or value, and notes. Takes under 30 seconds per entry.</p>
+      </div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">3</div><div class="step-line"></div>
+      <div class="step-body">
+        <div class="step-title">Add people to your network</div>
+        <p class="step-desc">Create contact profiles for relatives and friends. Link them to gift entries across multiple events — automatically building their full history.</p>
+      </div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">4</div><div class="step-line"></div>
+      <div class="step-body">
+        <div class="step-title">Record gifts you give</div>
+        <p class="step-desc">When you attend someone's function, log what you gave. Your khata shows both sides — gifts received and given — for complete clarity.</p>
+      </div>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <div class="step-title">Track and review anytime</div>
+        <p class="step-desc">Open any event or person's profile to see totals, types, and amounts. Use insights to plan future gifting thoughtfully.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- GIFT TYPES -->
-<section id="gift-types" style="padding:70px 5%">
+<section id="gift-types">
   <div class="text-center reveal">
     <div class="section-label">What You Can Track</div>
     <h2 class="section-title">All gift types, one khata</h2>
+    <p class="section-sub">GiftKhata handles every kind of gift Indian families exchange.</p>
   </div>
   <div class="types-grid">
-    <div class="type-card reveal"><div class="type-emoji">💵</div><div class="type-name">Cash</div><div class="type-desc">Cash in shagun envelopes or direct transfers — log amounts easily.</div></div>
-    <div class="type-card reveal"><div class="type-emoji">🎫</div><div class="type-name">Vouchers</div><div class="type-desc">Amazon, Flipkart, Myntra, restaurant gift cards — store code and value.</div></div>
-    <div class="type-card reveal"><div class="type-emoji">🎀</div><div class="type-name">Items & Gifts</div><div class="type-desc">Silverware, appliances, clothes, sweets — log with name and value.</div></div>
+    <div class="type-card reveal">
+      <div class="type-emoji">💵</div>
+      <h3 class="type-name">Cash / Shagun</h3>
+      <p class="type-desc">Cash in shagun envelopes or direct transfers — log amounts and keep a full shagun register digitally.</p>
+    </div>
+    <div class="type-card reveal">
+      <div class="type-emoji">🎫</div>
+      <h3 class="type-name">Gift Vouchers</h3>
+      <p class="type-desc">Amazon, Flipkart, Myntra, restaurant gift cards — store brand, code and value in one place.</p>
+    </div>
+    <div class="type-card reveal">
+      <div class="type-emoji">🎀</div>
+      <h3 class="type-name">Items &amp; Gifts</h3>
+      <p class="type-desc">Silverware, appliances, clothes, sweets — log with name, description and value so you never forget who gave what.</p>
+    </div>
     <div class="type-card type-card--soon reveal">
       <div class="soon-ribbon">Coming Soon</div>
-      <div class="type-emoji soon-emoji">📱</div>
-      <div class="type-name">Digital Transfers</div>
-      <div class="type-desc">UPI, NEFT, bank transfers — capture transaction ID and amount.</div>
+      <div class="type-emoji">📱</div>
+      <h3 class="type-name">Digital Transfers</h3>
+      <p class="type-desc">UPI, NEFT, bank transfers — capture transaction ID and amount directly inside GiftKhata.</p>
       <div class="soon-footer">
-        <span class="soon-dot"></span>
-        <span class="soon-dot"></span>
-        <span class="soon-dot"></span>
+        <span class="soon-dot"></span><span class="soon-dot"></span><span class="soon-dot"></span>
         <span class="soon-label">In Development</span>
       </div>
     </div>
@@ -666,7 +573,7 @@
   <div class="text-center reveal">
     <div class="section-label">Perfect For</div>
     <h2 class="section-title">Every Indian occasion covered</h2>
-    <p class="section-sub">GiftKhata is built around the rich tradition of gifting in Indian families and functions.</p>
+    <p class="section-sub">GiftKhata is built around the rich tradition of gifting in Indian families across all communities and functions.</p>
   </div>
   <div class="occasions-flex reveal">
     <div class="occasion-tag">💒 Wedding</div>
@@ -689,22 +596,49 @@
   <div class="reveal">
     <div class="section-label">Why GiftKhata</div>
     <h2 class="section-title">Your family's gifting memory</h2>
-    <p class="section-sub">Thousands of Indian families still use paper registers or scattered WhatsApp notes. GiftKhata changes that.</p>
+    <p class="section-sub">Thousands of Indian families still use paper registers or scattered WhatsApp notes. GiftKhata changes that forever.</p>
   </div>
   <div class="why-grid">
     <ul class="why-list reveal">
-      <li class="why-item"><div class="why-check"><i class="fa fa-check"></i></div><div class="why-text"><strong>No more lost records</strong><span>Unlike paper bahi-khatas, your digital ledger never gets lost, damaged, or illegible.</span></div></li>
-      <li class="why-item"><div class="why-check"><i class="fa fa-check"></i></div><div class="why-text"><strong>Return-gifting made easy</strong><span>Always know what someone gave you before deciding what to give at their next function.</span></div></li>
-      <li class="why-item"><div class="why-check"><i class="fa fa-check"></i></div><div class="why-text"><strong>Family sharing ready</strong><span>Multiple family members can add entries for the same event from different phones.</span></div></li>
-      <li class="why-item"><div class="why-check"><i class="fa fa-check"></i></div><div class="why-text"><strong>Private and secure</strong><span>Your gifting data stays private — no sharing with third parties, ever.</span></div></li>
-      <li class="why-item"><div class="why-check"><i class="fa fa-check"></i></div><div class="why-text"><strong>Works offline too</strong><span>Add entries even without internet. Data syncs automatically when you're back online.</span></div></li>
+      <li class="why-item">
+        <div class="why-check"><i class="fa fa-check"></i></div>
+        <div class="why-text"><strong>No more lost records</strong><span>Unlike paper bahi-khatas, your digital ledger never gets lost, damaged, or illegible. Everything stays backed up and search-ready.</span></div>
+      </li>
+      <li class="why-item">
+        <div class="why-check"><i class="fa fa-check"></i></div>
+        <div class="why-text"><strong>Return-gifting made easy</strong><span>Always know what someone gave you before deciding what to give at their next function. Maintain thoughtful and balanced gifting.</span></div>
+      </li>
+      <li class="why-item">
+        <div class="why-check"><i class="fa fa-check"></i></div>
+        <div class="why-text"><strong>Family sharing ready</strong><span>Multiple family members can add entries for the same event from different phones, so your entire family maintains one shared khata.</span></div>
+      </li>
+      <li class="why-item">
+        <div class="why-check"><i class="fa fa-check"></i></div>
+        <div class="why-text"><strong>Private and secure</strong><span>Your gifting data stays private — no sharing with third parties. Only you and your family control your GiftKhata.</span></div>
+      </li>
+      <li class="why-item">
+        <div class="why-check"><i class="fa fa-check"></i></div>
+        <div class="why-text"><strong>Works offline too</strong><span>Add entries even without internet. Data syncs automatically when you're back online — perfect for remote wedding venues.</span></div>
+      </li>
     </ul>
     <div class="why-visual reveal">
-      <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em">Person Ledger Preview</div>
-      <div class="ledger-row"><div class="ledger-person"><div class="avatar av1">SS</div><div><div class="ledger-name">Sharma Saab</div><div class="ledger-event">Wedding · 2023</div></div></div><div class="ledger-amounts"><div class="amount-col"><div class="amount-label">Received</div><div class="amount-val received">₹21,000</div></div><div class="amount-col"><div class="amount-label">Given</div><div class="amount-val given">₹15,000</div></div></div></div>
-      <div class="ledger-row"><div class="ledger-person"><div class="avatar av2">GP</div><div><div class="ledger-name">Gupta Pariwar</div><div class="ledger-event">Griha Pravesh · 2024</div></div></div><div class="ledger-amounts"><div class="amount-col"><div class="amount-label">Received</div><div class="amount-val received">₹8,500</div></div><div class="amount-col"><div class="amount-label">Given</div><div class="amount-val given">₹11,000</div></div></div></div>
-      <div class="ledger-row"><div class="ledger-person"><div class="avatar av3">PD</div><div><div class="ledger-name">Priya Didi</div><div class="ledger-event">Birthday · 2024</div></div></div><div class="ledger-amounts"><div class="amount-col"><div class="amount-label">Received</div><div class="amount-val received">₹5,000</div></div><div class="amount-col"><div class="amount-label">Given</div><div class="amount-val given">₹5,000</div></div></div></div>
-      <div class="ledger-row"><div class="ledger-person"><div class="avatar av4">RM</div><div><div class="ledger-name">Ramesh Mama</div><div class="ledger-event">Naming Cer. · 2025</div></div></div><div class="ledger-amounts"><div class="amount-col"><div class="amount-label">Received</div><div class="amount-val received">₹11,000</div></div><div class="amount-col"><div class="amount-label">Given</div><div class="amount-val given">₹7,000</div></div></div></div>
+      <div class="ledger-table-title">👁 Person Ledger Preview</div>
+      <div class="ledger-row">
+        <div class="ledger-person"><div class="avatar av1">SS</div><div><div class="ledger-name">Sharma Saab</div><div class="ledger-event">Wedding · 2023</div></div></div>
+        <div class="ledger-amounts"><div class="amount-col"><div class="amount-label">Received</div><div class="amount-val received">₹21,000</div></div><div class="amount-col"><div class="amount-label">Given</div><div class="amount-val given">₹15,000</div></div></div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-person"><div class="avatar av2">GP</div><div><div class="ledger-name">Gupta Pariwar</div><div class="ledger-event">Griha Pravesh · 2024</div></div></div>
+        <div class="ledger-amounts"><div class="amount-col"><div class="amount-label">Received</div><div class="amount-val received">₹8,500</div></div><div class="amount-col"><div class="amount-label">Given</div><div class="amount-val given">₹11,000</div></div></div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-person"><div class="avatar av3">PD</div><div><div class="ledger-name">Priya Didi</div><div class="ledger-event">Birthday · 2024</div></div></div>
+        <div class="ledger-amounts"><div class="amount-col"><div class="amount-label">Received</div><div class="amount-val received">₹5,000</div></div><div class="amount-col"><div class="amount-label">Given</div><div class="amount-val given">₹5,000</div></div></div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-person"><div class="avatar av4">RM</div><div><div class="ledger-name">Ramesh Mama</div><div class="ledger-event">Naming Cer. · 2025</div></div></div>
+        <div class="ledger-amounts"><div class="amount-col"><div class="amount-label">Received</div><div class="amount-val received">₹11,000</div></div><div class="amount-col"><div class="amount-label">Given</div><div class="amount-val given">₹7,000</div></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -713,110 +647,157 @@
 <section id="testimonials">
   <div class="text-center reveal">
     <div class="section-label">Early Users Love It</div>
-    <h2 class="section-title">What families are saying</h2>
+    <h2 class="section-title">What Indian families are saying</h2>
+    <p class="section-sub">Real stories from families who replaced their paper khata with GiftKhata.</p>
   </div>
   <div class="testimonials-grid">
-    <div class="testimonial-card reveal"><div class="stars">★★★★★</div><p class="t-text">"We used to maintain a thick register for our son's wedding gifts. GiftKhata digitised everything in one evening. Finding who gave what is instant now!"</p><div class="t-author"><div class="t-avatar av1">SR</div><div><div class="t-name">Sunita Reddy</div><div class="t-loc">Hyderabad, Telangana</div></div></div></div>
-    <div class="testimonial-card reveal"><div class="stars">★★★★★</div><p class="t-text">"The person-wise ledger is a game changer. Before going to anyone's function, I open their profile and know exactly what to give. No more under or over-gifting!"</p><div class="t-author"><div class="t-avatar av2">AM</div><div><div class="t-name">Arun Mehta</div><div class="t-loc">Jaipur, Rajasthan</div></div></div></div>
-    <div class="testimonial-card reveal"><div class="stars">★★★★★</div><p class="t-text">"Finally an app made for Indian families! We track gifts from griha pravesh, naming ceremony, and birthdays all in one place. My mother-in-law uses it too now."</p><div class="t-author"><div class="t-avatar av3">DK</div><div><div class="t-name">Deepika Kulkarni</div><div class="t-loc">Pune, Maharashtra</div></div></div></div>
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="t-text">"We used to maintain a thick register for our son's wedding gifts. GiftKhata digitised everything in one evening. Finding who gave what is instant now!"</p>
+      <div class="t-author"><div class="t-avatar av1">SR</div><div><div class="t-name">Sunita Reddy</div><div class="t-loc">Hyderabad, Telangana</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="t-text">"The person-wise ledger is a game changer. Before going to anyone's function, I open their profile and know exactly what to give. No more under or over-gifting!"</p>
+      <div class="t-author"><div class="t-avatar av2">AM</div><div><div class="t-name">Arun Mehta</div><div class="t-loc">Jaipur, Rajasthan</div></div></div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="stars">★★★★★</div>
+      <p class="t-text">"Finally an app made for Indian families! We track gifts from griha pravesh, naming ceremony and birthdays in one place. My mother-in-law uses it too now."</p>
+      <div class="t-author"><div class="t-avatar av3">DK</div><div><div class="t-name">Deepika Kulkarni</div><div class="t-loc">Pune, Maharashtra</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="text-center reveal">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Everything you need to know about GiftKhata.</p>
+  </div>
+  <div class="faq-wrap">
+    <details class="faq-item reveal">
+      <summary class="faq-q">What is GiftKhata and who is it for?</summary>
+      <p class="faq-a">GiftKhata is India's first digital gift ledger app designed for Indian families. It replaces the traditional paper bahi-khata with a smart digital register to track all gifts received and given at weddings, birthdays, griha pravesh, naming ceremonies, and all Indian functions.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary class="faq-q">Is GiftKhata free to use?</summary>
+      <p class="faq-a">Yes — GiftKhata is completely free to get started. Add unlimited events, people, and gift entries at no cost. Premium features may be introduced later, but the core gift tracking will always remain free.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary class="faq-q">Which gift types can I track in GiftKhata?</summary>
+      <p class="faq-a">You can track cash (shagun envelopes), gift vouchers (Amazon, Flipkart, Myntra etc.), physical items (silverware, clothes, appliances), and digital transfers (UPI, NEFT, bank transfers) coming soon.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary class="faq-q">Can I track gifts I have given to others?</summary>
+      <p class="faq-a">Absolutely. GiftKhata maintains a complete two-sided ledger per person — showing both what you received from them and what you gave at their functions. This helps you plan return-gifting thoughtfully and fairly.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary class="faq-q">Can multiple family members use the same GiftKhata?</summary>
+      <p class="faq-a">Yes. GiftKhata supports family sharing, so your spouse or parents can add gift entries for the same event from different phones and everything stays in sync automatically.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary class="faq-q">Does GiftKhata work offline?</summary>
+      <p class="faq-a">Yes. You can add gift entries even without internet connection. Your data syncs automatically once you are back online — so you never miss a gift entry even at remote wedding venues with poor connectivity.</p>
+    </details>
+    <details class="faq-item reveal">
+      <summary class="faq-q">Is my gifting data safe and private?</summary>
+      <p class="faq-a">Yes. Your data is encrypted and stored securely. GiftKhata never shares your personal gifting records with any third party. Only you and family members you invite can see your khata.</p>
+    </details>
   </div>
 </section>
 
 <!-- CTA -->
 <section id="cta">
-  <div class="cta-box">
-    <h2>Start your GiftKhata today</h2>
-    <p>Join thousands of Indian families replacing their paper registers with a smarter, digital gifting record.</p>
+  <div class="cta-box reveal">
+    <h2>Start your Digital GiftKhata today</h2>
+    <p>Join thousands of Indian families who are replacing paper bahi-khatas with GiftKhata — India's smartest digital gift ledger. Free forever to start.</p>
     <div class="cta-btns">
-      <a href="#" class="btn-white"><i class="fa fa-download"></i> Download App</a>
-      <a href="#" class="btn-ghost"><i class="fa fa-envelope"></i> Get Notified</a>
+      <a href="#" class="btn-white"><i class="fa fa-download"></i> Download App — Free</a>
+      <a href="#" class="btn-ghost"><i class="fa fa-bell"></i> Notify Me at Launch</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <span style="font-size:1.5rem;margin-right:0.5rem">🎁</span>
-    <span style="color:var(--text);font-weight:800">Gift</span><span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800">Khata</span>
-    <div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.12em;text-transform:uppercase;margin-top:3px;-webkit-text-fill-color:var(--text-muted)">India's Digital Gift Ledger</div>
-  </div>
+  <div class="footer-logo"><span class="logo-gift-txt">Gift</span><span class="logo-khata-txt">Khata</span></div>
+  <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:1.5rem;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7">India's first digital gift ledger — helping Indian families track every gift, at every function, forever.</p>
   <div class="footer-links">
-    <a href="#">Home</a>
     <a href="#features">Features</a>
     <a href="#how-it-works">How It Works</a>
-    <a href="#occasions">Occasions</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Contact Us</a>
+    <a href="#faq">FAQ</a>
+    <a href="#" rel="nofollow">Privacy Policy</a>
+    <a href="#" rel="nofollow">Terms of Use</a>
+    <a href="#" rel="nofollow">Contact Us</a>
   </div>
   <div class="footer-social">
-    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
-    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
-    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+    <a href="https://instagram.com/giftkhata.ledger" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com/giftkhata.ledger" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/giftkhata" target="_blank" rel="noopener" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://youtube.com/@giftkhata" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
   </div>
-  <div class="footer-copy">© 2026 GiftKhata. Made with ❤️ for Indian families. All rights reserved.</div>
+  <p class="footer-copy">© 2026 GiftKhata. All rights reserved. | <a href="https://www.giftkhata.com" style="color:var(--primary);text-decoration:none">giftkhata.com</a></p>
 </footer>
 
 <script>
-  // ===== THEME TOGGLE =====
-  const html = document.documentElement;
-  const toggleBtn = document.getElementById('themeToggle');
-  const toggleIcon = document.getElementById('toggleIcon');
-  const overlay = document.getElementById('themeOverlay');
+// THEME TOGGLE
+const html = document.documentElement;
+const toggle = document.getElementById('themeToggle');
+const icon = document.getElementById('toggleIcon');
+function setTheme(t){
+  html.setAttribute('data-theme', t);
+  icon.textContent = t === 'dark' ? '☀️' : '🌙';
+  localStorage.setItem('gk-theme', t);
+}
+toggle.addEventListener('click', () => {
+  setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+const saved = localStorage.getItem('gk-theme');
+if(saved) setTheme(saved);
+else setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-  function setTheme(theme, animate = false) {
-    if (animate) {
-      overlay.style.background = theme === 'light' ? '#fff' : '#0F0A1E';
-      overlay.classList.add('active');
-      setTimeout(() => {
-        html.setAttribute('data-theme', theme);
-        toggleIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
-        localStorage.setItem('gk-theme', theme);
-        setTimeout(() => overlay.classList.remove('active'), 150);
-      }, 120);
-    } else {
-      html.setAttribute('data-theme', theme);
-      toggleIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+// MOBILE MENU
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// REVEAL ON SCROLL
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if(e.isIntersecting){
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      observer.unobserve(e.target);
     }
-  }
-
-  // Load saved theme
-  const saved = localStorage.getItem('gk-theme') || 'light';
-  setTheme(saved);
-
-  toggleBtn.addEventListener('click', () => {
-    const current = html.getAttribute('data-theme');
-    setTheme(current === 'dark' ? 'light' : 'dark', true);
   });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // ===== SCROLL REVEAL =====
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12 });
-  reveals.forEach(r => observer.observe(r));
+// NAVBAR SCROLL SHADOW
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').style.boxShadow =
+    window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.12)' : 'none';
+});
 
-  // ===== NAVBAR SHRINK =====
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    nav.style.padding = window.scrollY > 50 ? '0.65rem 5%' : '1rem 5%';
+// COUNTER ANIMATION
+function animateCounters(){
+  document.querySelectorAll('[data-target]').forEach(el => {
+    const target = +el.getAttribute('data-target');
+    let count = 0;
+    const step = Math.ceil(target / 40);
+    const timer = setInterval(() => {
+      count = Math.min(count + step, target);
+      el.textContent = count + '+';
+      if(count >= target) clearInterval(timer);
+    }, 50);
   });
-
-  // ===== HAMBURGER =====
-  function toggleMenu() {
-    const links = document.querySelector('.nav-links');
-    const isOpen = links.style.display === 'flex';
-    links.style.cssText = isOpen ? '' :
-      'display:flex;flex-direction:column;position:absolute;top:70px;left:0;right:0;background:var(--nav-bg);padding:1.5rem 5%;border-bottom:1px solid var(--card-border);backdrop-filter:blur(16px);';
-  }
-
-  // ===== MOCK CARD TILT =====
-  const mockCard = document.getElementById('mockCard');
-  setInterval(() => {
-    const t = Math.sin(Date.now() / 2000) * 3;
-    if(mockCard) mockCard.style.transform = `perspective(1000px) rotateX(${t*0.5}deg) rotateY(${t}deg)`;
-  }, 50);
+}
+const heroObserver = new IntersectionObserver(entries => {
+  if(entries[0].isIntersecting){ animateCounters(); heroObserver.disconnect(); }
+}, { threshold: 0.5 });
+const heroSec = document.getElementById('hero');
+if(heroSec) heroObserver.observe(heroSec);
 </script>
 </body>
 </html>
