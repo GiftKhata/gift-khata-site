@@ -127,7 +127,7 @@ body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);ove
 /* NAVBAR */
 nav{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:.9rem 5%;background:var(--nav-bg);backdrop-filter:blur(18px);border-bottom:1px solid var(--card-border);transition:all .3s}
 .nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;flex-shrink:0}
-.logo-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;box-shadow:0 4px 14px var(--shadow);transition:transform .3s}
+.logo-icon{height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;transition:transform .3s}
 .nav-logo:hover .logo-icon{transform:rotate(-8deg) scale(1.1)}
 .logo-text{display:flex;flex-direction:column;line-height:1.1}
 .logo-name{font-size:1.18rem;font-weight:800;letter-spacing:-.02em}
@@ -342,7 +342,6 @@ footer{background:var(--footer-bg);border-top:1px solid var(--card-border);paddi
 @media(max-width:768px){
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
-  .logo-sub{display:none}
   nav{padding:.75rem 4%}
   #hero{padding-top:85px}
 }
@@ -398,15 +397,15 @@ footer{background:var(--footer-bg);border-top:1px solid var(--card-border);paddi
 
 <!-- NAVBAR -->
 <nav id="navbar">
-  <a href="#" class="nav-logo" aria-label="GiftKhata Home">
+  <span class="nav-logo" aria-label="GiftKhata Home">
     <div class="logo-icon">
       <img src="/assets/img/icon_transperent.png" alt="GiftKhata – Celebrate Better. Track Smarter." class="nav-brand-logo" loading="lazy"/>
+      <div class="logo-text">
+        <div class="logo-name"><span class="logo-gift-txt">Gift</span><span class="logo-khata-txt">Khata</span></div>
+        <div class="logo-sub">Celebrate Better.  <span class="track"></span>Track Smarter.</div></div>
+      </div>
     </div>
-    <div class="logo-text">
-      <div class="logo-name"><span class="logo-gift-txt">Gift</span><span class="logo-khata-txt">Khata</span></div>
-      <div class="logo-sub">Celebrate Better.  <span class="track"></span>Track Smarter.</div></div>
-    </div>
-  </a>
+  </span>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
@@ -602,10 +601,10 @@ footer{background:var(--footer-bg);border-top:1px solid var(--card-border);paddi
       <div class="type-emoji">📱</div>
       <h3 class="type-name">Digital Transfers</h3>
       <p class="type-desc">UPI, NEFT, bank transfers — capture transaction ID and amount directly inside GiftKhata.</p>
-      <div class="soon-footer">
+      <!-- <div class="soon-footer">
         <span class="soon-dot"></span><span class="soon-dot"></span><span class="soon-dot"></span>
         <span class="soon-label">In Development</span>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -729,7 +728,7 @@ footer{background:var(--footer-bg);border-top:1px solid var(--card-border);paddi
     </details>
     <details class="faq-item reveal">
       <summary class="faq-q">Which gift types can I track in GiftKhata?</summary>
-      <p class="faq-a">You can track cash (shagun envelopes), gift vouchers (Amazon, Flipkart, Myntra etc.), physical items (silverware, clothes, appliances), and digital transfers (UPI, NEFT, bank transfers) coming soon.</p>
+      <p class="faq-a">You can track cash (shagun envelopes), gift vouchers (Amazon, Flipkart, Myntra etc.), physical items (silverware, clothes, appliances). <br/> <br/> Digital transfers (UPI, NEFT, bank transfers) coming soon.</p>
     </details>
     <details class="faq-item reveal">
       <summary class="faq-q">Can I track gifts I have given to others?</summary>
