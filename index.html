@@ -345,9 +345,17 @@
       display: none;
       flex-direction: column;
       background: var(--nav-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--card-border);
       padding: 1rem 5%;
-      gap: .5rem
+      gap: .5rem;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      z-index: 998;
+      box-shadow: 0 8px 24px var(--shadow)
     }
 
     .mobile-menu.open {
@@ -361,6 +369,10 @@
       font-weight: 500;
       padding: .6rem 0;
       border-bottom: 1px solid var(--card-border)
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none
     }
 
     /* HERO */
@@ -1559,6 +1571,10 @@
         padding: .75rem 4%
       }
 
+      .mobile-menu {
+        top: 60px
+      }
+
       #hero {
         padding-top: 85px
       }
@@ -1579,6 +1595,10 @@
 
       #hero {
         padding-top: 78px
+      }
+
+      .mobile-menu {
+        top: 55px
       }
     }
 
@@ -2340,6 +2360,15 @@
     function toggleMenu() {
       document.getElementById('mobileMenu').classList.toggle('open');
     }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.querySelector('.hamburger');
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
 
     // SCROLL REVEAL
     const observer = new IntersectionObserver((entries) => {
