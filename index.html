@@ -2025,6 +2025,130 @@
         display: none;
       }
     }
+
+    /* REACH US SECTION */
+    #reach-us {
+      padding: 80px 5%;
+      background: var(--bg2);
+    }
+
+    .reach-us-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .reach-cards {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2.8rem;
+    }
+
+    .reach-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 22px;
+      padding: 2rem 2.2rem;
+      flex: 1;
+      min-width: 220px;
+      max-width: 280px;
+      box-shadow: 0 8px 32px var(--shadow);
+      transition: transform .3s, box-shadow .3s;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .7rem;
+      cursor: pointer;
+    }
+
+    .reach-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px var(--shadow);
+    }
+
+    .reach-card-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.55rem;
+      margin-bottom: .3rem;
+    }
+
+    .reach-card-icon.email-icon {
+      background: var(--purple-bg);
+      color: var(--primary-light);
+    }
+
+    .reach-card-icon.phone-icon {
+      background: var(--green-bg);
+      color: #059669;
+    }
+
+    [data-theme="dark"] .reach-card-icon.phone-icon {
+      color: #34d399;
+    }
+
+    .reach-card-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .reach-card-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      word-break: break-all;
+      text-align: center;
+    }
+
+    .reach-card-desc {
+      font-size: .8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .reach-card-btn {
+      margin-top: .4rem;
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: .48rem 1.3rem;
+      font-size: .82rem;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .reach-card-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px var(--shadow);
+    }
+
+    @media (max-width: 540px) {
+      .reach-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .reach-card {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -2050,6 +2174,7 @@
       <li><a href="#occasions">Occasions</a></li>
       <li><a href="#why">Why Us</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="#reach-us">Reach Us</a></li>
     </ul>
     <div class="nav-right">
       <div class="theme-toggle" id="themeToggle" title="Toggle light/dark mode" role="button" aria-label="Toggle theme">
@@ -2071,6 +2196,7 @@
     <a href="#occasions" onclick="toggleMenu()">Occasions</a>
     <a href="#why" onclick="toggleMenu()">Why Us</a>
     <a href="#faq" onclick="toggleMenu()">FAQ</a>
+    <a href="#reach-us" onclick="toggleMenu()">Reach Us</a>
     <a href="#cta" onclick="toggleMenu()" style="color:var(--primary);font-weight:700">🚀 Coming Soon</a>
   </div>
 
@@ -2597,6 +2723,39 @@
     </div>
   </section>
 
+  <!-- REACH US -->
+  <section id="reach-us">
+    <div class="reach-us-inner">
+      <div class="text-center reveal">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">We're here to help 🤝</h2>
+        <p class="section-sub">Have a question, feedback, or need support? Reach out to the GiftKhata team — we
+          typically respond within 2 hours.</p>
+      </div>
+      <div class="reach-cards">
+
+        <!-- Email -->
+        <a class="reach-card reveal" href="mailto:support@giftkhata.com">
+          <div class="reach-card-icon email-icon"><i class="fa fa-envelope"></i></div>
+          <div class="reach-card-label">Email Support</div>
+          <div class="reach-card-value">support@giftkhata.com</div>
+          <div class="reach-card-desc">Write to us anytime for help, feedback, or partnership enquiries.</div>
+          <span class="reach-card-btn" href="mailto:support@giftkhata.com">Send Email</span>
+        </a>
+
+        <!-- Phone / WhatsApp -->
+        <a class="reach-card reveal" href="https://wa.me/919440094265" target="_blank" rel="noopener">
+          <div class="reach-card-icon phone-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="reach-card-label">WhatsApp / Call</div>
+          <div class="reach-card-value">+91 94400 94265</div>
+          <div class="reach-card-desc">Chat with us on WhatsApp or give us a call during business hours.</div>
+          <span class="reach-card-btn">Chat on WhatsApp</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo "><img src="logo.png" alt="GiftKhata" class="footer-brand-logo-1 full-logo"
@@ -2611,7 +2770,7 @@
       <a href="javascript:void(0)" id="footerDisclaimerLink">Disclaimer</a>
       <a href="javascript:void(0)" rel="nofollow">Privacy Policy</a>
       <a href="javascript:void(0)" rel="nofollow">Terms of Use</a>
-      <a href="javascript:void(0)" rel="nofollow">Contact Us</a>
+      <a href="#reach-us">Contact Us</a>
     </div>
     <div class="footer-social">
       <a href="https://instagram.com/giftkhata.ledger" target="_blank" rel="noopener" class="social-btn"
