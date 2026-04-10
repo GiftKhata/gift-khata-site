@@ -1605,107 +1605,6 @@
       }
     }
 
-    /* DISCLAIMER MODAL */
-    .disclaimer-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, .65);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1200;
-      padding: 1rem
-    }
-
-    .disclaimer-backdrop.active {
-      display: flex
-    }
-
-    .disclaimer-modal {
-      position: relative;
-      max-width: 820px;
-      width: 100%;
-      max-height: 88vh;
-      overflow-y: auto;
-      background: var(--mock-bg);
-      border-radius: 20px;
-      border: 1px solid var(--card-border);
-      box-shadow: 0 25px 80px rgba(0, 0, 0, .35);
-      padding: 2.2rem 2.4rem
-    }
-
-    .disclaimer-modal h2 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      margin-bottom: .8rem
-    }
-
-    .disclaimer-modal h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-top: 1.2rem;
-      margin-bottom: .4rem
-    }
-
-    .disclaimer-modal p {
-      font-size: .9rem;
-      color: var(--text-muted);
-      line-height: 1.78;
-      margin-bottom: .5rem
-    }
-
-    .disclaimer-modal ul {
-      margin-left: 1.2rem;
-      margin-bottom: .7rem
-    }
-
-    .disclaimer-modal li {
-      font-size: .88rem;
-      color: var(--text-muted);
-      line-height: 1.72;
-      margin-bottom: .35rem
-    }
-
-    .disclaimer-chip {
-      display: inline-block;
-      font-size: .72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      color: var(--primary-light);
-      margin-bottom: .5rem
-    }
-
-    .disclaimer-close {
-      position: absolute;
-      top: 14px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
-      border: none;
-      background: var(--card);
-      color: var(--text-muted);
-      border-radius: 50%;
-      font-size: 1.1rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background .2s, color .2s
-    }
-
-    .disclaimer-close:hover {
-      background: var(--primary);
-      color: #fff
-    }
-
-    @media(max-width:768px) {
-      .disclaimer-modal {
-        padding: 1.6rem 1.3rem;
-        margin: .5rem
-      }
-    }
-
     /* RESPONSIVE GRID SYSTEM */
     @media(max-width:539px) {
       .features-grid {
@@ -2717,7 +2616,7 @@
       <p>Join thousands of Indian families who are replacing paper bahi-khatas with GiftKhata — India's smartest digital
         gift ledger. Free forever to start.</p>
       <div class="cta-btns">
-        <a href="javascript:void(0)" class="btn-white"><i class="fa fa-download"></i> Download App — Coming Soon</a>
+        <button class="btn-white"><i class="fa fa-download"></i> Download App — Coming Soon</button>
       </div>
     </div>
   </section>
@@ -2766,9 +2665,9 @@
       <a href="#features">Features</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#faq">FAQ</a>
-      <a href="javascript:void(0)" id="footerDisclaimerLink">Disclaimer</a>
-      <a href="javascript:void(0)" rel="nofollow">Privacy Policy</a>
-      <a href="javascript:void(0)" rel="nofollow">Terms of Use</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
       <a href="#reach-us">Contact Us</a>
     </div>
     <div class="footer-social">
@@ -2786,7 +2685,8 @@
         style="color:var(--primary);text-decoration:none">giftkhata.com</a></p>
   </footer>
 
-  <script>
+  <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
+   <script>
     // THEME TOGGLE — theme already set in <head>; just wire the button
     const html = document.documentElement;
     const toggle = document.getElementById('themeToggle');
@@ -2850,66 +2750,7 @@
     const heroSec = document.getElementById('hero');
     if (heroSec) heroObserver.observe(heroSec);
 
-    // DISCLAIMER MODAL — DOMContentLoaded wrapper removed (script is at body end, DOM is ready)
-    const backdrop = document.getElementById('disclaimerBackdrop');
-    const closeBtn = document.getElementById('disclaimerClose');
-    const footerLink = document.getElementById('footerDisclaimerLink');
-    function openModal(e) { if (e) e.preventDefault(); backdrop.classList.add('active'); document.body.style.overflow = 'hidden'; }
-    function closeModal() { backdrop.classList.remove('active'); document.body.style.overflow = ''; }
-    if (footerLink) footerLink.addEventListener('click', openModal);
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (backdrop) backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeModal(); });
-    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
   </script>
-
-  <!-- DISCLAIMER MODAL -->
-  <div class="disclaimer-backdrop" id="disclaimerBackdrop">
-    <div class="disclaimer-modal" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle">
-      <button class="disclaimer-close" id="disclaimerClose" aria-label="Close">×</button>
-      <div class="disclaimer-chip">Important Notice</div>
-      <h2 id="disclaimerTitle">Disclaimer &amp; Liability</h2>
-      <p><strong>GiftKhata</strong> is a personal record-keeping tool. It is not a bank, wallet, or financial service.
-      </p>
-      <h3>📓 Personal ledger only</h3>
-      <p>GiftKhata is designed purely as a digital notebook for recording gifts received and given at personal and
-        family events. It does not hold or move real money, operate as a payment system, or provide banking, investment,
-        or financial services of any kind.</p>
-      <h3>✏️ User-entered data</h3>
-      <p>All information stored in GiftKhata is entered manually by the user. Gift amounts, descriptions, people names,
-        and events are based solely on what users type into the app and may be inaccurate, incomplete, or approximate.
-      </p>
-      <p>GiftKhata does not verify, validate, audit, or guarantee the accuracy of any entry. Users are fully responsible
-        for checking and maintaining the correctness of their own records.</p>
-      <h3>⚖️ No legal or financial proof</h3>
-      <p>Entries recorded in GiftKhata are intended only as personal notes and convenience records. They do not
-        constitute legal proof of any payment, debt, or obligation between any parties.</p>
-      <p>GiftKhata should not be treated as a replacement for legally valid documents, receipts, contracts, or bank
-        statements. In case of any dispute, users must rely on their own independent evidence.</p>
-      <h3>🧾 Not a tax, legal, or accounting service</h3>
-      <p>GiftKhata does not provide tax, legal, or accounting advice. Gift entries are not designed for filing income
-        tax returns or complying with any statutory requirements.</p>
-      <p>Users are solely responsible for understanding and following applicable laws, including Indian tax laws related
-        to gifts. Consult a qualified CA or legal professional for such matters.</p>
-      <h3>🔒 Data privacy</h3>
-      <p>GiftKhata may store personal data such as names, relationships, and gift details. We take reasonable measures
-        to protect stored data; however no system is 100% secure. Users should keep their devices and login credentials
-        safe.</p>
-      <p>GiftKhata does not sell gifting records to advertisers or third parties. Limited sharing may occur only as
-        described in the Privacy Policy and always in compliance with India's DPDP Act 2023.</p>
-      <h3>⚠️ Limitation of liability</h3>
-      <p>GiftKhata, its founders, and its team will not be responsible for any loss, dispute, or damage arising out of:
-      </p>
-      <ul>
-        <li>Incorrect, incomplete, or fraudulent entries made by users.</li>
-        <li>Use of app screenshots or records as evidence in personal or legal disputes.</li>
-        <li>Any decision taken solely on the basis of data stored in the app without independent verification.</li>
-        <li>Temporary unavailability of the app, data loss, or unauthorised access caused by user negligence.</li>
-      </ul>
-      <p>By using GiftKhata, you agree that you are using the app "as is" and "as available", and that you are solely
-        responsible for how you interpret and use the information stored in your ledger.</p>
-      <p style="margin-top:1rem;font-size:.82rem;color:var(--text-muted);font-style:italic">If you do not agree with any part of this disclaimer, please do not use GiftKhata or delete your account and data from the app. Last updated: March 2026.</p>
-    </div>
-  </div>
 
 </body>
 </html>
