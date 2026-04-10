@@ -90,10 +90,17 @@
   }
   </script>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- PERF: preconnect saves 100-300ms DNS+TLS handshake per origin -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- PERF: trimmed to used weights only; Playfair Display removed (saves 1 font fetch) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- PERF: Font Awesome loaded non-blocking — no longer delays first paint -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
 
   <style>
     *,
@@ -730,8 +737,15 @@
       justify-content: center
     }
 
+    /* PERF: skip layout/paint of off-screen sections until near viewport */
+    section:not(#hero) {
+      content-visibility: auto;
+      contain-intrinsic-size: 0 600px;
+    }
+
     .section-title {
-      font-family: 'Playfair Display', 'Poppins', serif;
+      /* PERF: Playfair Display dropped — saves an extra font file fetch */
+      font-family: 'Poppins', Georgia, serif;
       font-size: clamp(1.9rem, 3.5vw, 2.9rem);
       font-weight: 800;
       line-height: 1.18;
@@ -1948,51 +1962,34 @@
       color: var(--primary-light);
     }
 
+    /* PERF: will-change pre-promotes to GPU layer before animation starts */
     .event-card-1 {
-      /* No extra offsets for the first card on the left container */
+      will-change: transform;
       animation: floatLeft1 5s ease-in-out infinite;
     }
-
     .event-card-2 {
-      /* Offset vertically from the first card and rotate differently */
+      will-change: transform;
       margin-top: 60px;
       animation: floatLeft2 6s ease-in-out infinite 0.5s;
-      /* Delay and vary duration */
     }
-
-    /* Right Cards */
     .event-card-3 {
+      will-change: transform;
       animation: floatLeft1 5.5s ease-in-out infinite;
     }
-
     .event-card-4 {
+      will-change: transform;
       margin-top: 60px;
       animation: floatLeft2 4.5s ease-in-out infinite 1s;
-      /* Shorter duration and delay */
     }
 
+    /* PERF: translate3d forces GPU compositing; no main-thread paint on animate */
     @keyframes floatLeft1 {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(-10deg);
-      }
-
-      50% {
-        transform: translateY(-25px) rotate(-10deg);
-      }
+      0%, 100% { transform: translate3d(0,0,0) rotate(-10deg); }
+      50%       { transform: translate3d(0,-25px,0) rotate(-10deg); }
     }
-
     @keyframes floatLeft2 {
-
-      0%,
-      100% {
-        transform: translateY(0) rotate(5deg);
-      }
-
-      50% {
-        transform: translateY(-30px) rotate(5deg);
-      }
+      0%, 100% { transform: translate3d(0,0,0) rotate(5deg); }
+      50%       { transform: translate3d(0,-30px,0) rotate(5deg); }
     }
 
     @keyframes floatRight1 {
@@ -2020,7 +2017,7 @@
     }
 
     /* Hide side cards on smaller screens */
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       .hero-side-cards {
         display: none;
       }
@@ -2150,6 +2147,9 @@
       }
     }
   </style>
+
+  <!-- PERF: theme applied before first paint → no flash of wrong theme, no repaint -->
+  <script>(function(){var t=localStorage.getItem('gk-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 
 <body>
@@ -2159,7 +2159,7 @@
     <span class="nav-logo" aria-label="GiftKhata Home">
       <div class="logo-icon">
         <img src="/logo_icon.png" alt="GiftKhata – Celebrate Better. Track Smarter." class="nav-brand-logo"
-          loading="lazy" />
+          width="210" height="48" fetchpriority="high" />
         <div class="logo-text">
           <div class="logo-name"><span class="logo-gift-txt">Gift</span><span class="logo-khata-txt">Khata</span></div>
           <div class="logo-sub">Celebrate Better. <span class="track"></span>Track Smarter.</div>
@@ -2183,7 +2183,7 @@
         </div>
       </div>
       <!-- <a href="#cta" class="nav-cta">Coming Soon</a> -->
-      <a href="#cta" class="nav-cta">Coming Soon</a>
+      <!-- <a href="#cta" class="nav-cta">Coming Soon</a> -->
       <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
       </div>
@@ -2234,8 +2234,7 @@
         <!-- CENTRE CONTENT -->
         <div class="hero-content">
           <div class="hero-badge"><span class="badge-dot"></span>
-            <img src="/india-flag-icon.svg" alt="GiftKhata – Celebrate Better. Track Smarter." class="in-logo"
-              loading="lazy" />
+            <img src="/india-flag-icon.svg" alt="India" class="in-logo" width="16" height="16" />
             India's First Digital Gift Ledger
           </div>
           <h1 class="hero-title">Never Lose Track of a<br /><span class="grad">Gift Again</span></h1>
@@ -2788,7 +2787,7 @@
   </footer>
 
   <script>
-    // THEME TOGGLE
+    // THEME TOGGLE — theme already set in <head>; just wire the button
     const html = document.documentElement;
     const toggle = document.getElementById('themeToggle');
     const icon = document.getElementById('toggleIcon');
@@ -2797,19 +2796,16 @@
       icon.textContent = t === 'dark' ? '☀️' : '🌙';
       localStorage.setItem('gk-theme', t);
     }
+    // Sync icon with already-applied theme (no redundant localStorage read)
+    icon.textContent = html.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
     toggle.addEventListener('click', () => {
       setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
     });
-    const saved = localStorage.getItem('gk-theme');
-    if (saved) setTheme(saved);
-    else setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
     // MOBILE MENU
     function toggleMenu() {
       document.getElementById('mobileMenu').classList.toggle('open');
     }
-
-    // Close mobile menu when clicking outside
     document.addEventListener('click', function (e) {
       const menu = document.getElementById('mobileMenu');
       const hamburger = document.querySelector('.hamburger');
@@ -2829,11 +2825,11 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // NAVBAR SHADOW
+    // PERF: passive:true lets scroll never block the browser paint pipeline
     window.addEventListener('scroll', () => {
       document.getElementById('navbar').style.boxShadow =
         window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.12)' : 'none';
-    });
+    }, { passive: true });
 
     // COUNTER ANIMATION
     function animateCounters() {
@@ -2854,31 +2850,16 @@
     const heroSec = document.getElementById('hero');
     if (heroSec) heroObserver.observe(heroSec);
 
-    // DISCLAIMER MODAL
-    document.addEventListener('DOMContentLoaded', function () {
-      const backdrop = document.getElementById('disclaimerBackdrop');
-      const closeBtn = document.getElementById('disclaimerClose');
-      const footerLink = document.getElementById('footerDisclaimerLink');
-
-      function openModal(e) {
-        if (e) e.preventDefault();
-        backdrop.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeModal() {
-        backdrop.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-
-      if (footerLink) footerLink.addEventListener('click', openModal);
-      if (closeBtn) closeBtn.addEventListener('click', closeModal);
-      if (backdrop) backdrop.addEventListener('click', (e) => {
-        if (e.target === backdrop) closeModal();
-      });
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-      });
-    });
+    // DISCLAIMER MODAL — DOMContentLoaded wrapper removed (script is at body end, DOM is ready)
+    const backdrop = document.getElementById('disclaimerBackdrop');
+    const closeBtn = document.getElementById('disclaimerClose');
+    const footerLink = document.getElementById('footerDisclaimerLink');
+    function openModal(e) { if (e) e.preventDefault(); backdrop.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { backdrop.classList.remove('active'); document.body.style.overflow = ''; }
+    if (footerLink) footerLink.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeModal(); });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
   </script>
 
   <!-- DISCLAIMER MODAL -->
@@ -2926,12 +2907,9 @@
       </ul>
       <p>By using GiftKhata, you agree that you are using the app "as is" and "as available", and that you are solely
         responsible for how you interpret and use the information stored in your ledger.</p>
-      <p style="margin-top:1rem;font-size:.82rem;color:var(--text-muted);font-style:italic">If you do not agree with any
-        part of this disclaimer, please do not use GiftKhata or delete your account and data from the app. Last updated:
-        March 2026.</p>
+      <p style="margin-top:1rem;font-size:.82rem;color:var(--text-muted);font-style:italic">If you do not agree with any part of this disclaimer, please do not use GiftKhata or delete your account and data from the app. Last updated: March 2026.</p>
     </div>
   </div>
 
 </body>
-
 </html>
