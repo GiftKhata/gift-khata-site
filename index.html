@@ -2,6 +2,15 @@
 <html lang="en" data-theme="light">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2V508P24B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-P2V508P24B');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -99,8 +108,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- PERF: Font Awesome loaded non-blocking — no longer delays first paint -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </noscript>
 
   <style>
     *,
@@ -1866,15 +1878,18 @@
       will-change: transform;
       animation: floatLeft1 5s ease-in-out infinite;
     }
+
     .event-card-2 {
       will-change: transform;
       margin-top: 60px;
       animation: floatLeft2 6s ease-in-out infinite 0.5s;
     }
+
     .event-card-3 {
       will-change: transform;
       animation: floatLeft1 5.5s ease-in-out infinite;
     }
+
     .event-card-4 {
       will-change: transform;
       margin-top: 60px;
@@ -1883,12 +1898,27 @@
 
     /* PERF: translate3d forces GPU compositing; no main-thread paint on animate */
     @keyframes floatLeft1 {
-      0%, 100% { transform: translate3d(0,0,0) rotate(-10deg); }
-      50%       { transform: translate3d(0,-25px,0) rotate(-10deg); }
+
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0) rotate(-10deg);
+      }
+
+      50% {
+        transform: translate3d(0, -25px, 0) rotate(-10deg);
+      }
     }
+
     @keyframes floatLeft2 {
-      0%, 100% { transform: translate3d(0,0,0) rotate(5deg); }
-      50%       { transform: translate3d(0,-30px,0) rotate(5deg); }
+
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0) rotate(5deg);
+      }
+
+      50% {
+        transform: translate3d(0, -30px, 0) rotate(5deg);
+      }
     }
 
     @keyframes floatRight1 {
@@ -2048,7 +2078,7 @@
   </style>
 
   <!-- PERF: theme applied before first paint → no flash of wrong theme, no repaint -->
-  <script>(function(){var t=localStorage.getItem('gk-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+  <script>(function () { var t = localStorage.getItem('gk-theme') || (window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light'); document.documentElement.setAttribute('data-theme', t); })();</script>
 </head>
 
 <body>
@@ -2057,8 +2087,8 @@
   <nav id="navbar">
     <span class="nav-logo" aria-label="GiftKhata Home">
       <div class="logo-icon">
-        <img src="/logo_icon.png" alt="GiftKhata – Celebrate Better. Track Smarter." class="nav-brand-logo"
-          width="210" height="48" fetchpriority="high" />
+        <img src="/logo_icon.png" alt="GiftKhata – Celebrate Better. Track Smarter." class="nav-brand-logo" width="210"
+          height="48" fetchpriority="high" />
         <div class="logo-text">
           <div class="logo-name"><span class="logo-gift-txt">Gift</span><span class="logo-khata-txt">Khata</span></div>
           <div class="logo-sub">Celebrate Better. <span class="track"></span>Track Smarter.</div>
@@ -2686,7 +2716,7 @@
   </footer>
 
   <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
-   <script>
+  <script>
     // THEME TOGGLE — theme already set in <head>; just wire the button
     const html = document.documentElement;
     const toggle = document.getElementById('themeToggle');
@@ -2753,4 +2783,5 @@
   </script>
 
 </body>
+
 </html>
