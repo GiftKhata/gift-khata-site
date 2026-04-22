@@ -1,501 +1,1053 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Use | GiftKhata</title>
-  <meta name="description" content="GiftKhata Terms of Use — plain-language rules that govern your use of this free community gift ledger app." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.giftkhata.com/terms-of-use" />
-  <link rel="icon" type="image/png" href="/logo.png" />
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P2V508P24B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+      gtag("config", "G-P2V508P24B");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Use | GiftKhata</title>
+    <meta
+      name="description"
+      content="GiftKhata Terms of Use — plain-language rules that govern your use of this free community gift ledger app."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.giftkhata.com/terms-of-use" />
+    <link rel="icon" type="image/png" href="/logo.png" />
 
-  <script>(function(){var t=localStorage.getItem('gk-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    /></noscript>
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    <script>
+      (function () {
+        var t =
+          localStorage.getItem("gk-theme") ||
+          (window.matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light");
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
 
-    [data-theme="light"] {
-      --primary: #6D28D9; --primary-light: #7C3AED; --primary-dark: #4C1D95;
-      --accent: #D97706; --accent2: #DB2777;
-      --bg: #F8F5FF; --bg2: #EDE9FE; --bg3: #DDD6FE;
-      --text: #1E1B4B; --text-muted: #6B5FA6;
-      --card: rgba(255,255,255,0.92); --card-border: rgba(109,40,217,0.18);
-      --nav-bg: rgba(248,245,255,0.95); --shadow: rgba(109,40,217,0.14);
-      --mock-bg: #ffffff; --toggle-bg: #DDD6FE; --footer-bg: #EDE9FE;
-      --gradient: linear-gradient(135deg,#6D28D9 0%,#DB2777 100%);
-      --purple-bg: #EDE9FE; --green-bg: #DCFCE7; --amber-bg: #FEF3C7;
-    }
-    [data-theme="dark"] {
-      --primary: #7C3AED; --primary-light: #A78BFA; --primary-dark: #5B21B6;
-      --accent: #F59E0B; --accent2: #EC4899;
-      --bg: #0F0A1E; --bg2: #1A1133; --bg3: #241848;
-      --text: #F3F0FF; --text-muted: #A89EC9;
-      --card: rgba(255,255,255,0.05); --card-border: rgba(124,58,237,0.28);
-      --nav-bg: rgba(15,10,30,0.90); --shadow: rgba(124,58,237,0.28);
-      --mock-bg: #1A1133; --toggle-bg: #241848; --footer-bg: #1A1133;
-      --gradient: linear-gradient(135deg,#7C3AED 0%,#EC4899 100%);
-      --purple-bg: rgba(124,58,237,0.12); --green-bg: rgba(16,185,129,0.12); --amber-bg: rgba(245,158,11,0.12);
-    }
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    html { scroll-behavior: smooth }
-    body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background .4s, color .4s }
+      [data-theme="light"] {
+        --primary: #6d28d9;
+        --primary-light: #7c3aed;
+        --primary-dark: #4c1d95;
+        --accent: #d97706;
+        --accent2: #db2777;
+        --bg: #f8f5ff;
+        --bg2: #ede9fe;
+        --bg3: #ddd6fe;
+        --text: #1e1b4b;
+        --text-muted: #6b5fa6;
+        --card: rgba(255, 255, 255, 0.92);
+        --card-border: rgba(109, 40, 217, 0.18);
+        --nav-bg: rgba(248, 245, 255, 0.95);
+        --shadow: rgba(109, 40, 217, 0.14);
+        --mock-bg: #ffffff;
+        --toggle-bg: #ddd6fe;
+        --footer-bg: #ede9fe;
+        --gradient: linear-gradient(135deg, #6d28d9 0%, #db2777 100%);
+        --purple-bg: #ede9fe;
+        --green-bg: #dcfce7;
+        --amber-bg: #fef3c7;
+      }
+      [data-theme="dark"] {
+        --primary: #7c3aed;
+        --primary-light: #a78bfa;
+        --primary-dark: #5b21b6;
+        --accent: #f59e0b;
+        --accent2: #ec4899;
+        --bg: #0f0a1e;
+        --bg2: #1a1133;
+        --bg3: #241848;
+        --text: #f3f0ff;
+        --text-muted: #a89ec9;
+        --card: rgba(255, 255, 255, 0.05);
+        --card-border: rgba(124, 58, 237, 0.28);
+        --nav-bg: rgba(15, 10, 30, 0.9);
+        --shadow: rgba(124, 58, 237, 0.28);
+        --mock-bg: #1a1133;
+        --toggle-bg: #241848;
+        --footer-bg: #1a1133;
+        --gradient: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+        --purple-bg: rgba(124, 58, 237, 0.12);
+        --green-bg: rgba(16, 185, 129, 0.12);
+        --amber-bg: rgba(245, 158, 11, 0.12);
+      }
 
-    /* NAV */
-    nav {
-      position: sticky; top: 0; z-index: 999;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: .9rem 5%;
-      background: var(--nav-bg); backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--card-border);
-      box-shadow: 0 2px 20px var(--shadow);
-    }
-    .nav-logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
-    .nav-logo-mark {
-      width: 38px; height: 38px; border-radius: 10px;
-      background: var(--gradient); display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; color: #fff; font-weight: 800; flex-shrink: 0;
-    }
-    .nav-logo-text { font-size: 1.1rem; font-weight: 800; letter-spacing: -.02em; }
-    .nav-logo-gift { color: var(--primary); }
-    .nav-logo-khata { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .nav-back {
-      display: inline-flex; align-items: center; gap: .5rem;
-      color: var(--text-muted); text-decoration: none; font-size: .88rem; font-weight: 600;
-      padding: .45rem 1rem; border: 1.5px solid var(--card-border); border-radius: 50px;
-      transition: all .2s;
-    }
-    .nav-back:hover { color: var(--primary); border-color: var(--primary); background: var(--purple-bg); }
-    .theme-toggle {
-      width: 48px; height: 27px; background: var(--toggle-bg);
-      border-radius: 50px; border: 1.5px solid var(--card-border);
-      cursor: pointer; position: relative; display: flex; align-items: center;
-      padding: 2px; transition: background .4s; flex-shrink: 0;
-    }
-    .toggle-thumb {
-      width: 21px; height: 21px; border-radius: 50%;
-      background: var(--gradient); display: flex; align-items: center;
-      justify-content: center; font-size: .68rem;
-      transition: transform .35s cubic-bezier(.4,0,.2,1);
-      box-shadow: 0 2px 6px rgba(0,0,0,.2);
-    }
-    [data-theme="dark"] .toggle-thumb { transform: translateX(0) }
-    [data-theme="light"] .toggle-thumb { transform: translateX(21px) }
-    .nav-right { display: flex; align-items: center; gap: 1rem; }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        transition:
+          background 0.4s,
+          color 0.4s;
+      }
 
-    /* HERO BAND */
-    .legal-hero {
-      background: var(--gradient);
-      padding: 64px 5% 56px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .legal-hero::before {
-      content: ''; position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      opacity: .4;
-    }
-    .legal-hero-chip {
-      display: inline-flex; align-items: center; gap: .45rem;
-      background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 50px; padding: .3rem .9rem;
-      font-size: .75rem; font-weight: 700; letter-spacing: .08em;
-      text-transform: uppercase; color: #fff; margin-bottom: 1.1rem;
-    }
-    .legal-hero h1 {
-      font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800;
-      color: #fff; line-height: 1.15; margin-bottom: .7rem; position: relative;
-    }
-    .legal-hero-sub { font-size: .95rem; color: rgba(255,255,255,0.82); position: relative; }
+      /* NAV */
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.9rem 5%;
+        background: var(--nav-bg);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--card-border);
+        box-shadow: 0 2px 20px var(--shadow);
+      }
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        text-decoration: none;
+      }
+      .nav-logo-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: #fff;
+        font-weight: 800;
+        flex-shrink: 0;
+      }
+      .nav-logo-text {
+        font-size: 1.1rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .nav-logo-gift {
+        color: var(--primary);
+      }
+      .nav-logo-khata {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .nav-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.88rem;
+        font-weight: 600;
+        padding: 0.45rem 1rem;
+        border: 1.5px solid var(--card-border);
+        border-radius: 50px;
+        transition: all 0.2s;
+      }
+      .nav-back:hover {
+        color: var(--primary);
+        border-color: var(--primary);
+        background: var(--purple-bg);
+      }
+      .theme-toggle {
+        width: 48px;
+        height: 27px;
+        background: var(--toggle-bg);
+        border-radius: 50px;
+        border: 1.5px solid var(--card-border);
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        transition: background 0.4s;
+        flex-shrink: 0;
+      }
+      .toggle-thumb {
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        background: var(--gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.68rem;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+      [data-theme="dark"] .toggle-thumb {
+        transform: translateX(0);
+      }
+      [data-theme="light"] .toggle-thumb {
+        transform: translateX(21px);
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
 
-    /* LAYOUT */
-    .legal-layout {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 2.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 3rem 5% 5rem;
-      align-items: start;
-    }
+      /* HERO BAND */
+      .legal-hero {
+        background: var(--gradient);
+        padding: 64px 5% 56px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .legal-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.4;
+      }
+      .legal-hero-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        padding: 0.3rem 0.9rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 1.1rem;
+      }
+      .legal-hero h1 {
+        font-size: clamp(2rem, 4.5vw, 3rem);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 0.7rem;
+        position: relative;
+      }
+      .legal-hero-sub {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.82);
+        position: relative;
+      }
 
-    /* SIDEBAR TOC */
-    .legal-toc {
-      position: sticky; top: 80px;
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 18px; padding: 1.4rem 1.2rem;
-      box-shadow: 0 4px 20px var(--shadow);
-    }
-    .legal-toc-title {
-      font-size: .7rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--text-muted);
-      margin-bottom: 1rem; padding-bottom: .6rem;
-      border-bottom: 1px solid var(--card-border);
-    }
-    .legal-toc a {
-      display: flex; align-items: center; gap: .5rem;
-      color: var(--text-muted); text-decoration: none;
-      font-size: .82rem; font-weight: 500; padding: .45rem .5rem;
-      border-radius: 8px; transition: all .2s; margin-bottom: .1rem;
-    }
-    .legal-toc a:hover, .legal-toc a.active {
-      color: var(--primary); background: var(--purple-bg); font-weight: 600;
-    }
-    .legal-toc a .toc-num {
-      width: 20px; height: 20px; border-radius: 6px;
-      background: var(--purple-bg); color: var(--primary);
-      font-size: .68rem; font-weight: 700;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    .legal-toc a.active .toc-num { background: var(--gradient); color: #fff; }
+      /* LAYOUT */
+      .legal-layout {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 2.5rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 3rem 5% 5rem;
+        align-items: start;
+      }
 
-    /* CONTENT */
-    .legal-content { min-width: 0; }
-    .legal-section {
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 20px; padding: 2rem 2.2rem; margin-bottom: 1.5rem;
-      box-shadow: 0 4px 20px var(--shadow);
-      scroll-margin-top: 90px;
-    }
-    .legal-section-header {
-      display: flex; align-items: center; gap: .9rem; margin-bottom: 1.2rem;
-      padding-bottom: 1rem; border-bottom: 1px solid var(--card-border);
-    }
-    .legal-section-icon {
-      width: 44px; height: 44px; border-radius: 12px;
-      background: var(--purple-bg); display: flex; align-items: center;
-      justify-content: center; font-size: 1.2rem; flex-shrink: 0;
-    }
-    .legal-section-icon.green { background: var(--green-bg); }
-    .legal-section-icon.amber { background: var(--amber-bg); }
-    .legal-section h2 {
-      font-size: 1.1rem; font-weight: 700; color: var(--text); margin: 0;
-    }
-    .legal-section h2 .section-num {
-      font-size: .72rem; font-weight: 700; color: var(--primary);
-      background: var(--purple-bg); padding: .15rem .5rem;
-      border-radius: 6px; margin-right: .5rem; vertical-align: middle;
-    }
-    .legal-section p {
-      font-size: .93rem; color: var(--text-muted); margin-bottom: .9rem; line-height: 1.8;
-    }
-    .legal-section p:last-child { margin-bottom: 0; }
-    .legal-section ul, .legal-section ol {
-      padding-left: 1.4rem; margin-bottom: .9rem;
-    }
-    .legal-section li {
-      font-size: .93rem; color: var(--text-muted); margin-bottom: .5rem; line-height: 1.7;
-    }
-    .legal-section strong { color: var(--text); }
+      /* SIDEBAR TOC */
+      .legal-toc {
+        position: sticky;
+        top: 80px;
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 18px;
+        padding: 1.4rem 1.2rem;
+        box-shadow: 0 4px 20px var(--shadow);
+      }
+      .legal-toc-title {
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid var(--card-border);
+      }
+      .legal-toc a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.82rem;
+        font-weight: 500;
+        padding: 0.45rem 0.5rem;
+        border-radius: 8px;
+        transition: all 0.2s;
+        margin-bottom: 0.1rem;
+      }
+      .legal-toc a:hover,
+      .legal-toc a.active {
+        color: var(--primary);
+        background: var(--purple-bg);
+        font-weight: 600;
+      }
+      .legal-toc a .toc-num {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+        background: var(--purple-bg);
+        color: var(--primary);
+        font-size: 0.68rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .legal-toc a.active .toc-num {
+        background: var(--gradient);
+        color: #fff;
+      }
 
-    /* HIGHLIGHT BOX */
-    .legal-highlight {
-      background: var(--purple-bg); border: 1px solid var(--card-border);
-      border-left: 4px solid var(--primary); border-radius: 10px;
-      padding: .9rem 1.1rem; margin: 1rem 0; font-size: .88rem;
-      color: var(--text); line-height: 1.7;
-    }
-    .legal-highlight.green {
-      background: var(--green-bg); border-left-color: #10B981;
-    }
-    .legal-highlight.amber {
-      background: var(--amber-bg); border-left-color: #D97706;
-    }
+      /* CONTENT */
+      .legal-content {
+        min-width: 0;
+      }
+      .legal-section {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 20px;
+        padding: 2rem 2.2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 20px var(--shadow);
+        scroll-margin-top: 90px;
+      }
+      .legal-section-header {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        margin-bottom: 1.2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--card-border);
+      }
+      .legal-section-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: var(--purple-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+      .legal-section-icon.green {
+        background: var(--green-bg);
+      }
+      .legal-section-icon.amber {
+        background: var(--amber-bg);
+      }
+      .legal-section h2 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text);
+        margin: 0;
+      }
+      .legal-section h2 .section-num {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--primary);
+        background: var(--purple-bg);
+        padding: 0.15rem 0.5rem;
+        border-radius: 6px;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+      }
+      .legal-section p {
+        font-size: 0.93rem;
+        color: var(--text-muted);
+        margin-bottom: 0.9rem;
+        line-height: 1.8;
+      }
+      .legal-section p:last-child {
+        margin-bottom: 0;
+      }
+      .legal-section ul,
+      .legal-section ol {
+        padding-left: 1.4rem;
+        margin-bottom: 0.9rem;
+      }
+      .legal-section li {
+        font-size: 0.93rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
+      }
+      .legal-section strong {
+        color: var(--text);
+      }
 
-    /* META BAR */
-    .legal-meta {
-      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 14px; padding: 1rem 1.4rem; margin-bottom: 2rem;
-      font-size: .82rem; color: var(--text-muted);
-    }
-    .legal-meta span { display: flex; align-items: center; gap: .4rem; }
-    .legal-meta strong { color: var(--text); }
+      /* HIGHLIGHT BOX */
+      .legal-highlight {
+        background: var(--purple-bg);
+        border: 1px solid var(--card-border);
+        border-left: 4px solid var(--primary);
+        border-radius: 10px;
+        padding: 0.9rem 1.1rem;
+        margin: 1rem 0;
+        font-size: 0.88rem;
+        color: var(--text);
+        line-height: 1.7;
+      }
+      .legal-highlight.green {
+        background: var(--green-bg);
+        border-left-color: #10b981;
+      }
+      .legal-highlight.amber {
+        background: var(--amber-bg);
+        border-left-color: #d97706;
+      }
 
-    /* RELATED LINKS */
-    .legal-related {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-      gap: 1rem; margin-top: 2.5rem;
-    }
-    .legal-related-card {
-      background: var(--card); border: 1px solid var(--card-border);
-      border-radius: 16px; padding: 1.2rem 1.4rem;
-      text-decoration: none; transition: all .25s;
-      display: flex; align-items: center; gap: .8rem;
-    }
-    .legal-related-card:hover {
-      transform: translateY(-3px); box-shadow: 0 12px 32px var(--shadow);
-      border-color: var(--primary);
-    }
-    .legal-related-icon {
-      width: 40px; height: 40px; border-radius: 10px;
-      background: var(--purple-bg); display: flex; align-items: center;
-      justify-content: center; font-size: 1.1rem; flex-shrink: 0;
-    }
-    .legal-related-label { font-size: .7rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
-    .legal-related-name { font-size: .92rem; font-weight: 700; color: var(--text); margin-top: .1rem; }
+      /* META BAR */
+      .legal-meta {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        padding: 1rem 1.4rem;
+        margin-bottom: 2rem;
+        font-size: 0.82rem;
+        color: var(--text-muted);
+      }
+      .legal-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .legal-meta strong {
+        color: var(--text);
+      }
 
-    /* FOOTER */
-    footer {
-      background: var(--bg2); border-top: 1px solid var(--card-border);
-      padding: 2rem 5%; text-align: center;
-    }
-    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1rem; }
-    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
-    .footer-links a:hover { color: var(--primary); }
-    .footer-copy { font-size: .8rem; color: var(--text-muted); }
+      /* RELATED LINKS */
+      .legal-related {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2.5rem;
+      }
+      .legal-related-card {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 1.2rem 1.4rem;
+        text-decoration: none;
+        transition: all 0.25s;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      .legal-related-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 32px var(--shadow);
+        border-color: var(--primary);
+      }
+      .legal-related-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--purple-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+      .legal-related-label {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .legal-related-name {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-top: 0.1rem;
+      }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .legal-layout { grid-template-columns: 1fr; }
-      .legal-toc { position: static; }
-    }
+      /* FOOTER */
+      footer {
+        background: var(--bg2);
+        border-top: 1px solid var(--card-border);
+        padding: 2rem 5%;
+        text-align: center;
+      }
+      .footer-links {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
+      .footer-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--primary);
+      }
+      .footer-copy {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
 
-    /* COMMUNITY CALLOUT */
-    .community-callout {
-      display: flex; align-items: flex-start; gap: .9rem;
-      padding: 1.1rem 1.3rem; border-radius: 18px;
-      border: 1px solid var(--card-border); background: var(--card);
-      margin-bottom: 1.8rem;
-    }
-    .callout-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: .1rem; }
-    .community-callout p { font-size: .88rem; color: var(--text-muted); line-height: 1.75; margin: 0; }
-    .community-callout strong { color: var(--text); }
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .legal-layout {
+          grid-template-columns: 1fr;
+        }
+        .legal-toc {
+          position: static;
+        }
+      }
 
-    /* AT-A-GLANCE GRID */
-    .glance-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: .9rem; margin-bottom: 2rem;
-    }
-    .glance-card {
-      display: flex; align-items: flex-start; gap: .75rem;
-      padding: .9rem 1rem; border-radius: 16px;
-      border: 1px solid var(--card-border); background: var(--card);
-    }
-    .glance-icon {
-      width: 34px; height: 34px; border-radius: 10px;
-      background: var(--bg2); display: flex; align-items: center;
-      justify-content: center; font-size: 1rem; flex-shrink: 0;
-    }
-    .glance-label { font-size: .82rem; font-weight: 700; color: var(--text); }
-    .glance-sub   { font-size: .72rem; color: var(--text-muted); margin-top: .18rem; }
+      /* COMMUNITY CALLOUT */
+      .community-callout {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.9rem;
+        padding: 1.1rem 1.3rem;
+        border-radius: 18px;
+        border: 1px solid var(--card-border);
+        background: var(--card);
+        margin-bottom: 1.8rem;
+      }
+      .callout-icon {
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      .community-callout p {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+        margin: 0;
+      }
+      .community-callout strong {
+        color: var(--text);
+      }
 
-    /* SUB-HEADINGS inside sections */
-    .sub-heading { font-size: .88rem; font-weight: 700; color: var(--text); margin: 1rem 0 .4rem; }
+      /* AT-A-GLANCE GRID */
+      .glance-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem;
+        margin-bottom: 2rem;
+      }
+      .glance-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.9rem 1rem;
+        border-radius: 16px;
+        border: 1px solid var(--card-border);
+        background: var(--card);
+      }
+      .glance-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: var(--bg2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .glance-label {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .glance-sub {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 0.18rem;
+      }
 
-    /* AMBER WARNING BOX */
-    .amber-box {
-      display: flex; align-items: flex-start; gap: .7rem;
-      padding: .9rem 1.1rem; border-radius: 12px; margin-bottom: .9rem;
-      background: #fffbeb; border: 1px solid #fde68a; color: #92400e;
-    }
-    [data-theme="dark"] .amber-box {
-      background: rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.25); color: #fcd34d;
-    }
-    .amber-box-icon { font-size: 1rem; flex-shrink: 0; margin-top: .1rem; }
-    .amber-box p { font-size: .85rem; line-height: 1.65; margin: 0; }
-    .amber-box strong { color: inherit; }
+      /* SUB-HEADINGS inside sections */
+      .sub-heading {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text);
+        margin: 1rem 0 0.4rem;
+      }
 
-    /* GOVERNING LAW BOX */
-    .governing-box {
-      display: flex; align-items: flex-start; gap: .75rem;
-      padding: .9rem 1.1rem; border-radius: 12px;
-      border: 1px solid var(--card-border); background: var(--card);
-    }
-    .governing-box p { font-size: .88rem; color: var(--text-muted); line-height: 1.7; margin: 0; }
+      /* AMBER WARNING BOX */
+      .amber-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7rem;
+        padding: 0.9rem 1.1rem;
+        border-radius: 12px;
+        margin-bottom: 0.9rem;
+        background: #fffbeb;
+        border: 1px solid #fde68a;
+        color: #92400e;
+      }
+      [data-theme="dark"] .amber-box {
+        background: rgba(245, 158, 11, 0.08);
+        border-color: rgba(245, 158, 11, 0.25);
+        color: #fcd34d;
+      }
+      .amber-box-icon {
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      .amber-box p {
+        font-size: 0.85rem;
+        line-height: 1.65;
+        margin: 0;
+      }
+      .amber-box strong {
+        color: inherit;
+      }
 
-    /* PAGE FOOTER NOTE */
-    .page-footer-note {
-      margin-top: 2.5rem; padding-top: 1.5rem;
-      border-top: 1px solid var(--card-border);
-      text-align: center; font-size: .75rem; color: var(--text-muted);
-    }
-    .page-footer-note p + p { margin-top: .25rem; }
+      /* GOVERNING LAW BOX */
+      .governing-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.9rem 1.1rem;
+        border-radius: 12px;
+        border: 1px solid var(--card-border);
+        background: var(--card);
+      }
+      .governing-box p {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin: 0;
+      }
 
-    @media (max-width: 540px) { .glance-grid { grid-template-columns: 1fr; } }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html" class="nav-logo">
-      <div class="nav-logo-mark">🎁</div>
-      <span class="nav-logo-text"><span class="nav-logo-gift">Gift</span><span class="nav-logo-khata">Khata</span></span>
-    </a>
-    <div class="nav-right">
-      <div class="theme-toggle" id="themeToggle" title="Toggle theme" role="button" aria-label="Toggle theme">
-        <div class="toggle-thumb"><span id="toggleIcon">🌙</span></div>
+      /* PAGE FOOTER NOTE */
+      .page-footer-note {
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--card-border);
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+      .page-footer-note p + p {
+        margin-top: 0.25rem;
+      }
+
+      @media (max-width: 540px) {
+        .glance-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">🎁</div>
+        <span class="nav-logo-text"
+          ><span class="nav-logo-gift">Gift</span
+          ><span class="nav-logo-khata">Khata</span></span
+        >
+      </a>
+      <div class="nav-right">
+        <div
+          class="theme-toggle"
+          id="themeToggle"
+          title="Toggle theme"
+          role="button"
+          aria-label="Toggle theme"
+        >
+          <div class="toggle-thumb"><span id="toggleIcon">🌙</span></div>
+        </div>
+        <a href="index.html" class="nav-back"
+          ><i class="fa fa-arrow-left"></i> Back to Home</a
+        >
       </div>
-      <a href="index.html" class="nav-back"><i class="fa fa-arrow-left"></i> Back to Home</a>
+    </nav>
+
+    <div class="legal-hero">
+      <div class="legal-hero-chip">📋 User Agreement</div>
+      <h1>Terms of Use</h1>
+      <p class="legal-hero-sub">
+        Effective: 1 April 2025 &nbsp;·&nbsp; Last updated: 1 April 2025
+      </p>
     </div>
-  </nav>
 
+    <div class="legal-layout">
+      <aside class="legal-toc">
+        <div class="legal-toc-title">On this page</div>
+        <a href="#tu-who"><span class="toc-num">1</span> Who this is between</a>
+        <a href="#tu-as-is"><span class="toc-num">2</span> Free &amp; as-is</a>
+        <a href="#tu-account"><span class="toc-num">3</span> Your account</a>
+        <a href="#tu-data"><span class="toc-num">4</span> Your data</a>
+        <a href="#tu-rules"
+          ><span class="toc-num">5</span> What you must not do</a
+        >
+        <a href="#tu-liability"><span class="toc-num">6</span> No liability</a>
+        <a href="#tu-ip"
+          ><span class="toc-num">7</span> Intellectual property</a
+        >
+        <a href="#tu-changes"><span class="toc-num">8</span> Changes</a>
+        <a href="#tu-law"><span class="toc-num">9</span> Governing law</a>
+        <a href="#tu-contact"><span class="toc-num">10</span> Contact</a>
+      </aside>
+      <div class="legal-content">
+        <div class="legal-meta">
+          <span>📅 <strong>Effective:</strong> 1 April 2025</span>
+          <span>🔄 <strong>Last updated:</strong> 1 April 2025</span>
+          <span>⚖️ <strong>Jurisdiction:</strong> India · IT Act 2000</span>
+        </div>
+        <div class="community-callout">
+          <span class="callout-icon">❤️</span>
+          <div>
+            <p>
+              <strong>GiftKhata</strong> is a free, open community project built
+              by volunteers to help Indian families track gifts at functions.
+              There is no company, no subscription, no commercial motive.
+            </p>
+            <p style="margin-top: 0.5rem">
+              These terms exist to protect both you and the volunteer
+              contributors from misuse. They are intentionally written in plain
+              language — no dense legal boilerplate.
+            </p>
+          </div>
+        </div>
 
-  <div class="legal-hero">
-    <div class="legal-hero-chip">📋 User Agreement</div>
-    <h1>Terms of Use</h1>
-    <p class="legal-hero-sub">Effective: 1 April 2025 &nbsp;·&nbsp; Last updated: 1 April 2025</p>
-  </div>
+        <div class="legal-section" id="tu-who">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">🤝</div>
+            <h2>
+              <span class="section-num">01</span> Who this agreement is between
+            </h2>
+          </div>
+          <p>
+            By using GiftKhata you agree to these terms. The other party is not
+            a company — it is the group of volunteer contributors who built and
+            maintain this app. When these terms say "we" or "us" that's who we
+            mean.
+          </p>
+        </div>
 
-  <div class="legal-layout">
-    <aside class="legal-toc">
-      <div class="legal-toc-title">On this page</div>
-      <a href="#tu-who"><span class="toc-num">1</span> Who this is between</a>
-      <a href="#tu-as-is"><span class="toc-num">2</span> Free &amp; as-is</a>
-      <a href="#tu-account"><span class="toc-num">3</span> Your account</a>
-      <a href="#tu-data"><span class="toc-num">4</span> Your data</a>
-      <a href="#tu-rules"><span class="toc-num">5</span> What you must not do</a>
-      <a href="#tu-liability"><span class="toc-num">6</span> No liability</a>
-      <a href="#tu-ip"><span class="toc-num">7</span> Intellectual property</a>
-      <a href="#tu-changes"><span class="toc-num">8</span> Changes</a>
-      <a href="#tu-law"><span class="toc-num">9</span> Governing law</a>
-      <a href="#tu-contact"><span class="toc-num">10</span> Contact</a>
-    </aside>
-    <div class="legal-content">
-      <div class="legal-meta">
-        <span>📅 <strong>Effective:</strong> 1 April 2025</span>
-        <span>🔄 <strong>Last updated:</strong> 1 April 2025</span>
-        <span>⚖️ <strong>Jurisdiction:</strong> India · IT Act 2000</span>
-      </div>
-      <div class="community-callout">
-        <span class="callout-icon">❤️</span>
-        <div>
-          <p><strong>GiftKhata</strong> is a free, open community project built by volunteers to help Indian families track gifts at functions. There is no company, no subscription, no commercial motive.</p>
-          <p style="margin-top:.5rem">These terms exist to protect both you and the volunteer contributors from misuse. They are intentionally written in plain language — no dense legal boilerplate.</p>
+        <div class="legal-section" id="tu-as-is">
+          <div class="legal-section-header">
+            <div class="legal-section-icon amber">⚠️</div>
+            <h2>
+              <span class="section-num">02</span> The service is free and
+              provided as-is
+            </h2>
+          </div>
+          <div class="amber-box">
+            <span class="amber-box-icon">⚠️</span>
+            <p>
+              GiftKhata is provided <strong>free of charge</strong> and
+              <strong>"as is"</strong> — without any warranty. We're volunteers,
+              not a company with a support team. The app may have bugs, go
+              offline, or be discontinued at any time.
+            </p>
+          </div>
+          <p>
+            We will do our best to keep it running reliably, guaranteed uptime,
+            data durability, or continued availability. Please keep your own
+            backups of important records (use the Export feature in Settings).
+          </p>
+        </div>
+
+        <div class="legal-section" id="tu-account">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">👤</div>
+            <h2><span class="section-num">03</span> Your account</h2>
+          </div>
+          <p>
+            You sign in via Google, Apple, Facebook, or LinkedIn — we never
+            store your password. You are responsible for keeping your sign-in
+            account secure.
+          </p>
+          <p>
+            One account per person please. Don't create multiple accounts to get
+            around any restrictions.
+          </p>
+          <p>
+            You must be at least <strong>13 years old</strong> to use GiftKhata.
+            If you are under 18, please use it with a parent or guardian's
+            awareness.
+          </p>
+        </div>
+
+        <div class="legal-section" id="tu-data">
+          <div class="legal-section-header">
+            <div class="legal-section-icon green">💾</div>
+            <h2><span class="section-num">04</span> Your data</h2>
+          </div>
+          <p>
+            Everything you enter — gift records, event details, person names,
+            family tree data — <strong>belongs to you</strong>. We claim no
+            rights over it.
+          </p>
+          <p>
+            By using the app you give us permission to store and display your
+            data back to you. That's the only purpose we use it for. See the
+            <a href="privacy-policy.html" style="color: var(--primary)"
+              >Privacy Policy</a
+            >
+            for full details.
+          </p>
+          <p>
+            You can export or delete your data at any time. On account deletion
+            we remove everything within 30 days.
+          </p>
+        </div>
+
+        <div class="legal-section" id="tu-rules">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">🚦</div>
+            <h2><span class="section-num">05</span> What you must not do</h2>
+          </div>
+          <p>
+            This is a community tool built in good faith. Please don't abuse it:
+          </p>
+          <ul>
+            <li>Don't use the app to store or share illegal content</li>
+            <li>Don't attempt to access other users' data</li>
+            <li>
+              Don't try to reverse-engineer, scrape, or attack the service
+            </li>
+            <li>
+              Don't use automated bots or scripts to interact with the app
+            </li>
+            <li>
+              Don't use the app for commercial purposes without talking to us
+              first
+            </li>
+            <li>Don't impersonate someone else</li>
+          </ul>
+          <p>
+            Misuse will result in account termination. Serious misuse may be
+            reported to the relevant authorities as required under the IT Act,
+            2000.
+          </p>
+        </div>
+
+        <div class="legal-section" id="tu-liability">
+          <div class="legal-section-header">
+            <div class="legal-section-icon amber">⚖️</div>
+            <h2><span class="section-num">06</span> No liability</h2>
+          </div>
+          <p>
+            We are volunteers, not a company. To the maximum extent permitted by
+            law:
+          </p>
+          <ul>
+            <li>
+              We are not liable for data loss — please export your data
+              regularly
+            </li>
+            <li>We are not liable for service interruptions or downtime</li>
+            <li>We are not liable for any indirect or consequential loss</li>
+            <li>
+              Our total liability is capped at ₹0 since the service is free
+            </li>
+          </ul>
+          <p>
+            Nothing here limits liability for fraud, gross negligence, or
+            anything that cannot be excluded under Indian law.
+          </p>
+        </div>
+
+        <div class="legal-section" id="tu-ip">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">©️</div>
+            <h2><span class="section-num">07</span> Intellectual property</h2>
+          </div>
+          <p>
+            The app's code, design, and branding ("GiftKhata") belong to the
+            volunteer contributors. Your data belongs to you. That's it.
+          </p>
+          <p>
+            The source code may be open-sourced in future — check the project
+            repository for the current licence.
+          </p>
+        </div>
+
+        <div class="legal-section" id="tu-changes">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">🔄</div>
+            <h2>
+              <span class="section-num">08</span> Changes to the app or these
+              terms
+            </h2>
+          </div>
+          <p>
+            We may update these terms or change / discontinue features at any
+            time. For material changes we'll update the date at the top and
+            notify you in-app where possible. Continued use after changes means
+            you accept them.
+          </p>
+          <p>
+            If we ever need to shut down the service, we will give as much
+            notice as we can (aiming for at least 30 days) and provide a data
+            export before shutdown.
+          </p>
+        </div>
+
+        <div class="legal-section" id="tu-law">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">🏛️</div>
+            <h2><span class="section-num">09</span> Governing law</h2>
+          </div>
+          <div class="governing-box">
+            <span style="font-size: 1.1rem">⚖️</span>
+            <p>
+              These terms are governed by the laws of India. Any dispute that
+              can't be resolved by talking to us should be referred to mediation
+              before formal proceedings. Courts in India have jurisdiction.
+            </p>
+          </div>
+        </div>
+
+        <div class="legal-section" id="tu-contact">
+          <div class="legal-section-header">
+            <div class="legal-section-icon green">📬</div>
+            <h2><span class="section-num">10</span> Contact</h2>
+          </div>
+          <p>
+            If you have questions about these terms, or if you want to report
+            misuse, email us at
+            <a href="mailto:support@giftkhata.com" style="color: var(--primary)"
+              >support@giftkhata.com</a
+            >. We're a small volunteer team so please allow a few days for a
+            response.
+          </p>
+        </div>
+
+        <div class="page-footer-note">
+          <p>
+            GiftKhata is a free community project, not a registered company.
+          </p>
+          <p>Last updated: 1 April 2025</p>
+        </div>
+
+        <div class="legal-related">
+          <a href="disclaimer.html" class="legal-related-card"
+            ><div class="legal-related-icon">⚠️</div>
+            <div>
+              <div class="legal-related-label">Also read</div>
+              <div class="legal-related-name">Disclaimer</div>
+            </div></a
+          >
+          <a href="privacy-policy.html" class="legal-related-card"
+            ><div class="legal-related-icon">🔐</div>
+            <div>
+              <div class="legal-related-label">Also read</div>
+              <div class="legal-related-name">Privacy Policy</div>
+            </div></a
+          >
+          <a href="index.html#reach-us" class="legal-related-card"
+            ><div class="legal-related-icon">💬</div>
+            <div>
+              <div class="legal-related-label">Questions?</div>
+              <div class="legal-related-name">Reach Us</div>
+            </div></a
+          >
         </div>
       </div>
-
-      <div class="legal-section" id="tu-who">
-        <div class="legal-section-header"><div class="legal-section-icon">🤝</div><h2><span class="section-num">01</span> Who this agreement is between</h2></div>
-        <p>By using GiftKhata you agree to these terms. The other party is not a company — it is the group of volunteer contributors who built and maintain this app. When these terms say "we" or "us" that's who we mean.</p>
-      </div>
-
-      <div class="legal-section" id="tu-as-is">
-        <div class="legal-section-header"><div class="legal-section-icon amber">⚠️</div><h2><span class="section-num">02</span> The service is free and provided as-is</h2></div>
-        <div class="amber-box">
-          <span class="amber-box-icon">⚠️</span>
-          <p>GiftKhata is provided <strong>free of charge</strong> and <strong>"as is"</strong> — without any warranty. We're volunteers, not a company with a support team. The app may have bugs, go offline, or be discontinued at any time.</p>
-        </div>
-        <p>We will do our best to keep it running reliably, but we make no guarantees about uptime, data durability, or continued availability. Please keep your own backups of important records (use the Export feature in Settings).</p>
-      </div>
-
-      <div class="legal-section" id="tu-account">
-        <div class="legal-section-header"><div class="legal-section-icon">👤</div><h2><span class="section-num">03</span> Your account</h2></div>
-        <p>You sign in via Google, Apple, Facebook, or LinkedIn — we never store your password. You are responsible for keeping your sign-in account secure.</p>
-        <p>One account per person please. Don't create multiple accounts to get around any restrictions.</p>
-        <p>You must be at least <strong>13 years old</strong> to use GiftKhata. If you are under 18, please use it with a parent or guardian's awareness.</p>
-      </div>
-
-      <div class="legal-section" id="tu-data">
-        <div class="legal-section-header"><div class="legal-section-icon green">💾</div><h2><span class="section-num">04</span> Your data</h2></div>
-        <p>Everything you enter — gift records, event details, person names, family tree data — <strong>belongs to you</strong>. We claim no rights over it.</p>
-        <p>By using the app you give us permission to store and display your data back to you. That's the only purpose we use it for. See the <a href="privacy-policy.html" style="color:var(--primary)">Privacy Policy</a> for full details.</p>
-        <p>You can export or delete your data at any time. On account deletion we remove everything within 30 days.</p>
-      </div>
-
-      <div class="legal-section" id="tu-rules">
-        <div class="legal-section-header"><div class="legal-section-icon">🚦</div><h2><span class="section-num">05</span> What you must not do</h2></div>
-        <p>This is a community tool built in good faith. Please don't abuse it:</p>
-        <ul>
-          <li>Don't use the app to store or share illegal content</li>
-          <li>Don't attempt to access other users' data</li>
-          <li>Don't try to reverse-engineer, scrape, or attack the service</li>
-          <li>Don't use automated bots or scripts to interact with the app</li>
-          <li>Don't use the app for commercial purposes without talking to us first</li>
-          <li>Don't impersonate someone else</li>
-        </ul>
-        <p>Misuse will result in account termination. Serious misuse may be reported to the relevant authorities as required under the IT Act, 2000.</p>
-      </div>
-
-      <div class="legal-section" id="tu-liability">
-        <div class="legal-section-header"><div class="legal-section-icon amber">⚖️</div><h2><span class="section-num">06</span> No liability</h2></div>
-        <p>We are volunteers, not a company. To the maximum extent permitted by law:</p>
-        <ul>
-          <li>We are not liable for data loss — please export your data regularly</li>
-          <li>We are not liable for service interruptions or downtime</li>
-          <li>We are not liable for any indirect or consequential loss</li>
-          <li>Our total liability is capped at ₹0 since the service is free</li>
-        </ul>
-        <p>Nothing here limits liability for fraud, gross negligence, or anything that cannot be excluded under Indian law.</p>
-      </div>
-
-      <div class="legal-section" id="tu-ip">
-        <div class="legal-section-header"><div class="legal-section-icon">©️</div><h2><span class="section-num">07</span> Intellectual property</h2></div>
-        <p>The app's code, design, and branding ("GiftKhata") belong to the volunteer contributors. Your data belongs to you. That's it.</p>
-        <p>The source code may be open-sourced in future — check the project repository for the current licence.</p>
-      </div>
-
-      <div class="legal-section" id="tu-changes">
-        <div class="legal-section-header"><div class="legal-section-icon">🔄</div><h2><span class="section-num">08</span> Changes to the app or these terms</h2></div>
-        <p>We may update these terms or change / discontinue features at any time. For material changes we'll update the date at the top and notify you in-app where possible. Continued use after changes means you accept them.</p>
-        <p>If we ever need to shut down the service, we will give as much notice as we can (aiming for at least 30 days) and provide a data export before shutdown.</p>
-      </div>
-
-      <div class="legal-section" id="tu-law">
-        <div class="legal-section-header"><div class="legal-section-icon">🏛️</div><h2><span class="section-num">09</span> Governing law</h2></div>
-        <div class="governing-box">
-          <span style="font-size:1.1rem">⚖️</span>
-          <p>These terms are governed by the laws of India. Any dispute that can't be resolved by talking to us should be referred to mediation before formal proceedings. Courts in India have jurisdiction.</p>
-        </div>
-      </div>
-
-      <div class="legal-section" id="tu-contact">
-        <div class="legal-section-header"><div class="legal-section-icon green">📬</div><h2><span class="section-num">10</span> Contact</h2></div>
-        <p>If you have questions about these terms, or if you want to report misuse, email us at <a href="mailto:support@giftkhata.com" style="color:var(--primary)">support@giftkhata.com</a>. We're a small volunteer team so please allow a few days for a response.</p>
-      </div>
-
-      <div class="page-footer-note">
-        <p>GiftKhata is a free community project, not a registered company.</p>
-        <p>Last updated: 1 April 2025</p>
-      </div>
-
-      <div class="legal-related">
-        <a href="disclaimer.html" class="legal-related-card"><div class="legal-related-icon">⚠️</div><div><div class="legal-related-label">Also read</div><div class="legal-related-name">Disclaimer</div></div></a>
-        <a href="privacy-policy.html" class="legal-related-card"><div class="legal-related-icon">🔐</div><div><div class="legal-related-label">Also read</div><div class="legal-related-name">Privacy Policy</div></div></a>
-        <a href="index.html#reach-us" class="legal-related-card"><div class="legal-related-icon">💬</div><div><div class="legal-related-label">Questions?</div><div class="legal-related-name">Reach Us</div></div></a>
-      </div>
     </div>
-  </div>
 
-  <footer>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms-of-use.html">Terms of Use</a>
-      <a href="index.html#reach-us">Contact Us</a>
-    </div>
-    <p class="footer-copy">© 2026 GiftKhata. All rights reserved. | <a href="https://www.giftkhata.com" style="color:var(--primary);text-decoration:none">giftkhata.com</a></p>
-  </footer>
+    <footer>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="index.html#reach-us">Contact Us</a>
+      </div>
+      <p class="footer-copy">
+        © 2026 GiftKhata. All rights reserved. |
+        <a
+          href="https://www.giftkhata.com"
+          style="color: var(--primary); text-decoration: none"
+          >giftkhata.com</a
+        >
+      </p>
+    </footer>
 
-  <script>
-    const html = document.documentElement;
-    const toggle = document.getElementById('themeToggle');
-    const icon = document.getElementById('toggleIcon');
-    icon.textContent = html.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
-    toggle.addEventListener('click', () => {
-      const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', t);
-      icon.textContent = t === 'dark' ? '☀️' : '🌙';
-      localStorage.setItem('gk-theme', t);
-    });
-    // TOC active state on scroll
-    const sections = document.querySelectorAll('.legal-section');
-    const tocLinks = document.querySelectorAll('.legal-toc a');
-    const onScroll = () => {
-      let current = '';
-      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
-      tocLinks.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    <script>
+      const html = document.documentElement;
+      const toggle = document.getElementById("themeToggle");
+      const icon = document.getElementById("toggleIcon");
+      icon.textContent =
+        html.getAttribute("data-theme") === "dark" ? "☀️" : "🌙";
+      toggle.addEventListener("click", () => {
+        const t = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        html.setAttribute("data-theme", t);
+        icon.textContent = t === "dark" ? "☀️" : "🌙";
+        localStorage.setItem("gk-theme", t);
       });
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  </script>
-</body>
+      // TOC active state on scroll
+      const sections = document.querySelectorAll(".legal-section");
+      const tocLinks = document.querySelectorAll(".legal-toc a");
+      const onScroll = () => {
+        let current = "";
+        sections.forEach((s) => {
+          if (window.scrollY >= s.offsetTop - 120) current = s.id;
+        });
+        tocLinks.forEach((a) => {
+          a.classList.toggle(
+            "active",
+            a.getAttribute("href") === "#" + current,
+          );
+        });
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    </script>
+  </body>
 </html>
