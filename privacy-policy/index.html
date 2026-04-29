@@ -16,13 +16,12 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Disclaimer & Liability | GiftKhata</title>
+    <title>Privacy Policy | GiftKhata</title>
     <meta
       name="description"
-      content="GiftKhata disclaimer — understand the scope, limitations and liability terms of using India's digital gift ledger app."
+      content="GiftKhata Privacy Policy — how we collect, use, store and protect your personal data in compliance with India's DPDP Act 2023."
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.giftkhata.com/disclaimer" />
     <link rel="icon" type="image/png" href="/logo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -548,6 +547,145 @@
           position: static;
         }
       }
+
+      /* COMMUNITY CALLOUT */
+      .community-callout {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.9rem;
+        padding: 1.1rem 1.3rem;
+        border-radius: 18px;
+        border: 1px solid var(--card-border);
+        background: var(--card);
+        margin-bottom: 1.8rem;
+      }
+      .callout-icon {
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      .community-callout p {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.75;
+        margin: 0;
+      }
+      .community-callout strong {
+        color: var(--text);
+      }
+
+      /* AT-A-GLANCE GRID */
+      .glance-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.9rem;
+        margin-bottom: 2rem;
+      }
+      .glance-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.9rem 1rem;
+        border-radius: 16px;
+        border: 1px solid var(--card-border);
+        background: var(--card);
+      }
+      .glance-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: var(--bg2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .glance-label {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .glance-sub {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 0.18rem;
+      }
+
+      /* SUB-HEADINGS inside sections */
+      .sub-heading {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text);
+        margin: 1rem 0 0.4rem;
+      }
+
+      /* AMBER WARNING BOX */
+      .amber-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7rem;
+        padding: 0.9rem 1.1rem;
+        border-radius: 12px;
+        margin-bottom: 0.9rem;
+        background: #fffbeb;
+        border: 1px solid #fde68a;
+        color: #92400e;
+      }
+      [data-theme="dark"] .amber-box {
+        background: rgba(245, 158, 11, 0.08);
+        border-color: rgba(245, 158, 11, 0.25);
+        color: #fcd34d;
+      }
+      .amber-box-icon {
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      .amber-box p {
+        font-size: 0.85rem;
+        line-height: 1.65;
+        margin: 0;
+      }
+      .amber-box strong {
+        color: inherit;
+      }
+
+      /* GOVERNING LAW BOX */
+      .governing-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.9rem 1.1rem;
+        border-radius: 12px;
+        border: 1px solid var(--card-border);
+        background: var(--card);
+      }
+      .governing-box p {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* PAGE FOOTER NOTE */
+      .page-footer-note {
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--card-border);
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+      .page-footer-note p + p {
+        margin-top: 0.25rem;
+      }
+
+      @media (max-width: 540px) {
+        .glance-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -576,212 +714,331 @@
     </nav>
 
     <div class="legal-hero">
-      <div class="legal-hero-chip">⚠️ Important Notice</div>
-      <h1>Disclaimer &amp; Liability</h1>
+      <div class="legal-hero-chip">🔐 Your Data, Your Rights</div>
+      <h1>Privacy Policy</h1>
       <p class="legal-hero-sub">
-        Please read this carefully before using GiftKhata
+        Effective: 1 April 2025 &nbsp;·&nbsp; Last updated: 1 April 2025
       </p>
     </div>
 
     <div class="legal-layout">
-      <!-- TOC -->
       <aside class="legal-toc">
         <div class="legal-toc-title">On this page</div>
-        <a href="#personal-ledger"
-          ><span class="toc-num">1</span> Personal Ledger Only</a
+        <a href="#pp-who"><span class="toc-num">1</span> Who runs GiftKhata?</a>
+        <a href="#pp-collect"><span class="toc-num">2</span> What we collect</a>
+        <a href="#pp-not-collect"
+          ><span class="toc-num">3</span> What we don't collect</a
         >
-        <a href="#user-data"
-          ><span class="toc-num">2</span> User-Entered Data</a
+        <a href="#pp-use"><span class="toc-num">4</span> How we use it</a>
+        <a href="#pp-who-sees"
+          ><span class="toc-num">5</span> Who can see your data</a
         >
-        <a href="#no-legal-proof"
-          ><span class="toc-num">3</span> No Legal Proof</a
-        >
-        <a href="#not-tax"><span class="toc-num">4</span> Not a Tax Service</a>
-        <a href="#data-privacy"><span class="toc-num">5</span> Data Privacy</a>
-        <a href="#liability"
-          ><span class="toc-num">6</span> Limitation of Liability</a
-        >
+        <a href="#pp-rights"><span class="toc-num">6</span> Your rights</a>
+        <a href="#pp-security"><span class="toc-num">7</span> Security</a>
+        <a href="#pp-children"><span class="toc-num">8</span> Children</a>
+        <a href="#pp-cookies"><span class="toc-num">9</span> Cookies</a>
+        <a href="#pp-changes"><span class="toc-num">10</span> Changes</a>
+        <a href="#pp-contact"><span class="toc-num">11</span> Contact</a>
       </aside>
-
-      <!-- CONTENT -->
       <div class="legal-content">
         <div class="legal-meta">
-          <span>📅 <strong>Last updated:</strong> March 2026</span>
+          <span>📅 <strong>Effective:</strong> 1 April 2025</span>
+          <span>🔄 <strong>Last updated:</strong> 1 April 2025</span>
           <span
-            >🌐 <strong>Applies to:</strong> giftkhata.com &amp; mobile
-            apps</span
+            >⚖️ <strong>Governed by:</strong> IT Act 2000 · DPDP Act 2023</span
           >
-          <span>🇮🇳 <strong>Jurisdiction:</strong> India</span>
+        </div>
+        <div class="community-callout">
+          <span class="callout-icon">❤️</span>
+          <p>
+            <strong>GiftKhata</strong> is a free, open community project — not a
+            company. There is no registered entity, no commercial intent, and no
+            investors. We built this to help Indian families manage gift records
+            at functions. This policy is written in plain language so you
+            actually understand how your data is handled.
+          </p>
+        </div>
+        <div class="glance-grid">
+          <div class="glance-card">
+            <div class="glance-icon">🔑</div>
+            <div>
+              <div class="glance-label">No password stored</div>
+              <div class="glance-sub">We use Google / Apple sign-in only</div>
+            </div>
+          </div>
+          <div class="glance-card">
+            <div class="glance-icon">👁️</div>
+            <div>
+              <div class="glance-label">No ads, no tracking</div>
+              <div class="glance-sub">We don't monetise your data</div>
+            </div>
+          </div>
+          <div class="glance-card">
+            <div class="glance-icon">✅</div>
+            <div>
+              <div class="glance-label">Delete anytime</div>
+              <div class="glance-sub">Your data, your choice</div>
+            </div>
+          </div>
+          <div class="glance-card">
+            <div class="glance-icon">❤️</div>
+            <div>
+              <div class="glance-label">Community project</div>
+              <div class="glance-sub">Built by volunteers, not a company</div>
+            </div>
+          </div>
         </div>
 
-        <div class="legal-highlight amber">
-          <strong>GiftKhata</strong> is a personal record-keeping tool. It is
-          not a bank, wallet, payment gateway, or financial service of any kind.
-        </div>
-
-        <div class="legal-section" id="personal-ledger">
+        <div class="legal-section" id="pp-who">
           <div class="legal-section-header">
-            <div class="legal-section-icon">📓</div>
-            <h2><span class="section-num">01</span>Personal Ledger Only</h2>
+            <div class="legal-section-icon">👥</div>
+            <h2><span class="section-num">01</span> Who runs GiftKhata?</h2>
           </div>
           <p>
-            GiftKhata is designed purely as a digital notebook for recording
-            gifts received and given at personal and family events. It does not
-            hold or move real money, operate as a payment system, or provide
-            banking, investment, or financial services of any kind.
+            GiftKhata is a personal side project maintained by a small group of
+            volunteers. There is no registered company, no registered address,
+            and no legal entity behind this application. When we say "we" or
+            "us" in this policy we mean the volunteer contributors to this
+            project.
           </p>
           <p>
-            Think of GiftKhata as the digital equivalent of your family's paper
-            bahi-khata — a convenience tool for personal memory keeping, nothing
-            more.
+            Questions? Email us at
+            <a href="mailto:support@giftkhata.com" style="color: var(--primary)"
+              >support@giftkhata.com</a
+            >.
           </p>
         </div>
 
-        <div class="legal-section" id="user-data">
+        <div class="legal-section" id="pp-collect">
           <div class="legal-section-header">
-            <div class="legal-section-icon amber">✏️</div>
-            <h2><span class="section-num">02</span>User-Entered Data</h2>
+            <div class="legal-section-icon">📋</div>
+            <h2><span class="section-num">02</span> What data we collect</h2>
           </div>
+          <h3 class="sub-heading">From your sign-in provider</h3>
           <p>
-            All information stored in GiftKhata is entered manually by the user.
-            Gift amounts, descriptions, people names, and events are based
-            solely on what users type into the app and may be inaccurate,
-            incomplete, or approximate.
+            We use OAuth 2.0 (Google, Facebook, Apple, LinkedIn). When you sign
+            in, your provider shares your
+            <strong>name, email address, and profile photo</strong> with us. We
+            store only these three fields. We never see or store your password.
           </p>
+          <h3 class="sub-heading">Data you enter yourself</h3>
           <p>
-            GiftKhata does not verify, validate, audit, or guarantee the
-            accuracy of any entry. Users are fully responsible for checking and
-            maintaining the correctness of their own records.
+            Everything you type into the app — gift records, event details,
+            person names, phone numbers, cities, family tree data — is stored in
+            our database linked to your account.
+            <strong>You own this data</strong>. We don't read it, analyse it, or
+            use it for any purpose other than showing it back to you.
           </p>
-          <div class="legal-highlight">
-            No automated data collection from payments, banks, or UPI apps
-            occurs. Everything is user-typed.
-          </div>
-        </div>
-
-        <div class="legal-section" id="no-legal-proof">
-          <div class="legal-section-header">
-            <div class="legal-section-icon">⚖️</div>
-            <h2>
-              <span class="section-num">03</span>No Legal or Financial Proof
-            </h2>
-          </div>
+          <h3 class="sub-heading">Basic usage logs</h3>
           <p>
-            Entries recorded in GiftKhata are intended only as personal notes
-            and convenience records. They do not constitute legal proof of any
-            payment, debt, or obligation between any parties.
-          </p>
-          <p>
-            GiftKhata should not be treated as a replacement for legally valid
-            documents, receipts, contracts, or bank statements. In case of any
-            dispute, users must rely on their own independent evidence.
+            Our hosting provider (Firebase / Google Cloud) automatically logs
+            standard server request data: IP address, browser type, and
+            timestamps. We do not add any additional analytics, session
+            recording, or behavioural tracking on top of this.
           </p>
         </div>
 
-        <div class="legal-section" id="not-tax">
+        <div class="legal-section" id="pp-not-collect">
           <div class="legal-section-header">
-            <div class="legal-section-icon amber">🧾</div>
-            <h2>
-              <span class="section-num">04</span>Not a Tax, Legal, or Accounting
-              Service
-            </h2>
+            <div class="legal-section-icon green">🚫</div>
+            <h2><span class="section-num">03</span> What we do NOT collect</h2>
           </div>
-          <p>
-            GiftKhata does not provide tax, legal, or accounting advice. Gift
-            entries are not designed for filing income tax returns or complying
-            with any statutory requirements.
-          </p>
-          <p>
-            Users are solely responsible for understanding and following
-            applicable laws, including Indian tax laws related to gifts. Consult
-            a qualified CA or legal professional for such matters.
-          </p>
-          <div class="legal-highlight amber">
-            Gift receipts above ₹50,000 from non-relatives may be taxable under
-            Indian income tax law. Consult a CA for guidance.
-          </div>
+          <ul>
+            <li>Passwords (handled entirely by your sign-in provider)</li>
+            <li>Payment or financial account information (the app is free)</li>
+            <li>Location data / GPS</li>
+            <li>Contacts from your phone</li>
+            <li>Advertising identifiers or cross-site tracking cookies</li>
+            <li>Sensitive personal data beyond what you voluntarily enter</li>
+          </ul>
         </div>
 
-        <div class="legal-section" id="data-privacy">
+        <div class="legal-section" id="pp-use">
           <div class="legal-section-header">
-            <div class="legal-section-icon green">🔒</div>
-            <h2><span class="section-num">05</span>Data Privacy</h2>
+            <div class="legal-section-icon amber">⚙️</div>
+            <h2><span class="section-num">04</span> How we use your data</h2>
           </div>
           <p>
-            GiftKhata may store personal data such as names, relationships, and
-            gift details. We take reasonable measures to protect stored data;
-            however no system is 100% secure. Users should keep their devices
-            and login credentials safe.
-          </p>
-          <p>
-            GiftKhata does not sell gifting records to advertisers or third
-            parties. Limited sharing may occur only as described in our
-            <a href="privacy-policy.html" style="color: var(--primary)"
-              >Privacy Policy</a
-            >
-            and always in compliance with India's DPDP Act 2023.
-          </p>
-        </div>
-
-        <div class="legal-section" id="liability">
-          <div class="legal-section-header">
-            <div class="legal-section-icon">⚠️</div>
-            <h2><span class="section-num">06</span>Limitation of Liability</h2>
-          </div>
-          <p>
-            GiftKhata, its founders, and its team will not be responsible for
-            any loss, dispute, or damage arising out of:
+            We use your data for exactly one purpose:
+            <strong>to run the app for you.</strong>
           </p>
           <ul>
-            <li>Incorrect, incomplete, or fraudulent entries made by users.</li>
+            <li>Show your gift ledger, events, persons, and family tree</li>
+            <li>Sync your data across your devices when you sign in</li>
+            <li>Let you export or delete your data on request</li>
+          </ul>
+          <p>
+            We do not sell your data. We do not share it with advertisers. We do
+            not use it to train AI models. We do not analyse it for business
+            insights.
+          </p>
+        </div>
+
+        <div class="legal-section" id="pp-who-sees">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">👁️</div>
+            <h2><span class="section-num">05</span> Who can see your data</h2>
+          </div>
+          <p>
+            Your data is <strong>private to your account</strong>. Nobody else
+            can see it through the app. The volunteer maintainers have
+            administrative access to the database for the sole purposes of
+            keeping the service running and responding to support requests.
+          </p>
+          <p>
+            We use the following third-party services to run the app. Each
+            receives only the minimum data required:
+          </p>
+          <ul>
             <li>
-              Use of app screenshots or records as evidence in personal or legal
-              disputes.
+              <strong>Firebase (Google)</strong> — authentication and database
+              hosting. Your data sits on Google's servers, subject to their
+              <a
+                href="https://firebase.google.com/support/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--primary)"
+                >Privacy Policy</a
+              >.
             </li>
             <li>
-              Any decision taken solely on the basis of data stored in the app
-              without independent verification.
-            </li>
-            <li>
-              Temporary unavailability of the app, data loss, or unauthorised
-              access caused by user negligence.
+              <strong>Your sign-in provider</strong> (Google, Apple, Facebook,
+              or LinkedIn) — for authentication only.
             </li>
           </ul>
           <p>
-            By using GiftKhata, you agree that you are using the app
-            <strong>"as is"</strong> and <strong>"as available"</strong>, and
-            that you are solely responsible for how you interpret and use the
-            information stored in your ledger.
+            We will share your data with law enforcement only if required by a
+            valid court order under Indian law.
           </p>
-          <div class="legal-highlight amber">
-            If you do not agree with any part of this disclaimer, please do not
-            use GiftKhata or delete your account and data from the app.
-          </div>
         </div>
 
-        <!-- Related pages -->
+        <div class="legal-section" id="pp-rights">
+          <div class="legal-section-header">
+            <div class="legal-section-icon green">🛡️</div>
+            <h2><span class="section-num">06</span> Your rights</h2>
+          </div>
+          <p>You can, at any time:</p>
+          <ul>
+            <li>
+              <strong>Export your data</strong> — Settings → Account → Export
+              (or email us)
+            </li>
+            <li>
+              <strong>Delete your account and all data</strong> — email us at
+              <a
+                href="mailto:support@giftkhata.com"
+                style="color: var(--primary)"
+                >support@giftkhata.com</a
+              >
+              and we will delete everything within 30 days
+            </li>
+            <li>
+              <strong>Correct your data</strong> — edit it directly in the app,
+              or ask us to correct it
+            </li>
+            <li>
+              <strong>Ask what we hold</strong> — email us and we'll tell you
+              exactly what's stored for your account
+            </li>
+          </ul>
+          <p>
+            These rights are consistent with the Digital Personal Data
+            Protection Act, 2023 (India).
+          </p>
+        </div>
+
+        <div class="legal-section" id="pp-security">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">🔒</div>
+            <h2><span class="section-num">07</span> Security</h2>
+          </div>
+          <p>
+            We take reasonable precautions: data is encrypted in transit
+            (HTTPS/TLS) and at rest on Firebase's infrastructure. Authentication
+            is handled by your OAuth provider — we never handle passwords
+            directly.
+          </p>
+        </div>
+
+        <div class="legal-section" id="pp-children">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">👶</div>
+            <h2><span class="section-num">08</span> Children</h2>
+          </div>
+          <p>
+            GiftKhata is intended for adults (18+). We don't knowingly collect
+            data from children. If you believe a child has signed up, email us
+            and we'll delete the account.
+          </p>
+        </div>
+
+        <div class="legal-section" id="pp-cookies">
+          <div class="legal-section-header">
+            <div class="legal-section-icon amber">🍪</div>
+            <h2><span class="section-num">09</span> Cookies</h2>
+          </div>
+          <p>
+            We use only essential session cookies set by Firebase for keeping
+            you signed in. No advertising cookies, no third-party tracking
+            pixels.
+          </p>
+        </div>
+
+        <div class="legal-section" id="pp-changes">
+          <div class="legal-section-header">
+            <div class="legal-section-icon">🔄</div>
+            <h2><span class="section-num">10</span> Changes to this policy</h2>
+          </div>
+          <p>
+            If we make material changes we'll update the "Last updated" date at
+            the top of this page and, where possible, notify you in-app. The
+            latest version is always at this URL.
+          </p>
+        </div>
+
+        <div class="legal-section" id="pp-contact">
+          <div class="legal-section-header">
+            <div class="legal-section-icon green">📬</div>
+            <h2><span class="section-num">11</span> Contact</h2>
+          </div>
+          <p>
+            This is a community project so please be patient. For privacy
+            questions or data deletion requests, email
+            <a href="mailto:support@giftkhata.com" style="color: var(--primary)"
+              >support@giftkhata.com</a
+            >. We'll do our best to respond within a week.
+          </p>
+        </div>
+
+        <div class="page-footer-note">
+          <p>
+            GiftKhata is a free community project, not a registered company.
+          </p>
+          <p>Last updated: 1 April 2025</p>
+        </div>
+
         <div class="legal-related">
-          <a href="privacy-policy.html" class="legal-related-card">
-            <div class="legal-related-icon">🔐</div>
+          <a href="/disclaimer" class="legal-related-card"
+            ><div class="legal-related-icon">⚠️</div>
             <div>
               <div class="legal-related-label">Also read</div>
-              <div class="legal-related-name">Privacy Policy</div>
-            </div>
-          </a>
-          <a href="terms-of-use.html" class="legal-related-card">
-            <div class="legal-related-icon">📋</div>
+              <div class="legal-related-name">Disclaimer</div>
+            </div></a
+          >
+          <a href="/terms-of-use" class="legal-related-card"
+            ><div class="legal-related-icon">📋</div>
             <div>
               <div class="legal-related-label">Also read</div>
               <div class="legal-related-name">Terms of Use</div>
-            </div>
-          </a>
-          <a href="/#reach-us" class="legal-related-card">
-            <div class="legal-related-icon">💬</div>
+            </div></a
+          >
+          <a href="/#reach-us" class="legal-related-card"
+            ><div class="legal-related-icon">💬</div>
             <div>
               <div class="legal-related-label">Questions?</div>
               <div class="legal-related-name">Reach Us</div>
-            </div>
-          </a>
+            </div></a
+          >
         </div>
       </div>
     </div>
@@ -789,9 +1046,9 @@
     <footer>
       <div class="footer-links">
         <a href="/">Home</a>
-        <a href="disclaimer.html">Disclaimer</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="/disclaimer">Disclaimer</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-use">Terms of Use</a>
         <a href="/#reach-us">Contact Us</a>
       </div>
       <p class="footer-copy">
@@ -816,7 +1073,6 @@
         icon.textContent = t === "dark" ? "☀️" : "🌙";
         localStorage.setItem("gk-theme", t);
       });
-
       // TOC active state on scroll
       const sections = document.querySelectorAll(".legal-section");
       const tocLinks = document.querySelectorAll(".legal-toc a");
@@ -834,6 +1090,19 @@
       };
       window.addEventListener("scroll", onScroll, { passive: true });
       onScroll();
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-P2V508P24B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-P2V508P24B");
     </script>
   </body>
 </html>
