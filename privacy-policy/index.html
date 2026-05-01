@@ -1,35 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-P2V508P24B"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-P2V508P24B");
-    </script>
+<head>
+  
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PRIMARY SEO -->
     <title>Privacy Policy | GiftKhata</title>
     <meta
       name="description"
-      content="GiftKhata Privacy Policy — how we collect, use, store and protect your personal data in compliance with India's DPDP Act 2023."
+      content="GiftKhata Privacy Policy — plain-language explanation of what data we collect, how we use it, and your rights as a user."
     />
-    <meta name="robots" content="index, follow" />
-    <link rel="icon" type="image/png" href="/logo.png" />
 
+    <meta
+      name="keywords"
+      content="gift tracking app, wedding gift tracker, gift management app, track gifts given and received, gift ledger app, event gift tracker"
+    />
+    <meta name="author" content="GiftKhata" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href="https://www.giftkhata.com/privacy-policy/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.giftkhata.com/privacy-policy/" />
+    <meta
+      property="og:title"
+      content="Privacy Policy"
+    />
+    <meta
+      property="og:description"
+      content="GiftKhata Privacy Policy — plain-language explanation of what data we collect, how we use it, and your rights as a user."
+    />
+    <meta
+      property="og:image"
+      content="https://www.giftkhata.com/og-image.png"
+    />
+    <meta property="og:locale" content="en" />
+    <meta property="og:locale:alternate" content="en_IN" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="en_AU" />
+    <meta property="og:site_name" content="GiftKhata" />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@giftkhata_app" />
+    <meta
+      name="twitter:title"
+      content="Privacy Policy"
+    />
+    <meta
+      name="twitter:description"
+      content="GiftKhata Privacy Policy — plain-language explanation of what data we collect, how we use it, and your rights as a user."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.giftkhata.com/og-image.png"
+    />
+
+    <!-- GEO: Primary markets -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.region" content="GB" />
+    <meta name="geo.region" content="US" />
+    <meta name="geo.region" content="AU" />
+
+    <!-- STRUCTURED DATA: WebApplication -->
+
+    <!-- STRUCTURED DATA: Organization -->
+
+    <!-- STRUCTURED DATA: FAQPage -->
+
+    <!-- PERF: preconnect saves 100-300ms DNS+TLS handshake per origin -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- PERF: trimmed to used weights only; Playfair Display removed (saves 1 font fetch) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- PERF: Font Awesome loaded non-blocking — no longer delays first paint -->
     <link
       rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -39,1017 +95,414 @@
         this.rel = 'stylesheet';
       "
     />
-    <noscript
-      ><link
+    <noscript>
+      <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    /></noscript>
+      />
+    </noscript>
 
-    <script>
-      (function () {
-        var t =
-          localStorage.getItem("gk-theme") ||
-          (window.matchMedia("(prefers-color-scheme:dark)").matches
-            ? "dark"
-            : "light");
-        document.documentElement.setAttribute("data-theme", t);
-      })();
-    </script>
+    <!-- PERF: theme applied before first paint → no flash of wrong theme, no repaint -->
 
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+  
 
-      [data-theme="light"] {
-        --primary: #6d28d9;
-        --primary-light: #7c3aed;
-        --primary-dark: #4c1d95;
-        --accent: #d97706;
-        --accent2: #db2777;
-        --bg: #f8f5ff;
-        --bg2: #ede9fe;
-        --bg3: #ddd6fe;
-        --text: #1e1b4b;
-        --text-muted: #6b5fa6;
-        --card: rgba(255, 255, 255, 0.92);
-        --card-border: rgba(109, 40, 217, 0.18);
-        --nav-bg: rgba(248, 245, 255, 0.95);
-        --shadow: rgba(109, 40, 217, 0.14);
-        --mock-bg: #ffffff;
-        --toggle-bg: #ddd6fe;
-        --footer-bg: #ede9fe;
-        --gradient: linear-gradient(135deg, #6d28d9 0%, #db2777 100%);
-        --purple-bg: #ede9fe;
-        --green-bg: #dcfce7;
-        --amber-bg: #fef3c7;
-      }
-      [data-theme="dark"] {
-        --primary: #7c3aed;
-        --primary-light: #a78bfa;
-        --primary-dark: #5b21b6;
-        --accent: #f59e0b;
-        --accent2: #ec4899;
-        --bg: #0f0a1e;
-        --bg2: #1a1133;
-        --bg3: #241848;
-        --text: #f3f0ff;
-        --text-muted: #a89ec9;
-        --card: rgba(255, 255, 255, 0.05);
-        --card-border: rgba(124, 58, 237, 0.28);
-        --nav-bg: rgba(15, 10, 30, 0.9);
-        --shadow: rgba(124, 58, 237, 0.28);
-        --mock-bg: #1a1133;
-        --toggle-bg: #241848;
-        --footer-bg: #1a1133;
-        --gradient: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
-        --purple-bg: rgba(124, 58, 237, 0.12);
-        --green-bg: rgba(16, 185, 129, 0.12);
-        --amber-bg: rgba(245, 158, 11, 0.12);
-      }
+  <script>(function(){var t=localStorage.getItem('gk-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
 
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.7;
-        transition:
-          background 0.4s,
-          color 0.4s;
-      }
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  
 
-      /* NAV */
-      nav {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.9rem 5%;
-        background: var(--nav-bg);
-        backdrop-filter: blur(18px);
-        border-bottom: 1px solid var(--card-border);
-        box-shadow: 0 2px 20px var(--shadow);
-      }
-      .nav-logo {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        text-decoration: none;
-      }
-      .nav-logo-mark {
-        width: 38px;
-        height: 38px;
-        border-radius: 10px;
-        background: var(--gradient);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.1rem;
-        color: #fff;
-        font-weight: 800;
-        flex-shrink: 0;
-      }
-      .nav-logo-text {
-        font-size: 1.1rem;
-        font-weight: 800;
-        letter-spacing: -0.02em;
-      }
-      .nav-logo-gift {
-        color: var(--primary);
-      }
-      .nav-logo-khata {
-        background: var(--gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .nav-back {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 0.88rem;
-        font-weight: 600;
-        padding: 0.45rem 1rem;
-        border: 1.5px solid var(--card-border);
-        border-radius: 50px;
-        transition: all 0.2s;
-      }
-      .nav-back:hover {
-        color: var(--primary);
-        border-color: var(--primary);
-        background: var(--purple-bg);
-      }
-      .theme-toggle {
-        width: 48px;
-        height: 27px;
-        background: var(--toggle-bg);
-        border-radius: 50px;
-        border: 1.5px solid var(--card-border);
-        cursor: pointer;
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding: 2px;
-        transition: background 0.4s;
-        flex-shrink: 0;
-      }
-      .toggle-thumb {
-        width: 21px;
-        height: 21px;
-        border-radius: 50%;
-        background: var(--gradient);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.68rem;
-        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      }
-      [data-theme="dark"] .toggle-thumb {
-        transform: translateX(0);
-      }
-      [data-theme="light"] .toggle-thumb {
-        transform: translateX(21px);
-      }
-      .nav-right {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
+</head>
+<body>
 
-      /* HERO BAND */
-      .legal-hero {
-        background: var(--gradient);
-        padding: 64px 5% 56px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-      .legal-hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        opacity: 0.4;
-      }
-      .legal-hero-chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        background: rgba(255, 255, 255, 0.18);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50px;
-        padding: 0.3rem 0.9rem;
-        font-size: 0.75rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #fff;
-        margin-bottom: 1.1rem;
-      }
-      .legal-hero h1 {
-        font-size: clamp(2rem, 4.5vw, 3rem);
-        font-weight: 800;
-        color: #fff;
-        line-height: 1.15;
-        margin-bottom: 0.7rem;
-        position: relative;
-      }
-      .legal-hero-sub {
-        font-size: 0.95rem;
-        color: rgba(255, 255, 255, 0.82);
-        position: relative;
-      }
-
-      /* LAYOUT */
-      .legal-layout {
-        display: grid;
-        grid-template-columns: 240px 1fr;
-        gap: 2.5rem;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 3rem 5% 5rem;
-        align-items: start;
-      }
-
-      /* SIDEBAR TOC */
-      .legal-toc {
-        position: sticky;
-        top: 80px;
-        background: var(--card);
-        border: 1px solid var(--card-border);
-        border-radius: 18px;
-        padding: 1.4rem 1.2rem;
-        box-shadow: 0 4px 20px var(--shadow);
-      }
-      .legal-toc-title {
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--text-muted);
-        margin-bottom: 1rem;
-        padding-bottom: 0.6rem;
-        border-bottom: 1px solid var(--card-border);
-      }
-      .legal-toc a {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 0.82rem;
-        font-weight: 500;
-        padding: 0.45rem 0.5rem;
-        border-radius: 8px;
-        transition: all 0.2s;
-        margin-bottom: 0.1rem;
-      }
-      .legal-toc a:hover,
-      .legal-toc a.active {
-        color: var(--primary);
-        background: var(--purple-bg);
-        font-weight: 600;
-      }
-      .legal-toc a .toc-num {
-        width: 20px;
-        height: 20px;
-        border-radius: 6px;
-        background: var(--purple-bg);
-        color: var(--primary);
-        font-size: 0.68rem;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-      }
-      .legal-toc a.active .toc-num {
-        background: var(--gradient);
-        color: #fff;
-      }
-
-      /* CONTENT */
-      .legal-content {
-        min-width: 0;
-      }
-      .legal-section {
-        background: var(--card);
-        border: 1px solid var(--card-border);
-        border-radius: 20px;
-        padding: 2rem 2.2rem;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 4px 20px var(--shadow);
-        scroll-margin-top: 90px;
-      }
-      .legal-section-header {
-        display: flex;
-        align-items: center;
-        gap: 0.9rem;
-        margin-bottom: 1.2rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--card-border);
-      }
-      .legal-section-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
-        background: var(--purple-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        flex-shrink: 0;
-      }
-      .legal-section-icon.green {
-        background: var(--green-bg);
-      }
-      .legal-section-icon.amber {
-        background: var(--amber-bg);
-      }
-      .legal-section h2 {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--text);
-        margin: 0;
-      }
-      .legal-section h2 .section-num {
-        font-size: 0.72rem;
-        font-weight: 700;
-        color: var(--primary);
-        background: var(--purple-bg);
-        padding: 0.15rem 0.5rem;
-        border-radius: 6px;
-        margin-right: 0.5rem;
-        vertical-align: middle;
-      }
-      .legal-section p {
-        font-size: 0.93rem;
-        color: var(--text-muted);
-        margin-bottom: 0.9rem;
-        line-height: 1.8;
-      }
-      .legal-section p:last-child {
-        margin-bottom: 0;
-      }
-      .legal-section ul,
-      .legal-section ol {
-        padding-left: 1.4rem;
-        margin-bottom: 0.9rem;
-      }
-      .legal-section li {
-        font-size: 0.93rem;
-        color: var(--text-muted);
-        margin-bottom: 0.5rem;
-        line-height: 1.7;
-      }
-      .legal-section strong {
-        color: var(--text);
-      }
-
-      /* HIGHLIGHT BOX */
-      .legal-highlight {
-        background: var(--purple-bg);
-        border: 1px solid var(--card-border);
-        border-left: 4px solid var(--primary);
-        border-radius: 10px;
-        padding: 0.9rem 1.1rem;
-        margin: 1rem 0;
-        font-size: 0.88rem;
-        color: var(--text);
-        line-height: 1.7;
-      }
-      .legal-highlight.green {
-        background: var(--green-bg);
-        border-left-color: #10b981;
-      }
-      .legal-highlight.amber {
-        background: var(--amber-bg);
-        border-left-color: #d97706;
-      }
-
-      /* META BAR */
-      .legal-meta {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        background: var(--card);
-        border: 1px solid var(--card-border);
-        border-radius: 14px;
-        padding: 1rem 1.4rem;
-        margin-bottom: 2rem;
-        font-size: 0.82rem;
-        color: var(--text-muted);
-      }
-      .legal-meta span {
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-      }
-      .legal-meta strong {
-        color: var(--text);
-      }
-
-      /* RELATED LINKS */
-      .legal-related {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-        margin-top: 2.5rem;
-      }
-      .legal-related-card {
-        background: var(--card);
-        border: 1px solid var(--card-border);
-        border-radius: 16px;
-        padding: 1.2rem 1.4rem;
-        text-decoration: none;
-        transition: all 0.25s;
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-      }
-      .legal-related-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 32px var(--shadow);
-        border-color: var(--primary);
-      }
-      .legal-related-icon {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-        background: var(--purple-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.1rem;
-        flex-shrink: 0;
-      }
-      .legal-related-label {
-        font-size: 0.7rem;
-        color: var(--text-muted);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-      .legal-related-name {
-        font-size: 0.92rem;
-        font-weight: 700;
-        color: var(--text);
-        margin-top: 0.1rem;
-      }
-
-      /* FOOTER */
-      footer {
-        background: var(--bg2);
-        border-top: 1px solid var(--card-border);
-        padding: 2rem 5%;
-        text-align: center;
-      }
-      .footer-links {
-        display: flex;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 1rem;
-      }
-      .footer-links a {
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 0.85rem;
-        transition: color 0.2s;
-      }
-      .footer-links a:hover {
-        color: var(--primary);
-      }
-      .footer-copy {
-        font-size: 0.8rem;
-        color: var(--text-muted);
-      }
-
-      /* RESPONSIVE */
-      @media (max-width: 768px) {
-        .legal-layout {
-          grid-template-columns: 1fr;
-        }
-        .legal-toc {
-          position: static;
-        }
-      }
-
-      /* COMMUNITY CALLOUT */
-      .community-callout {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.9rem;
-        padding: 1.1rem 1.3rem;
-        border-radius: 18px;
-        border: 1px solid var(--card-border);
-        background: var(--card);
-        margin-bottom: 1.8rem;
-      }
-      .callout-icon {
-        font-size: 1.3rem;
-        flex-shrink: 0;
-        margin-top: 0.1rem;
-      }
-      .community-callout p {
-        font-size: 0.88rem;
-        color: var(--text-muted);
-        line-height: 1.75;
-        margin: 0;
-      }
-      .community-callout strong {
-        color: var(--text);
-      }
-
-      /* AT-A-GLANCE GRID */
-      .glance-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.9rem;
-        margin-bottom: 2rem;
-      }
-      .glance-card {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.75rem;
-        padding: 0.9rem 1rem;
-        border-radius: 16px;
-        border: 1px solid var(--card-border);
-        background: var(--card);
-      }
-      .glance-icon {
-        width: 34px;
-        height: 34px;
-        border-radius: 10px;
-        background: var(--bg2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1rem;
-        flex-shrink: 0;
-      }
-      .glance-label {
-        font-size: 0.82rem;
-        font-weight: 700;
-        color: var(--text);
-      }
-      .glance-sub {
-        font-size: 0.72rem;
-        color: var(--text-muted);
-        margin-top: 0.18rem;
-      }
-
-      /* SUB-HEADINGS inside sections */
-      .sub-heading {
-        font-size: 0.88rem;
-        font-weight: 700;
-        color: var(--text);
-        margin: 1rem 0 0.4rem;
-      }
-
-      /* AMBER WARNING BOX */
-      .amber-box {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.7rem;
-        padding: 0.9rem 1.1rem;
-        border-radius: 12px;
-        margin-bottom: 0.9rem;
-        background: #fffbeb;
-        border: 1px solid #fde68a;
-        color: #92400e;
-      }
-      [data-theme="dark"] .amber-box {
-        background: rgba(245, 158, 11, 0.08);
-        border-color: rgba(245, 158, 11, 0.25);
-        color: #fcd34d;
-      }
-      .amber-box-icon {
-        font-size: 1rem;
-        flex-shrink: 0;
-        margin-top: 0.1rem;
-      }
-      .amber-box p {
-        font-size: 0.85rem;
-        line-height: 1.65;
-        margin: 0;
-      }
-      .amber-box strong {
-        color: inherit;
-      }
-
-      /* GOVERNING LAW BOX */
-      .governing-box {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.75rem;
-        padding: 0.9rem 1.1rem;
-        border-radius: 12px;
-        border: 1px solid var(--card-border);
-        background: var(--card);
-      }
-      .governing-box p {
-        font-size: 0.88rem;
-        color: var(--text-muted);
-        line-height: 1.7;
-        margin: 0;
-      }
-
-      /* PAGE FOOTER NOTE */
-      .page-footer-note {
-        margin-top: 2.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid var(--card-border);
-        text-align: center;
-        font-size: 0.75rem;
-        color: var(--text-muted);
-      }
-      .page-footer-note p + p {
-        margin-top: 0.25rem;
-      }
-
-      @media (max-width: 540px) {
-        .glance-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <a href="/" class="nav-logo">
-        <div class="nav-logo-mark">🎁</div>
-        <span class="nav-logo-text"
-          ><span class="nav-logo-gift">Gift</span
-          ><span class="nav-logo-khata">Khata</span></span
-        >
-      </a>
+  <nav id="navbar">
+      <span class="nav-logo" aria-label="GiftKhata Home">
+        <div class="logo-icon">
+          <img
+            src="/logo_icon.png"
+            alt="GiftKhata – Celebrate Better. Track Smarter."
+            class="nav-brand-logo"
+            width="210"
+            height="48"
+            fetchpriority="high"
+          />
+          <div class="logo-text">
+            <div class="logo-name">
+              <span class="logo-gift-txt">Gift</span
+              ><span class="logo-khata-txt">Khata</span>
+            </div>
+            <div class="logo-sub">
+              Celebrate Better. <span class="track"></span>Track Smarter.
+            </div>
+          </div>
+        </div>
+      </span>
+      <ul class="nav-links">
+      <li >
+        <a href="/#features">Features</a>
+      </li>
+      <li >
+        <a href="/#how-it-works">How It Works</a>
+      </li>
+      <li >
+        <a href="/#gift-types">Gift Types</a>
+      </li>
+      <li >
+        <a href="/#occasions">Occasions</a>
+      </li>
+      <li >
+        <a href="/#why">Why Us</a>
+      </li>
+      <li >
+        <a href="/#faq">FAQ</a>
+      </li>
+      <li >
+        <a href="/#reach-us">Reach Us</a>
+      </li>
+      <li >
+        <a href="/blog/">Blog</a>
+      </li>
+  </ul>
       <div class="nav-right">
         <div
           class="theme-toggle"
           id="themeToggle"
-          title="Toggle theme"
+          title="Toggle light/dark mode"
           role="button"
           aria-label="Toggle theme"
         >
-          <div class="toggle-thumb"><span id="toggleIcon">🌙</span></div>
+          <div class="toggle-thumb" id="toggleThumb">
+            <span id="toggleIcon">🌙</span>
+          </div>
         </div>
-        <a href="/" class="nav-back"
-          ><i class="fa fa-arrow-left"></i> Back to Home</a
-        >
+        <!-- <a href="#cta" class="nav-cta">Coming Soon</a> -->
+        <!-- <a href="#cta" class="nav-cta">Coming Soon</a> -->
+        <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </nav>
 
-    <div class="legal-hero">
-      <div class="legal-hero-chip">🔐 Your Data, Your Rights</div>
-      <h1>Privacy Policy</h1>
-      <p class="legal-hero-sub">
-        Effective: 1 April 2025 &nbsp;·&nbsp; Last updated: 1 April 2025
-      </p>
+<div class="mobile-menu" id="mobileMenu">
+      <a href="/#features">Features</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#gift-types">Gift Types</a>
+      <a href="/#occasions">Occasions</a>
+      <a href="/#why">Why Us</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#reach-us">Reach Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#cta" style="color: var(--primary); font-weight: 700">🚀 Coming Soon</a>
     </div>
 
-    <div class="legal-layout">
-      <aside class="legal-toc">
-        <div class="legal-toc-title">On this page</div>
-        <a href="#pp-who"><span class="toc-num">1</span> Who runs GiftKhata?</a>
-        <a href="#pp-collect"><span class="toc-num">2</span> What we collect</a>
-        <a href="#pp-not-collect"
-          ><span class="toc-num">3</span> What we don't collect</a
-        >
-        <a href="#pp-use"><span class="toc-num">4</span> How we use it</a>
-        <a href="#pp-who-sees"
-          ><span class="toc-num">5</span> Who can see your data</a
-        >
-        <a href="#pp-rights"><span class="toc-num">6</span> Your rights</a>
-        <a href="#pp-security"><span class="toc-num">7</span> Security</a>
-        <a href="#pp-children"><span class="toc-num">8</span> Children</a>
-        <a href="#pp-cookies"><span class="toc-num">9</span> Cookies</a>
-        <a href="#pp-changes"><span class="toc-num">10</span> Changes</a>
-        <a href="#pp-contact"><span class="toc-num">11</span> Contact</a>
-      </aside>
-      <div class="legal-content">
-        <div class="legal-meta">
-          <span>📅 <strong>Effective:</strong> 1 April 2025</span>
-          <span>🔄 <strong>Last updated:</strong> 1 April 2025</span>
-          <span
-            >⚖️ <strong>Governed by:</strong> IT Act 2000 · DPDP Act 2023</span
-          >
-        </div>
-        <div class="community-callout">
-          <span class="callout-icon">❤️</span>
-          <p>
-            <strong>GiftKhata</strong> is a free, open community project — not a
-            company. There is no registered entity, no commercial intent, and no
-            investors. We built this to help Indian families manage gift records
-            at functions. This policy is written in plain language so you
-            actually understand how your data is handled.
-          </p>
-        </div>
-        <div class="glance-grid">
-          <div class="glance-card">
-            <div class="glance-icon">🔑</div>
-            <div>
-              <div class="glance-label">No password stored</div>
-              <div class="glance-sub">We use Google / Apple sign-in only</div>
-            </div>
-          </div>
-          <div class="glance-card">
-            <div class="glance-icon">👁️</div>
-            <div>
-              <div class="glance-label">No ads, no tracking</div>
-              <div class="glance-sub">We don't monetise your data</div>
-            </div>
-          </div>
-          <div class="glance-card">
-            <div class="glance-icon">✅</div>
-            <div>
-              <div class="glance-label">Delete anytime</div>
-              <div class="glance-sub">Your data, your choice</div>
-            </div>
-          </div>
-          <div class="glance-card">
-            <div class="glance-icon">❤️</div>
-            <div>
-              <div class="glance-label">Community project</div>
-              <div class="glance-sub">Built by volunteers, not a company</div>
-            </div>
-          </div>
-        </div>
 
-        <div class="legal-section" id="pp-who">
-          <div class="legal-section-header">
-            <div class="legal-section-icon">👥</div>
-            <h2><span class="section-num">01</span> Who runs GiftKhata?</h2>
-          </div>
-          <p>
-            GiftKhata is a personal side project maintained by a small group of
-            volunteers. There is no registered company, no registered address,
-            and no legal entity behind this application. When we say "we" or
-            "us" in this policy we mean the volunteer contributors to this
-            project.
-          </p>
-          <p>
-            Questions? Email us at
-            <a href="mailto:support@giftkhata.com" style="color: var(--primary)"
-              >support@giftkhata.com</a
-            >.
-          </p>
-        </div>
+  <main id="main-content">
+    
 
-        <div class="legal-section" id="pp-collect">
-          <div class="legal-section-header">
-            <div class="legal-section-icon">📋</div>
-            <h2><span class="section-num">02</span> What data we collect</h2>
-          </div>
-          <h3 class="sub-heading">From your sign-in provider</h3>
-          <p>
-            We use OAuth 2.0 (Google, Facebook, Apple, LinkedIn). When you sign
-            in, your provider shares your
-            <strong>name, email address, and profile photo</strong> with us. We
-            store only these three fields. We never see or store your password.
-          </p>
-          <h3 class="sub-heading">Data you enter yourself</h3>
-          <p>
-            Everything you type into the app — gift records, event details,
-            person names, phone numbers, cities, family tree data — is stored in
-            our database linked to your account.
-            <strong>You own this data</strong>. We don't read it, analyse it, or
-            use it for any purpose other than showing it back to you.
-          </p>
-          <h3 class="sub-heading">Basic usage logs</h3>
-          <p>
-            Our hosting provider (Firebase / Google Cloud) automatically logs
-            standard server request data: IP address, browser type, and
-            timestamps. We do not add any additional analytics, session
-            recording, or behavioural tracking on top of this.
-          </p>
-        </div>
+<link rel="stylesheet" href="/css/blog.css" />
 
-        <div class="legal-section" id="pp-not-collect">
-          <div class="legal-section-header">
-            <div class="legal-section-icon green">🚫</div>
-            <h2><span class="section-num">03</span> What we do NOT collect</h2>
-          </div>
-          <ul>
-            <li>Passwords (handled entirely by your sign-in provider)</li>
-            <li>Payment or financial account information (the app is free)</li>
-            <li>Location data / GPS</li>
-            <li>Contacts from your phone</li>
-            <li>Advertising identifiers or cross-site tracking cookies</li>
-            <li>Sensitive personal data beyond what you voluntarily enter</li>
-          </ul>
-        </div>
 
-        <div class="legal-section" id="pp-use">
-          <div class="legal-section-header">
-            <div class="legal-section-icon amber">⚙️</div>
-            <h2><span class="section-num">04</span> How we use your data</h2>
-          </div>
-          <p>
-            We use your data for exactly one purpose:
-            <strong>to run the app for you.</strong>
-          </p>
-          <ul>
-            <li>Show your gift ledger, events, persons, and family tree</li>
-            <li>Sync your data across your devices when you sign in</li>
-            <li>Let you export or delete your data on request</li>
-          </ul>
-          <p>
-            We do not sell your data. We do not share it with advertisers. We do
-            not use it to train AI models. We do not analyse it for business
-            insights.
-          </p>
-        </div>
 
-        <div class="legal-section" id="pp-who-sees">
-          <div class="legal-section-header">
-            <div class="legal-section-icon">👁️</div>
-            <h2><span class="section-num">05</span> Who can see your data</h2>
-          </div>
-          <p>
-            Your data is <strong>private to your account</strong>. Nobody else
-            can see it through the app. The volunteer maintainers have
-            administrative access to the database for the sole purposes of
-            keeping the service running and responding to support requests.
-          </p>
-          <p>
-            We use the following third-party services to run the app. Each
-            receives only the minimum data required:
-          </p>
-          <ul>
-            <li>
-              <strong>Firebase (Google)</strong> — authentication and database
-              hosting. Your data sits on Google's servers, subject to their
-              <a
-                href="https://firebase.google.com/support/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                style="color: var(--primary)"
-                >Privacy Policy</a
-              >.
-            </li>
-            <li>
-              <strong>Your sign-in provider</strong> (Google, Apple, Facebook,
-              or LinkedIn) — for authentication only.
-            </li>
-          </ul>
-          <p>
-            We will share your data with law enforcement only if required by a
-            valid court order under Indian law.
-          </p>
-        </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.giftkhata.com" },
+    { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://www.giftkhata.com/privacy-policy/" }
+  ]
+}
+</script>
 
-        <div class="legal-section" id="pp-rights">
-          <div class="legal-section-header">
-            <div class="legal-section-icon green">🛡️</div>
-            <h2><span class="section-num">06</span> Your rights</h2>
-          </div>
-          <p>You can, at any time:</p>
-          <ul>
-            <li>
-              <strong>Export your data</strong> — Settings → Account → Export
-              (or email us)
-            </li>
-            <li>
-              <strong>Delete your account and all data</strong> — email us at
-              <a
-                href="mailto:support@giftkhata.com"
-                style="color: var(--primary)"
-                >support@giftkhata.com</a
-              >
-              and we will delete everything within 30 days
-            </li>
-            <li>
-              <strong>Correct your data</strong> — edit it directly in the app,
-              or ask us to correct it
-            </li>
-            <li>
-              <strong>Ask what we hold</strong> — email us and we'll tell you
-              exactly what's stored for your account
-            </li>
-          </ul>
-          <p>
-            These rights are consistent with the Digital Personal Data
-            Protection Act, 2023 (India).
-          </p>
-        </div>
 
-        <div class="legal-section" id="pp-security">
-          <div class="legal-section-header">
-            <div class="legal-section-icon">🔒</div>
-            <h2><span class="section-num">07</span> Security</h2>
-          </div>
-          <p>
-            We take reasonable precautions: data is encrypted in transit
-            (HTTPS/TLS) and at rest on Firebase's infrastructure. Authentication
-            is handled by your OAuth provider — we never handle passwords
-            directly.
-          </p>
-        </div>
+<div class="legal-hero">
+  <div class="legal-hero-chip">🔐 Your Data, Your Rights</div>
+  <h1>Privacy Policy</h1>
+  <p class="legal-hero-sub">How we collect, use and protect your information</p>
+</div>
 
-        <div class="legal-section" id="pp-children">
-          <div class="legal-section-header">
-            <div class="legal-section-icon">👶</div>
-            <h2><span class="section-num">08</span> Children</h2>
-          </div>
-          <p>
-            GiftKhata is intended for adults (18+). We don't knowingly collect
-            data from children. If you believe a child has signed up, email us
-            and we'll delete the account.
-          </p>
-        </div>
+<div class="legal-layout">
 
-        <div class="legal-section" id="pp-cookies">
-          <div class="legal-section-header">
-            <div class="legal-section-icon amber">🍪</div>
-            <h2><span class="section-num">09</span> Cookies</h2>
-          </div>
-          <p>
-            We use only essential session cookies set by Firebase for keeping
-            you signed in. No advertising cookies, no third-party tracking
-            pixels.
-          </p>
-        </div>
+  <aside class="legal-toc" aria-label="Table of contents">
+    <div class="legal-toc-title">On this page</div>
+    
+    <a href="#pp-who">
+      <span class="toc-num">1</span>
+      Who runs GiftKhata?
+    </a>
+    
+    <a href="#pp-collect">
+      <span class="toc-num">2</span>
+      What we collect
+    </a>
+    
+    <a href="#pp-not">
+      <span class="toc-num">3</span>
+      What we don&#39;t collect
+    </a>
+    
+    <a href="#pp-use">
+      <span class="toc-num">4</span>
+      How we use it
+    </a>
+    
+    <a href="#pp-sees">
+      <span class="toc-num">5</span>
+      Who can see your data
+    </a>
+    
+    <a href="#pp-rights">
+      <span class="toc-num">6</span>
+      Your rights
+    </a>
+    
+    <a href="#pp-security">
+      <span class="toc-num">7</span>
+      Security
+    </a>
+    
+    <a href="#pp-children">
+      <span class="toc-num">8</span>
+      Children
+    </a>
+    
+    <a href="#pp-cookies">
+      <span class="toc-num">9</span>
+      Cookies
+    </a>
+    
+    <a href="#pp-changes">
+      <span class="toc-num">10</span>
+      Changes
+    </a>
+    
+    <a href="#pp-contact">
+      <span class="toc-num">11</span>
+      Contact
+    </a>
+    
+  </aside>
 
-        <div class="legal-section" id="pp-changes">
-          <div class="legal-section-header">
-            <div class="legal-section-icon">🔄</div>
-            <h2><span class="section-num">10</span> Changes to this policy</h2>
-          </div>
-          <p>
-            If we make material changes we'll update the "Last updated" date at
-            the top of this page and, where possible, notify you in-app. The
-            latest version is always at this URL.
-          </p>
-        </div>
+  <div class="legal-content">
+    <div class="legal-meta">
+      <span>📅 <strong>Last updated:</strong> 1 April 2025</span>
+      <span>⚖️ <strong>Governed by:</strong> IT Act 2000 · DPDP Act 2023</span>
+      <span>🌐 <strong>Applies to:</strong> giftkhata.com &amp; mobile apps</span>
+    </div>
 
-        <div class="legal-section" id="pp-contact">
-          <div class="legal-section-header">
-            <div class="legal-section-icon green">📬</div>
-            <h2><span class="section-num">11</span> Contact</h2>
-          </div>
-          <p>
-            This is a community project so please be patient. For privacy
-            questions or data deletion requests, email
-            <a href="mailto:support@giftkhata.com" style="color: var(--primary)"
-              >support@giftkhata.com</a
-            >. We'll do our best to respond within a week.
-          </p>
-        </div>
+    <div class="community-callout">
+  <span class="callout-icon">❤️</span>
+  <p><strong>GiftKhata</strong> is a free, open community project — not a company. No registered entity, no commercial intent, no investors. This policy is written in plain language so you actually understand how your data is handled.</p>
+</div>
+<div class="glance-grid">
+  <div class="glance-card"><div class="glance-icon">🔑</div><div><div class="glance-label">No password stored</div><div class="glance-sub">Google / Apple sign-in only</div></div></div>
+  <div class="glance-card"><div class="glance-icon">👁️</div><div><div class="glance-label">No ads, no tracking</div><div class="glance-sub">We don't monetise your data</div></div></div>
+  <div class="glance-card"><div class="glance-icon">✅</div><div><div class="glance-label">Delete anytime</div><div class="glance-sub">Your data, your choice</div></div></div>
+  <div class="glance-card"><div class="glance-icon">❤️</div><div><div class="glance-label">Community project</div><div class="glance-sub">Built by volunteers, not a company</div></div></div>
+</div>
+<div class="legal-section" id="pp-who">
+  <div class="legal-section-header"><div class="legal-section-icon">👥</div><h2><span class="section-num">01</span> Who runs GiftKhata?</h2></div>
+  <p>GiftKhata is a personal side project maintained by a small group of volunteers. No registered company, no registered address, no legal entity. "We" or "us" means the volunteer contributors.</p>
+  <p>Questions? Email <a href="mailto:support@giftkhata.com">support@giftkhata.com</a>.</p>
+</div>
+<div class="legal-section" id="pp-collect">
+  <div class="legal-section-header"><div class="legal-section-icon">📋</div><h2><span class="section-num">02</span> What data we collect</h2></div>
+  <h3 class="sub-heading">From your sign-in provider</h3>
+  <p>We use OAuth 2.0 (Google, Facebook, Apple, LinkedIn). Your provider shares your <strong>name, email address, and profile photo</strong>. We store only these three fields. We never see or store your password.</p>
+  <h3 class="sub-heading">Data you enter yourself</h3>
+  <p>Everything you type — gift records, event details, person names — is stored linked to your account. <strong>You own this data.</strong> We don't read it or use it for any purpose other than showing it back to you.</p>
+  <h3 class="sub-heading">Basic usage logs</h3>
+  <p>Firebase / Google Cloud automatically logs standard server data: IP address, browser type, timestamps. No additional analytics or session recording.</p>
+</div>
+<div class="legal-section" id="pp-not">
+  <div class="legal-section-header"><div class="legal-section-icon green">🚫</div><h2><span class="section-num">03</span> What we do NOT collect</h2></div>
+  <ul>
+    <li>Passwords (handled by your sign-in provider)</li>
+    <li>Payment or financial account information (the app is free)</li>
+    <li>Location data / GPS</li>
+    <li>Contacts from your phone</li>
+    <li>Advertising identifiers or cross-site tracking cookies</li>
+  </ul>
+</div>
+<div class="legal-section" id="pp-use">
+  <div class="legal-section-header"><div class="legal-section-icon amber">⚙️</div><h2><span class="section-num">04</span> How we use your data</h2></div>
+  <p>We use your data for exactly one purpose: <strong>to run the app for you.</strong></p>
+  <ul>
+    <li>Show your gift ledger, events, persons, and family tree</li>
+    <li>Sync your data across your devices when you sign in</li>
+    <li>Let you export or delete your data on request</li>
+  </ul>
+  <p>We do not sell your data. We do not share it with advertisers. We do not use it to train AI models.</p>
+</div>
+<div class="legal-section" id="pp-sees">
+  <div class="legal-section-header"><div class="legal-section-icon">👁️</div><h2><span class="section-num">05</span> Who can see your data</h2></div>
+  <p>Your data is <strong>private to your account</strong>. Volunteer maintainers have admin access solely for keeping the service running and responding to support requests.</p>
+  <ul>
+    <li><strong>Firebase (Google)</strong> — authentication and database hosting, subject to their <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+    <li><strong>Your sign-in provider</strong> — for authentication only.</li>
+  </ul>
+  <p>We share data with law enforcement only if required by a valid court order.</p>
+</div>
+<div class="legal-section" id="pp-rights">
+  <div class="legal-section-header"><div class="legal-section-icon green">🛡️</div><h2><span class="section-num">06</span> Your rights</h2></div>
+  <ul>
+    <li><strong>Export your data</strong> — Settings → Account → Export (or email us)</li>
+    <li><strong>Delete your account</strong> — email <a href="mailto:support@giftkhata.com">support@giftkhata.com</a>; deletion within 30 days</li>
+    <li><strong>Correct your data</strong> — edit in-app or ask us</li>
+    <li><strong>Ask what we hold</strong> — email us and we'll tell you</li>
+  </ul>
+  <p>Consistent with the Digital Personal Data Protection Act, 2023 (India).</p>
+</div>
+<div class="legal-section" id="pp-security">
+  <div class="legal-section-header"><div class="legal-section-icon">🔒</div><h2><span class="section-num">07</span> Security</h2></div>
+  <p>Data is encrypted in transit (HTTPS/TLS) and at rest on Firebase. Authentication is handled by your OAuth provider — we never handle passwords directly.</p>
+  <p>No internet service is 100% secure. Please don't store critically sensitive information (financial account numbers, government IDs) in the notes fields.</p>
+</div>
+<div class="legal-section" id="pp-children">
+  <div class="legal-section-header"><div class="legal-section-icon">👶</div><h2><span class="section-num">08</span> Children</h2></div>
+  <p>GiftKhata is intended for adults (18+). We don't knowingly collect data from children. If you believe a child has signed up, email us and we'll delete the account promptly.</p>
+</div>
+<div class="legal-section" id="pp-cookies">
+  <div class="legal-section-header"><div class="legal-section-icon amber">🍪</div><h2><span class="section-num">09</span> Cookies</h2></div>
+  <p>We use only essential session cookies set by Firebase for keeping you signed in. No advertising cookies, no third-party tracking pixels.</p>
+</div>
+<div class="legal-section" id="pp-changes">
+  <div class="legal-section-header"><div class="legal-section-icon">🔄</div><h2><span class="section-num">10</span> Changes</h2></div>
+  <p>Material changes will update the "Last updated" date at the top of this page and, where possible, trigger an in-app notification.</p>
+</div>
+<div class="legal-section" id="pp-contact">
+  <div class="legal-section-header"><div class="legal-section-icon green">📬</div><h2><span class="section-num">11</span> Contact</h2></div>
+  <p>For privacy questions or data deletion requests, email <a href="mailto:support@giftkhata.com">support@giftkhata.com</a>. We respond within a week.</p>
+</div>
+<div class="page-footer-note">
+  <p>GiftKhata is a free community project, not a registered company.</p>
+  <p>Last updated: 1 April 2025</p>
+</div>
 
-        <div class="page-footer-note">
-          <p>
-            GiftKhata is a free community project, not a registered company.
-          </p>
-          <p>Last updated: 1 April 2025</p>
-        </div>
 
-        <div class="legal-related">
-          <a href="/disclaimer" class="legal-related-card"
-            ><div class="legal-related-icon">⚠️</div>
-            <div>
-              <div class="legal-related-label">Also read</div>
-              <div class="legal-related-name">Disclaimer</div>
-            </div></a
-          >
-          <a href="/terms-of-use" class="legal-related-card"
-            ><div class="legal-related-icon">📋</div>
-            <div>
-              <div class="legal-related-label">Also read</div>
-              <div class="legal-related-name">Terms of Use</div>
-            </div></a
-          >
-          <a href="/#reach-us" class="legal-related-card"
-            ><div class="legal-related-icon">💬</div>
-            <div>
-              <div class="legal-related-label">Questions?</div>
-              <div class="legal-related-name">Reach Us</div>
-            </div></a
-          >
+    <div class="legal-related">
+      
+      <a href="/disclaimer/" class="legal-related-card">
+        <div class="legal-related-icon">⚠️</div>
+        <div>
+          <div class="legal-related-label">Also read</div>
+          <div class="legal-related-name">Disclaimer</div>
         </div>
+      </a>
+      
+      <a href="/terms-of-use/" class="legal-related-card">
+        <div class="legal-related-icon">📋</div>
+        <div>
+          <div class="legal-related-label">Also read</div>
+          <div class="legal-related-name">Terms of Use</div>
+        </div>
+      </a>
+      
+      <a href="/#reach-us" class="legal-related-card">
+        <div class="legal-related-icon">💬</div>
+        <div>
+          <div class="legal-related-label">Questions?</div>
+          <div class="legal-related-name">Reach Us</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+  // TOC active state on scroll
+  const tocLinks = document.querySelectorAll('.legal-toc a');
+  const sections = document.querySelectorAll('.legal-section[id]');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+    tocLinks.forEach(a => {
+      const active = a.getAttribute('href') === '#' + cur;
+      a.style.color      = active ? 'var(--primary)' : '';
+      a.style.background = active ? 'var(--purple-bg)' : '';
+      a.style.fontWeight = active ? '600' : '500';
+    });
+  }, { passive: true });
+</script>
+
+
+  </main>
+
+  <footer>
+      <div class="footer-logo">
+        <img
+          src="/logo.png"
+          alt="GiftKhata"
+          class="footer-brand-logo-1 full-logo"
+          loading="lazy"
+        />
       </div>
-    </div>
-
-    <footer>
+      <p
+        style="
+          font-size: 0.88rem;
+          color: var(--text-muted);
+          margin-bottom: 1.5rem;
+          max-width: 420px;
+          margin-left: auto;
+          margin-right: auto;
+          line-height: 1.7;
+        "
+      >
+        The smart gift ledger for every family, every culture, every occasion —
+        track every gift, everywhere, forever.
+      </p>
       <div class="footer-links">
-        <a href="/">Home</a>
-        <a href="/disclaimer">Disclaimer</a>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/terms-of-use">Terms of Use</a>
-        <a href="/#reach-us">Contact Us</a>
+      <a href="/#features">Features</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/disclaimer/">Disclaimer</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/terms-of-use/">Terms of Use</a>
+      <a href="/#reach-us">Contact Us</a>
+      </div>
+      <div class="footer-social">
+        <a
+          href="https://instagram.com/giftkhata.ledger"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://facebook.com/giftkhata.ledger"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://twitter.com/giftkhata_app"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="Twitter"
+          ><i class="fab fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://youtube.com/@giftkhata"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/company/giftkhata"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
       </div>
       <p class="footer-copy">
         © 2026 GiftKhata. All rights reserved. |
@@ -1061,48 +514,108 @@
       </p>
     </footer>
 
+
     <script>
+      // THEME TOGGLE — theme already set in <head>; just wire the button
       const html = document.documentElement;
       const toggle = document.getElementById("themeToggle");
       const icon = document.getElementById("toggleIcon");
-      icon.textContent =
-        html.getAttribute("data-theme") === "dark" ? "☀️" : "🌙";
-      toggle.addEventListener("click", () => {
-        const t = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      function setTheme(t) {
         html.setAttribute("data-theme", t);
         icon.textContent = t === "dark" ? "☀️" : "🌙";
         localStorage.setItem("gk-theme", t);
-      });
-      // TOC active state on scroll
-      const sections = document.querySelectorAll(".legal-section");
-      const tocLinks = document.querySelectorAll(".legal-toc a");
-      const onScroll = () => {
-        let current = "";
-        sections.forEach((s) => {
-          if (window.scrollY >= s.offsetTop - 120) current = s.id;
-        });
-        tocLinks.forEach((a) => {
-          a.classList.toggle(
-            "active",
-            a.getAttribute("href") === "#" + current,
-          );
-        });
-      };
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-    </script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-P2V508P24B"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
       }
-      gtag("js", new Date());
+      // Sync icon with already-applied theme (no redundant localStorage read)
+      icon.textContent =
+        html.getAttribute("data-theme") === "dark" ? "☀️" : "🌙";
+      toggle.addEventListener("click", () => {
+        setTheme(html.getAttribute("data-theme") === "dark" ? "light" : "dark");
+      });
 
-      gtag("config", "G-P2V508P24B");
-    </script>
-  </body>
+      // MOBILE MENU
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("open");
+      }
+      document.addEventListener("click", function (e) {
+        const menu = document.getElementById("mobileMenu");
+        const hamburger = document.querySelector(".hamburger");
+        if (
+          menu.classList.contains("open") &&
+          !menu.contains(e.target) &&
+          !hamburger.contains(e.target)
+        ) {
+          menu.classList.remove("open");
+        }
+      });
+
+      // SCROLL REVEAL
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("visible"), i * 80);
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // PERF: passive:true lets scroll never block the browser paint pipeline
+      window.addEventListener(
+        "scroll",
+        () => {
+          document.getElementById("navbar").style.boxShadow =
+            window.scrollY > 20 ? "0 4px 30px rgba(0,0,0,0.12)" : "none";
+        },
+        { passive: true },
+      );
+
+      // COUNTER ANIMATION
+      function animateCounters() {
+        document.querySelectorAll("[data-target]").forEach((el) => {
+          const target = +el.getAttribute("data-target");
+          let count = 0;
+          const step = Math.ceil(target / 40);
+          const timer = setInterval(() => {
+            count = Math.min(count + step, target);
+            el.textContent = count + "+";
+            if (count >= target) clearInterval(timer);
+          }, 50);
+        });
+      }
+      const heroObserver = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            animateCounters();
+            heroObserver.disconnect();
+          }
+        },
+        { threshold: 0.5 },
+      );
+      const heroSec = document.getElementById("hero");
+      if (heroSec) heroObserver.observe(heroSec);
+    
+  </script>
+  <script>
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P2V508P24B';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-P2V508P24B');
+    });
+  </script>
+
+
+  
+
+</body>
 </html>
