@@ -1,364 +1,624 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GiftKhata Blog — Gift Tracking Tips, Gifting Culture & Family Finance Worldwide</title>
-  <meta name="description" content="The GiftKhata blog covers gift tracking tips, global wedding and occasion gifting etiquette, family finance, and how to manage gift records for every culture and celebration worldwide." />
-  <meta name="keywords" content="gift tracking tips, global gifting guide, wedding gift tracker, gift ledger blog, Christmas gift tracker, Eid gift guide, family gift record, gift etiquette worldwide, GiftKhata blog" />
-  <meta name="robots" content="index, follow" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.giftkhata.com/blog" />
-  <meta property="og:title" content="GiftKhata Blog — Gift Tracking Tips for Families Worldwide" />
-  <meta property="og:description" content="Gift tracking tips, global gifting etiquette, wedding & occasion gift guides, family finance — from GiftKhata, the smart gift ledger for families worldwide." />
-  <meta property="og:image" content="https://www.giftkhata.com/og-image.png" />
-  <meta property="og:locale" content="en" />
-  <meta property="og:site_name" content="GiftKhata" />
+    <!-- PRIMARY SEO -->
+    <title>Blog | GiftKhata</title>
+    <meta
+      name="description"
+      content="The GiftKhata blog covers gift tracking tips, global wedding and occasion gifting etiquette, family finance, and how to manage gift records for every culture and celebration worldwide."
+    />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "GiftKhata Blog",
-    "url": "https://www.giftkhata.com/blog",
-    "description": "Gift tracking tips, global gifting culture, and family finance advice for families worldwide — covering weddings, Christmas, Eid, birthdays and every occasion.",
-    "publisher": {"@type": "Organization", "name": "GiftKhata", "url": "https://www.giftkhata.com"},
-    "inLanguage": "en"
-  }
-  </script>
+    <meta
+      name="keywords"
+      content="gift tracking tips, global gifting guide, wedding gift tracker, gift ledger blog, Christmas gift tracker, Eid gift guide, family gift record, GiftKhata blog"
+    />
+    <meta name="author" content="GiftKhata" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <link rel="canonical" href="https://www.giftkhata.com/blog/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" /></noscript>
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.giftkhata.com/blog/" />
+    <meta
+      property="og:title"
+      content="Blog"
+    />
+    <meta
+      property="og:description"
+      content="The GiftKhata blog covers gift tracking tips, global wedding and occasion gifting etiquette, family finance, and how to manage gift records for every culture and celebration worldwide."
+    />
+    <meta
+      property="og:image"
+      content="https://www.giftkhata.com/og-image.png"
+    />
+    <meta property="og:locale" content="en" />
+    <meta property="og:locale:alternate" content="en_IN" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="en_AU" />
+    <meta property="og:site_name" content="GiftKhata" />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@giftkhata_app" />
+    <meta
+      name="twitter:title"
+      content="Blog"
+    />
+    <meta
+      name="twitter:description"
+      content="The GiftKhata blog covers gift tracking tips, global wedding and occasion gifting etiquette, family finance, and how to manage gift records for every culture and celebration worldwide."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.giftkhata.com/og-image.png"
+    />
+
+    <!-- GEO: Primary markets -->
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.region" content="GB" />
+    <meta name="geo.region" content="US" />
+    <meta name="geo.region" content="AU" />
+
+    <!-- STRUCTURED DATA: WebApplication -->
+
+    <!-- STRUCTURED DATA: Organization -->
+
+    <!-- STRUCTURED DATA: FAQPage -->
+
+    <!-- PERF: preconnect saves 100-300ms DNS+TLS handshake per origin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- PERF: trimmed to used weights only; Playfair Display removed (saves 1 font fetch) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- PERF: Font Awesome loaded non-blocking — no longer delays first paint -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      />
+    </noscript>
+
+    <!-- PERF: theme applied before first paint → no flash of wrong theme, no repaint -->
+
+  
+
   <script>(function(){var t=localStorage.getItem('gk-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
 
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    [data-theme="light"]{--primary:#6D28D9;--primary-light:#7C3AED;--accent2:#DB2777;--bg:#F8F5FF;--bg2:#EDE9FE;--text:#1E1B4B;--text-muted:#6B5FA6;--card:rgba(255,255,255,0.92);--card-border:rgba(109,40,217,0.18);--nav-bg:rgba(248,245,255,0.95);--shadow:rgba(109,40,217,0.14);--toggle-bg:#DDD6FE;--purple-bg:#EDE9FE;--gradient:linear-gradient(135deg,#6D28D9 0%,#DB2777 100%)}
-    [data-theme="dark"]{--primary:#7C3AED;--primary-light:#A78BFA;--accent2:#EC4899;--bg:#0F0A1E;--bg2:#1A1133;--text:#F3F0FF;--text-muted:#A89EC9;--card:rgba(255,255,255,0.05);--card-border:rgba(124,58,237,0.28);--nav-bg:rgba(15,10,30,0.90);--shadow:rgba(124,58,237,0.28);--toggle-bg:#241848;--purple-bg:rgba(124,58,237,0.12);--gradient:linear-gradient(135deg,#7C3AED 0%,#EC4899 100%)}
-    html{scroll-behavior:smooth}
-    body{font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-    nav{position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:.9rem 5%;background:var(--nav-bg);backdrop-filter:blur(18px);border-bottom:1px solid var(--card-border);transition:box-shadow .3s}
-    .nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
-    .nav-brand-logo{height:42px;width:auto;max-width:180px;object-fit:contain}
-    .nav-right{display:flex;align-items:center;gap:1rem}
-    .nav-back{display:inline-flex;align-items:center;gap:.4rem;color:var(--text-muted);text-decoration:none;font-size:.85rem;font-weight:600;padding:.4rem .9rem;border:1.5px solid var(--card-border);border-radius:50px;transition:all .2s}
-    .nav-back:hover{color:var(--primary);border-color:var(--primary);background:var(--purple-bg)}
-    .theme-toggle{width:48px;height:27px;background:var(--toggle-bg);border-radius:50px;border:1.5px solid var(--card-border);cursor:pointer;display:flex;align-items:center;padding:2px;flex-shrink:0}
-    .toggle-thumb{width:21px;height:21px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-size:.68rem;transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 6px rgba(0,0,0,.2)}
-    [data-theme="dark"] .toggle-thumb{transform:translateX(0)}
-    [data-theme="light"] .toggle-thumb{transform:translateX(21px)}
-    /* CATEGORY CHIPS */
-    .cat-chip{display:inline-block;padding:.38rem .95rem;border-radius:50px;font-size:.8rem;font-weight:600;cursor:pointer;border:1.5px solid var(--card-border);color:var(--text-muted);background:var(--card);transition:all .2s;user-select:none}
-    .cat-chip:hover,.cat-chip.active{background:var(--gradient);color:#fff;border-color:transparent}
-    /* BLOG GRID */
-    .blog-grid{display:flex;flex-direction:column;gap:1.4rem;max-width:860px;margin:2rem auto 0;padding:0 5%}
-    .blog-card{display:flex;gap:1.4rem;background:var(--card);border:1px solid var(--card-border);border-radius:20px;padding:1.6rem;text-decoration:none;transition:all .25s;align-items:flex-start}
-    .blog-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px var(--shadow);border-color:var(--primary)}
-    .blog-card-emoji{font-size:2.8rem;flex-shrink:0;width:70px;height:70px;background:var(--bg2);border-radius:16px;display:flex;align-items:center;justify-content:center}
-    .blog-card-body{flex:1;min-width:0}
-    .blog-card-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--primary);margin-bottom:.4rem}
-    .blog-card-title{font-size:1.05rem;font-weight:800;color:var(--text);line-height:1.35;margin-bottom:.5rem}
-    .blog-card-excerpt{font-size:.85rem;color:var(--text-muted);line-height:1.65;margin-bottom:.7rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-    .blog-card-meta{display:flex;gap:1rem;font-size:.75rem;color:var(--text-muted);flex-wrap:wrap}
-    .featured-post{background:var(--bg2);border-color:var(--primary)}
-    /* FOOTER */
-    footer{background:var(--bg2);border-top:1px solid var(--card-border);padding:2.5rem 5%;text-align:center;margin-top:4rem}
-    .footer-links{display:flex;gap:1.4rem;flex-wrap:wrap;justify-content:center;margin-bottom:1rem}
-    .footer-links a{color:var(--text-muted);text-decoration:none;font-size:.85rem;transition:color .2s}
-    .footer-links a:hover{color:var(--primary)}
-    .footer-social{display:flex;gap:.8rem;justify-content:center;margin:1rem 0}
-    .social-btn{width:38px;height:38px;border-radius:50%;background:var(--card);border:1px solid var(--card-border);display:flex;align-items:center;justify-content:center;color:var(--text-muted);text-decoration:none;transition:all .2s;font-size:.9rem}
-    .social-btn:hover{color:var(--primary);border-color:var(--primary)}
-    .footer-copy{font-size:.78rem;color:var(--text-muted)}
-    @media(max-width:600px){
-      .blog-card{flex-direction:column;gap:.9rem}
-      .blog-card-emoji{width:50px;height:50px;font-size:2rem}
-    }
-  </style>
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  
+
+</head>
 <body>
+
   <nav id="navbar">
-    <a href="/" class="nav-logo" aria-label="GiftKhata Home">
-      <img src="/logo_icon.png" alt="GiftKhata" class="nav-brand-logo" width="180" height="42" fetchpriority="high" />
-    </a>
-    <div class="nav-right">
-      <div class="theme-toggle" id="themeToggle" role="button" aria-label="Toggle theme">
-        <div class="toggle-thumb"><span id="toggleIcon">🌙</span></div>
+      <span class="nav-logo" aria-label="GiftKhata Home">
+        <div class="logo-icon">
+          <img
+            src="/logo_icon.png"
+            alt="GiftKhata – Celebrate Better. Track Smarter."
+            class="nav-brand-logo"
+            width="210"
+            height="48"
+            fetchpriority="high"
+          />
+          <div class="logo-text">
+            <div class="logo-name">
+              <span class="logo-gift-txt">Gift</span
+              ><span class="logo-khata-txt">Khata</span>
+            </div>
+            <div class="logo-sub">
+              Celebrate Better. <span class="track"></span>Track Smarter.
+            </div>
+          </div>
+        </div>
+      </span>
+      <ul class="nav-links">
+      <li >
+        <a href="/#features">Features</a>
+      </li>
+      <li >
+        <a href="/#how-it-works">How It Works</a>
+      </li>
+      <li >
+        <a href="/#gift-types">Gift Types</a>
+      </li>
+      <li >
+        <a href="/#occasions">Occasions</a>
+      </li>
+      <li >
+        <a href="/#why">Why Us</a>
+      </li>
+      <li >
+        <a href="/#faq">FAQ</a>
+      </li>
+      <li >
+        <a href="/#reach-us">Reach Us</a>
+      </li>
+      <li >
+        <a href="/blog/" aria-current="page">Blog</a>
+      </li>
+  </ul>
+      <div class="nav-right">
+        <div
+          class="theme-toggle"
+          id="themeToggle"
+          title="Toggle light/dark mode"
+          role="button"
+          aria-label="Toggle theme"
+        >
+          <div class="toggle-thumb" id="toggleThumb">
+            <span id="toggleIcon">🌙</span>
+          </div>
+        </div>
+        <!-- <a href="#cta" class="nav-cta">Coming Soon</a> -->
+        <!-- <a href="#cta" class="nav-cta">Coming Soon</a> -->
+        <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </div>
       </div>
-      <a href="/" class="nav-back"><i class="fa fa-arrow-left"></i> Home</a>
+    </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+      <a href="/#features">Features</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#gift-types">Gift Types</a>
+      <a href="/#occasions">Occasions</a>
+      <a href="/#why">Why Us</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#reach-us">Reach Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#cta" style="color: var(--primary); font-weight: 700">🚀 Coming Soon</a>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <div style="background:var(--gradient);padding:56px 5% 48px;text-align:center;position:relative;overflow:hidden">
-    <div style="position:absolute;inset:0;opacity:.08;background:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%) 0/20px 20px"></div>
-    <div style="position:relative">
-      <div style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:.28rem .9rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:1rem">📝 GiftKhata Blog</div>
-      <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:#fff;line-height:1.2;margin-bottom:.7rem;max-width:700px;margin-left:auto;margin-right:auto">Gift Tracking Tips &amp; Gifting Wisdom for Every Culture</h1>
-      <p style="font-size:.95rem;color:rgba(255,255,255,0.85);max-width:560px;margin:0 auto">Practical guides on tracking gifts, global gifting etiquette, wedding &amp; occasion tips, and family finance — for families in the UK, USA, Australia, India and everywhere in between.</p>
+
+  <main id="main-content">
+    
+
+<link rel="stylesheet" href="/css/blog.css" />
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "GiftKhata Blog",
+  "url": "https://www.giftkhata.com/blog/",
+  "description": "The GiftKhata blog covers gift tracking tips, global wedding and occasion gifting etiquette, family finance, and how to manage gift records for every culture and celebration worldwide.",
+  "publisher": { "@type": "Organization", "name": "GiftKhata", "url": "https://www.giftkhata.com" },
+  "inLanguage": "en"
+}
+</script>
+
+
+<div style="background:var(--gradient);padding:56px 5% 48px;text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;opacity:.08;background:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%) 0/20px 20px"></div>
+  <div style="position:relative;margin-top:2rem;">
+    <div style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.3);border-radius:50px;padding:.28rem .9rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:1rem">
+      📝 GiftKhata Blog
     </div>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:#fff;line-height:1.2;margin-bottom:.7rem;max-width:700px;margin-left:auto;margin-right:auto">
+      Gift Tracking Tips &amp; Gifting Wisdom for Every Culture
+    </h1>
+    <p style="font-size:.95rem;color:rgba(255,255,255,0.85);max-width:560px;margin:0 auto">
+      Practical guides on tracking gifts, global gifting etiquette, wedding &amp; occasion tips,
+      and family finance — for families in the UK, USA, Australia, India and everywhere in between.
+    </p>
   </div>
+</div>
 
-  <!-- CATEGORY CHIPS -->
-  <div style="display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;padding:1.6rem 5% .5rem">
-    <span class="cat-chip active" onclick="filterPosts(this,'all')">All Posts (10)</span>
-    <span class="cat-chip" onclick="filterPosts(this,'Gift Tracking Tips')">🎯 Gift Tracking</span>
-    <span class="cat-chip" onclick="filterPosts(this,'Wedding')">💒 Wedding</span>
-    <span class="cat-chip" onclick="filterPosts(this,'Occasions')">🎊 Occasions</span>
-    <span class="cat-chip" onclick="filterPosts(this,'Family Finance')">👨‍👩‍👧‍👦 Family Finance</span>
-    <span class="cat-chip" onclick="filterPosts(this,'Gift Culture')">🌍 Gift Culture</span>
-  </div>
+<div style="display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;padding:1.6rem 5% .5rem">
+  <span class="cat-chip active" onclick="filterPosts(this,'all')">
+    All Posts (10)
+  </span>
+  
+  <span class="cat-chip" onclick="filterPosts(this,'Occasions')">
+    🎊 Occasions
+  </span>
+  
+  <span class="cat-chip" onclick="filterPosts(this,'Gift Tracking Tips')">
+    🎯 Gift Tracking Tips
+  </span>
+  
+  <span class="cat-chip" onclick="filterPosts(this,'Family Finance')">
+    👨‍👩‍👧‍👦 Family Finance
+  </span>
+  
+  <span class="cat-chip" onclick="filterPosts(this,'Gift Culture')">
+    🌍 Gift Culture
+  </span>
+  
+  <span class="cat-chip" onclick="filterPosts(this,'Wedding')">
+    💒 Wedding
+  </span>
+  
+</div>
 
-  <!-- BLOG GRID -->
-  <div class="blog-grid" id="blogGrid">
-
-      <a href="/blog/digital-vs-paper-gift-register" class="blog-card featured-post" data-cat="Gift Tracking Tips">
-        <div class="blog-card-emoji">📒</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Gift Tracking Tips</div>
-          <h2 class="blog-card-title">Digital vs Paper Gift Register: Why Families Worldwide Are Making the Switch</h2>
-          <p class="blog-card-excerpt">Compare paper gift registers with digital gift tracker apps like GiftKhata. Discover why modern families across the UK, USA, Australia and India are switching to digital gift tracking.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-01-15</span>
-            <span>⏱️ 8 min read</span>
-          </div>
-        </div>
-      </a>
-      <a href="/blog/how-to-track-wedding-gifts" class="blog-card " data-cat="Wedding">
-        <div class="blog-card-emoji">💒</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Wedding</div>
-          <h2 class="blog-card-title">How to Track Wedding Gifts: The Complete Guide for Couples in 2026</h2>
-          <p class="blog-card-excerpt">Learn how to properly record, manage and use wedding gift records. From cash gifts to vouchers and items — a complete guide for couples and families worldwide.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-01-28</span>
-            <span>⏱️ 9 min read</span>
-          </div>
-        </div>
-      </a>
-      <a href="/blog/housewarming-gift-guide" class="blog-card " data-cat="Occasions">
-        <div class="blog-card-emoji">🏡</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Occasions</div>
-          <h2 class="blog-card-title">Housewarming Gift Guide 2026: What to Give, What to Expect & How to Track It</h2>
-          <p class="blog-card-excerpt">Everything about housewarming gifts — appropriate amounts by relationship, what to give and avoid across cultures, and how to track gifts received at your housewarming party.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-02-10</span>
-            <span>⏱️ 9 min read</span>
-          </div>
-        </div>
-      </a>
-      <a href="/blog/managing-gifts-in-large-families" class="blog-card " data-cat="Family Finance">
-        <div class="blog-card-emoji">👨‍👩‍👧‍👦</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Family Finance</div>
-          <h2 class="blog-card-title">Managing Gifts in Large & Extended Families: A System to Prevent Conflicts</h2>
-          <p class="blog-card-excerpt">Large family gift-giving is complex and often a source of conflict. Learn how to build a transparent, fair gift tracking system for extended families using GiftKhata.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-02-25</span>
-            <span>⏱️ 9 min read</span>
-          </div>
-        </div>
-      </a>
-      <a href="/blog/gift-giving-etiquette-around-the-world" class="blog-card " data-cat="Gift Culture">
-        <div class="blog-card-emoji">🌍</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Gift Culture</div>
-          <h2 class="blog-card-title">Gift-Giving Etiquette Around the World: A Cultural Guide for Global Families</h2>
-          <p class="blog-card-excerpt">A comprehensive guide to gift-giving customs, taboos and etiquette across India, UK, USA, Australia, Middle East, China and Southeast Asia — for multicultural and globally connected families.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-03-05</span>
-            <span>⏱️ 11 min read</span>
-          </div>
-        </div>
-      </a>
-      <a href="/blog/christmas-gift-tracker-family" class="blog-card " data-cat="Occasions">
-        <div class="blog-card-emoji">🎄</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Occasions</div>
-          <h2 class="blog-card-title">Christmas Gift Tracker for Families: Never Forget Who Gave What Again</h2>
-          <p class="blog-card-excerpt">Track every Christmas gift received and given — who gave what, how much was spent, and what to give next year. A practical guide to Christmas gift tracking for families.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-03-15</span>
-            <span>⏱️ 7 min read</span>
-          </div>
-        </div>
-      </a>
-      <a href="/blog/eid-gift-guide-and-tracker" class="blog-card " data-cat="Occasions">
-        <div class="blog-card-emoji">🌙</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Occasions</div>
-          <h2 class="blog-card-title">Eid Gift Guide: Traditions, Etiquette & How to Track Eidi for Your Family</h2>
-          <p class="blog-card-excerpt">A complete guide to Eid gifting — Eidi traditions, appropriate amounts, what to give and how to track Eid gifts for your family using GiftKhata.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-03-22</span>
-            <span>⏱️ 8 min read</span>
-          </div>
-        </div>
-      </a>
-      <a href="/blog/how-much-to-spend-on-a-gift" class="blog-card " data-cat="Gift Tracking Tips">
-        <div class="blog-card-emoji">💰</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Gift Tracking Tips</div>
-          <h2 class="blog-card-title">How Much Should You Spend on a Gift? A Practical Guide for Every Occasion</h2>
-          <p class="blog-card-excerpt">A complete, culture-aware guide to gift budgets — how much to spend at weddings, birthdays, Christmas, Eid and more, across different relationships and countries.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-03-28</span>
-            <span>⏱️ 9 min read</span>
-          </div>
-        </div>
-      </a>
-      <a href="/blog/baby-shower-gift-tracker" class="blog-card " data-cat="Occasions">
-        <div class="blog-card-emoji">👶</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Occasions</div>
-          <h2 class="blog-card-title">Baby Shower Gift Tracker: How to Record Every Gift Before Baby Arrives</h2>
-          <p class="blog-card-excerpt">Track every gift received at your baby shower — who gave what, thank-you notes made easy, and registry management. A practical guide for expecting parents worldwide.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-04-02</span>
-            <span>⏱️ 7 min read</span>
-          </div>
-        </div>
-      </a>
-      <a href="/blog/why-every-family-needs-a-gift-ledger" class="blog-card " data-cat="Gift Tracking Tips">
-        <div class="blog-card-emoji">📖</div>
-        <div class="blog-card-body">
-          <div class="blog-card-cat">Gift Tracking Tips</div>
-          <h2 class="blog-card-title">Why Every Family Needs a Gift Ledger — And How to Start One Today</h2>
-          <p class="blog-card-excerpt">A gift ledger is one of the most underrated family finance tools. Discover how tracking gifts received and given improves relationships, saves money and prevents family conflicts.</p>
-          <div class="blog-card-meta">
-            <span>📅 2026-04-10</span>
-            <span>⏱️ 8 min read</span>
-          </div>
-        </div>
-      </a>
-  </div>
-
-  <!-- CTA -->
-  <div style="max-width:680px;margin:3rem auto 0;padding:0 5% 5rem">
-    <div style="background:var(--gradient);border-radius:22px;padding:2.2rem;text-align:center;color:#fff">
-      <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:.5rem">🎁 Try GiftKhata Free</h3>
-      <p style="font-size:.9rem;opacity:.9;margin-bottom:1.2rem;line-height:1.65">Track every gift given and received at weddings, birthdays, Christmas, Eid and every celebration — for families worldwide. Free to start, forever.</p>
-      <a href="/#cta" style="background:#fff;color:var(--primary);font-weight:700;font-size:.9rem;padding:.75rem 2rem;border-radius:50px;text-decoration:none;display:inline-block">Get Started →</a>
+<div class="blog-grid" id="blogGrid">
+  
+  <a href="/blog/why-every-family-needs-a-gift-ledger/" class="blog-card featured-post"
+     data-cat="Gift Tracking Tips">
+    <div class="blog-card-emoji">📖</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Gift Tracking Tips</div>
+      <h2 class="blog-card-title">Why Every Family Needs a Gift Ledger — And How to Start One Today</h2>
+      <p class="blog-card-excerpt">A gift ledger is one of the most underrated family finance tools. Discover how tracking gifts received and given improves relationships, saves money and prevents family conflicts.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-04-10">10 Apr 2026</time></span>
+        <span>⏱️ 8 min read</span>
+      </div>
     </div>
+  </a>
+  
+  <a href="/blog/baby-shower-gift-tracker/" class="blog-card"
+     data-cat="Occasions">
+    <div class="blog-card-emoji">👶</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Occasions</div>
+      <h2 class="blog-card-title">Baby Shower Gift Tracker: How to Record Every Gift Before Baby Arrives</h2>
+      <p class="blog-card-excerpt">Track every gift received at your baby shower — who gave what, thank-you notes made easy, and registry management. A practical guide for expecting parents worldwide.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-04-02">2 Apr 2026</time></span>
+        <span>⏱️ 7 min read</span>
+      </div>
+    </div>
+  </a>
+  
+  <a href="/blog/how-much-to-spend-on-a-gift/" class="blog-card"
+     data-cat="Gift Tracking Tips">
+    <div class="blog-card-emoji">💰</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Gift Tracking Tips</div>
+      <h2 class="blog-card-title">How Much Should You Spend on a Gift? A Practical Guide for Every Occasion</h2>
+      <p class="blog-card-excerpt">A complete, culture-aware guide to gift budgets — how much to spend at weddings, birthdays, Christmas, Eid and more, across different relationships and countries.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-03-28">28 Mar 2026</time></span>
+        <span>⏱️ 9 min read</span>
+      </div>
+    </div>
+  </a>
+  
+  <a href="/blog/eid-gift-guide-and-tracker/" class="blog-card"
+     data-cat="Occasions">
+    <div class="blog-card-emoji">🌙</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Occasions</div>
+      <h2 class="blog-card-title">Eid Gift Guide: Traditions, Etiquette &amp; How to Track Eidi for Your Family</h2>
+      <p class="blog-card-excerpt">A complete guide to Eid gifting — Eidi traditions, appropriate amounts, what to give and how to track Eid gifts for your family using GiftKhata.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-03-22">22 Mar 2026</time></span>
+        <span>⏱️ 8 min read</span>
+      </div>
+    </div>
+  </a>
+  
+  <a href="/blog/christmas-gift-tracker-family/" class="blog-card"
+     data-cat="Occasions">
+    <div class="blog-card-emoji">🎄</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Occasions</div>
+      <h2 class="blog-card-title">Christmas Gift Tracker for Families: Never Forget Who Gave What Again</h2>
+      <p class="blog-card-excerpt">Track every Christmas gift received and given — who gave what, how much was spent, and what to give next year. A practical guide to Christmas gift tracking for families.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-03-15">15 Mar 2026</time></span>
+        <span>⏱️ 7 min read</span>
+      </div>
+    </div>
+  </a>
+  
+  <a href="/blog/gift-giving-etiquette-around-the-world/" class="blog-card"
+     data-cat="Gift Culture">
+    <div class="blog-card-emoji">🌍</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Gift Culture</div>
+      <h2 class="blog-card-title">Gift-Giving Etiquette Around the World: A Cultural Guide for Global Families</h2>
+      <p class="blog-card-excerpt">A comprehensive guide to gift-giving customs, taboos and etiquette across India, UK, USA, Australia, Middle East, China and Southeast Asia — for multicultural and globally connected families.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-03-05">5 Mar 2026</time></span>
+        <span>⏱️ 11 min read</span>
+      </div>
+    </div>
+  </a>
+  
+  <a href="/blog/managing-gifts-in-large-families/" class="blog-card"
+     data-cat="Family Finance">
+    <div class="blog-card-emoji">👨‍👩‍👧‍👦</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Family Finance</div>
+      <h2 class="blog-card-title">Managing Gifts in Large &amp; Extended Families: A System to Prevent Conflicts</h2>
+      <p class="blog-card-excerpt">Large family gift-giving is complex and often a source of conflict. Learn how to build a transparent, fair gift tracking system for extended families using GiftKhata.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-02-25">25 Feb 2026</time></span>
+        <span>⏱️ 9 min read</span>
+      </div>
+    </div>
+  </a>
+  
+  <a href="/blog/housewarming-gift-guide/" class="blog-card"
+     data-cat="Occasions">
+    <div class="blog-card-emoji">🏡</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Occasions</div>
+      <h2 class="blog-card-title">Housewarming Gift Guide 2026: What to Give, What to Expect &amp; How to Track It</h2>
+      <p class="blog-card-excerpt">Everything about housewarming gifts — appropriate amounts by relationship, what to give and avoid across cultures, and how to track gifts received at your housewarming party.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-02-10">10 Feb 2026</time></span>
+        <span>⏱️ 9 min read</span>
+      </div>
+    </div>
+  </a>
+  
+  <a href="/blog/how-to-track-wedding-gifts/" class="blog-card"
+     data-cat="Wedding">
+    <div class="blog-card-emoji">💒</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Wedding</div>
+      <h2 class="blog-card-title">How to Track Wedding Gifts: The Complete Guide for Couples in 2026</h2>
+      <p class="blog-card-excerpt">Learn how to properly record, manage and use wedding gift records. From cash gifts to vouchers and items — a complete guide for couples and families worldwide.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-01-28">28 Jan 2026</time></span>
+        <span>⏱️ 9 min read</span>
+      </div>
+    </div>
+  </a>
+  
+  <a href="/blog/digital-vs-paper-gift-register/" class="blog-card"
+     data-cat="Gift Tracking Tips">
+    <div class="blog-card-emoji">📒</div>
+    <div class="blog-card-body">
+      <div class="blog-card-cat">Gift Tracking Tips</div>
+      <h2 class="blog-card-title">Digital vs Paper Gift Register: Why Families Worldwide Are Making the Switch</h2>
+      <p class="blog-card-excerpt">Compare paper gift registers with digital gift tracker apps like GiftKhata. Discover why modern families across the UK, USA, Australia and India are switching to digital gift tracking.</p>
+      <div class="blog-card-meta">
+        <span>📅 <time datetime="2026-01-15">15 Jan 2026</time></span>
+        <span>⏱️ 8 min read</span>
+      </div>
+    </div>
+  </a>
+  
+</div>
+
+<div style="max-width:680px;margin:3rem auto 0;padding:0 5% 5rem">
+  <div style="background:var(--gradient);border-radius:22px;padding:2.2rem;text-align:center;color:#fff">
+    <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:.5rem">🎁 Try GiftKhata Free</h3>
+    <p style="font-size:.9rem;opacity:.9;margin-bottom:1.2rem;line-height:1.65">
+      Track every gift given and received at weddings, birthdays, Christmas, Eid and every
+      celebration — for families worldwide. Free to start, forever.
+    </p>
+    <a href="/#cta" style="background:#fff;color:var(--primary);font-weight:700;font-size:.9rem;padding:.75rem 2rem;border-radius:50px;text-decoration:none;display:inline-block">
+      Get Started →
+    </a>
   </div>
+</div>
+
+
+<script>
+  const cards = document.querySelectorAll('.blog-card');
+  const chips = document.querySelectorAll('.cat-chip');
+  function filterPosts(el, cat) {
+    chips.forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    cards.forEach(card => {
+      card.style.display = (cat === 'all' || card.getAttribute('data-cat') === cat)
+        ? 'flex' : 'none';
+    });
+  }
+</script>
+
+
+  </main>
 
   <footer>
-    <div style="margin-bottom:1rem"><img src="/logo_icon.png" alt="GiftKhata" style="height:40px;object-fit:contain" loading="lazy" /></div>
-    <p style="font-size:.85rem;color:var(--text-muted);max-width:400px;margin:0 auto 1.2rem;line-height:1.7">India's first digital gift ledger — helping Indian families track every gift, at every function, forever.</p>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/blog/">Blog</a>
-      <a href="/disclaimer">Disclaimer</a>
-      <a href="/privacy-policy">Privacy Policy</a>
-      <a href="/terms-of-use">Terms of Use</a>
+      <div class="footer-logo">
+        <img
+          src="/logo.png"
+          alt="GiftKhata"
+          class="footer-brand-logo-1 full-logo"
+          loading="lazy"
+        />
+      </div>
+      <p
+        style="
+          font-size: 0.88rem;
+          color: var(--text-muted);
+          margin-bottom: 1.5rem;
+          max-width: 420px;
+          margin-left: auto;
+          margin-right: auto;
+          line-height: 1.7;
+        "
+      >
+        The smart gift ledger for every family, every culture, every occasion —
+        track every gift, everywhere, forever.
+      </p>
+      <div class="footer-links">
+      <a href="/#features">Features</a>
+      <a href="/#how-it-works">How It Works</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/disclaimer/">Disclaimer</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/terms-of-use/">Terms of Use</a>
       <a href="/#reach-us">Contact Us</a>
-    </div>
-    <div class="footer-social">
-      <a href="https://instagram.com/giftkhata.ledger" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://facebook.com/giftkhata.ledger" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-       <a href="https://twitter.com/giftkhata_app" target="_blank" rel="noopener" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://youtube.com/@giftkhata" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.linkedin.com/company/giftkhata" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <p class="footer-copy">© 2026 GiftKhata. All rights reserved. | <a href="https://www.giftkhata.com" style="color:var(--primary);text-decoration:none">giftkhata.com</a></p>
-  </footer>
-
-  <script>
-    const html = document.documentElement;
-    const toggle = document.getElementById('themeToggle');
-    const icon = document.getElementById('toggleIcon');
-    icon.textContent = html.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
-    toggle.addEventListener('click', () => {
-      const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', t);
-      icon.textContent = t === 'dark' ? '☀️' : '🌙';
-      localStorage.setItem('gk-theme', t);
-    });
-    window.addEventListener('scroll', () => {
-      document.getElementById('navbar').style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.12)' : 'none';
-    }, {passive:true});
-  </script>
-</body>
-</html>
-
-
-  <script>
-    // Theme toggle
-    const html = document.documentElement;
-    const toggle = document.getElementById('themeToggle');
-    const icon = document.getElementById('toggleIcon');
-    icon.textContent = html.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
-    toggle.addEventListener('click', () => {
-      const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', t);
-      icon.textContent = t === 'dark' ? '☀️' : '🌙';
-      localStorage.setItem('gk-theme', t);
-    });
-
-    // Category filter
-    const cards = document.querySelectorAll('.blog-card');
-    const chips = document.querySelectorAll('.cat-chip');
-    function filterPosts(cat) {
-      chips.forEach(c => c.classList.remove('active'));
-      event.target.classList.add('active');
-      cards.forEach(card => {
-        const cardCat = card.querySelector('.blog-card-cat').textContent.trim();
-        card.style.display = (cat === 'all' || cardCat === cat) ? 'flex' : 'none';
-      });
-    }
-
-    window.addEventListener('scroll', () => {
-      document.getElementById('navbar').style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.12)' : 'none';
-    }, {passive:true});
-  </script>
-</body>
-</html>
+      </div>
+      <div class="footer-social">
+        <a
+          href="https://instagram.com/giftkhata.ledger"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://facebook.com/giftkhata.ledger"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://twitter.com/giftkhata_app"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="Twitter"
+          ><i class="fab fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://youtube.com/@giftkhata"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/company/giftkhata"
+          target="_blank"
+          rel="noopener"
+          class="social-btn"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+      <p class="footer-copy">
+        © 2026 GiftKhata. All rights reserved. |
+        <a
+          href="https://www.giftkhata.com"
+          style="color: var(--primary); text-decoration: none"
+          >giftkhata.com</a
+        >
+      </p>
+    </footer>
 
 
-  <script>
-    const html = document.documentElement;
-    const toggle = document.getElementById('themeToggle');
-    const icon = document.getElementById('toggleIcon');
-    icon.textContent = html.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
-    toggle.addEventListener('click', () => {
-      const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', t);
-      icon.textContent = t === 'dark' ? '☀️' : '🌙';
-      localStorage.setItem('gk-theme', t);
-    });
-    window.addEventListener('scroll', () => {
-      document.getElementById('navbar').style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.12)' : 'none';
-    }, {passive:true});
-
-    const cards = document.querySelectorAll('.blog-card');
-    const chips = document.querySelectorAll('.cat-chip');
-    function filterPosts(el, cat) {
-      chips.forEach(c => c.classList.remove('active'));
-      el.classList.add('active');
-      cards.forEach(card => {
-        const cardCat = card.getAttribute('data-cat');
-        card.style.display = (cat === 'all' || cardCat === cat) ? 'flex' : 'none';
-      });
-    }
-  </script>
-  <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-P2V508P24B"
-    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      // THEME TOGGLE — theme already set in <head>; just wire the button
+      const html = document.documentElement;
+      const toggle = document.getElementById("themeToggle");
+      const icon = document.getElementById("toggleIcon");
+      function setTheme(t) {
+        html.setAttribute("data-theme", t);
+        icon.textContent = t === "dark" ? "☀️" : "🌙";
+        localStorage.setItem("gk-theme", t);
       }
-      gtag("js", new Date());
+      // Sync icon with already-applied theme (no redundant localStorage read)
+      icon.textContent =
+        html.getAttribute("data-theme") === "dark" ? "☀️" : "🌙";
+      toggle.addEventListener("click", () => {
+        setTheme(html.getAttribute("data-theme") === "dark" ? "light" : "dark");
+      });
 
-      gtag("config", "G-P2V508P24B");
-    </script>
+      // MOBILE MENU
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("open");
+      }
+      document.addEventListener("click", function (e) {
+        const menu = document.getElementById("mobileMenu");
+        const hamburger = document.querySelector(".hamburger");
+        if (
+          menu.classList.contains("open") &&
+          !menu.contains(e.target) &&
+          !hamburger.contains(e.target)
+        ) {
+          menu.classList.remove("open");
+        }
+      });
+
+      // SCROLL REVEAL
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("visible"), i * 80);
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // PERF: passive:true lets scroll never block the browser paint pipeline
+      window.addEventListener(
+        "scroll",
+        () => {
+          document.getElementById("navbar").style.boxShadow =
+            window.scrollY > 20 ? "0 4px 30px rgba(0,0,0,0.12)" : "none";
+        },
+        { passive: true },
+      );
+
+      // COUNTER ANIMATION
+      function animateCounters() {
+        document.querySelectorAll("[data-target]").forEach((el) => {
+          const target = +el.getAttribute("data-target");
+          let count = 0;
+          const step = Math.ceil(target / 40);
+          const timer = setInterval(() => {
+            count = Math.min(count + step, target);
+            el.textContent = count + "+";
+            if (count >= target) clearInterval(timer);
+          }, 50);
+        });
+      }
+      const heroObserver = new IntersectionObserver(
+        (entries) => {
+          if (entries[0].isIntersecting) {
+            animateCounters();
+            heroObserver.disconnect();
+          }
+        },
+        { threshold: 0.5 },
+      );
+      const heroSec = document.getElementById("hero");
+      if (heroSec) heroObserver.observe(heroSec);
+    
+  </script>
+  <script>
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-P2V508P24B';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-P2V508P24B');
+    });
+  </script>
+
+
+  
+
 </body>
 </html>
